@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08EBF3M4K7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-08EBF3M4K7');
+  </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Noah's Website</title>
@@ -13,10 +22,28 @@
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <div class="fixed-top">
+                <p style="text-align:center">
+                  <!--<a href="mailto:yhung7@gsu.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;-->
+                  <a href="#info"><b>About me</b></a> &nbsp;/&nbsp;
+                  <a href="#news"><b>News</b></a> &nbsp;/&nbsp;
+                  <a href="#publications"><b>Publication</b></a> &nbsp;/&nbsp;
+                  <a href="#experience"><b>Experience</b></a> &nbsp;/&nbsp;
+                  <a href="#education"><b>Education</b></a> &nbsp;/&nbsp;
+                  <a href="#talkandposter"><b>Talk and Poster</b></a> &nbsp;/&nbsp;
+                  <a href="#awards"><b>Selected Awards</b></a> &nbsp;/&nbsp;
+                  <!--<a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/jonbarron/">Github</a>-->
+                </p>
+                </div>
+  <div class = "main-content">
+    <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table id="info" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
@@ -28,31 +55,53 @@
                   I earned my Master's in Joint Statistics and Computer Science from <a href="https://www.stat.purdue.edu/">Purdue University</a>, where I worked with Professor Qi Guo on a computer vision project. Prior to starting my PhD, I was a graduate research assistant under the supervision of Professor <a href="https://misg.stat.nycu.edu.tw/">Henry Horng-Shing Lu</a>, working on deep mixture density networks. I completed my undergraduate studies at <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>, working with <a href="https://kliao.weebly.com/">Ku-Wei Liao </a> on reliability research. During my time there, I received the 4th National Taiwan University Best Undergraduate Thesis Award and the Tomotake Takasaka Scholarship.
                 </p>
                 
-                <p style="text-align:center">
-                  <a href="mailto:yhung7@gsu.edu">Email</a> &nbsp;/&nbsp;
-                  <!--<a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;-->
-                  <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
-                  <!--<a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;-->
-                  <a href="https://github.com/jonbarron/">Github</a>
-                </p>
+
               </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/noahhung.JPG"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/noahhung.JPG" class="hoverZoomLink"></a>
+              <td style="padding:2.5%;width:30%;max-width:40%">
+                <a href="images/noahhung.JPG"><img style="width:80%;max-width:80%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/noahhung.JPG" class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+    <!-- News -->
+          <table id="news" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
+            <tbody>
+                <tr>
+                    <td style="padding:20px; width:100%; vertical-align:middle">
+                        <h2 class="heading-with-line">News</h2>
+                        <hr>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>    
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jul 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">Our work on <a href="#cikm_24">forecasting user intent</a> accepted at <a href="https://cikm2024.org/">CIKM '24</a>. Congrats to all collaborators!</td>
+              </tr>      
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jun 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">Started Applied Scientist internship with <a href="https://www.amazon.science/author/ed-vul">Ed Vul, PhD</a> at <a href="https://www.amazon.science/">Amazon Science</a>!</td>
+              </tr>
+            </tbody>        
+          </table>
+
+
+          <!-- Publication -->
+
+          <table id="publications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Publication</h2>
+                <h2 class="heading-with-line">Publication</h2>
                 <hr>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-  
+          
+    <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -60,7 +109,7 @@
           <source src="images/recon.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
-          <img src='images/smc.png' width="160">
+          <img src='images/smc.png' style="width:120%; height:80%;">
         </div>
         <script type="text/javascript">
           function recon_start() {
@@ -84,16 +133,17 @@
         <br>
         <em>JSHM</em>, 2024
         <br>
-        <a href="https://arxiv.org/abs/">arXiv</a>
+        <a href="https://arxiv.org/abs/">arXiv</a>/
         <p></p>
         <p>
-        Using a multi-image diffusion model as a regularizer lets you recover high-quality radiance fields from just a handful of images.
+        Using ...
         </p>
       </td>
     </tr>
           </tbody></table>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+        <!-- Experience -->
+          <table  id="experience" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td>
                 <h2>Experience</h2>
@@ -101,47 +151,154 @@
               </td>
             </tr>
           </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
+          <table style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
+              <td style="padding-left:20px;width:100%;vertical-align:middle;">
+                <table style="width: 100%; table-layout: fixed;"> 
+                  <tr>
+                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                      <span class="papertitle">Amazon</span>
+                      <br>
+                      Applied Scientist Intern with 
+                      <a href="https://www.amazon.science/author/ed-vul">Edward Vul, PhD</a>,
+                      <a href="https://www.amazon.science/author/ed-vul">Luigi Tedesco</a>,
+                      <a href="https://www.amazon.science/author/tianlang-chen">Tianlang Chen, PhD</a>
+                      <br>
+                      San Diego, CA &nbsp; · &nbsp; <em> Jun 2024 - <span style="color: red;">Present</span> </em>
+                      <br>
+                      <p>
+                        Developed an evaluation metric with the Search and Discovery team to evaluate LLM text generation based on input text ranking
+                      </p>
+                    </td>
+                    <td style="padding: 0px; height: 80px; width: 20%;">
+                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/amazon.jpeg">
+                    </td>
+                  </tr> 
+                </table>
               </td>
-              <td width="75%" valign="center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-                <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
+            </tr> 
+
+
+            <tr>
+              <td style="padding-left:20px;width:100%;vertical-align:middle;">
+                <table style="width: 100%; table-layout: fixed;"> 
+                  <tr>
+                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                      <span class="papertitle">PSDSARC Applied Reseach Center</span>
+                      <br>
+                      Signal Processing Engineer
+                      <br>
+                      Riyadh, Saudi Arabia &nbsp; · &nbsp; <em> Mar 2019 - Sep 2023 </em>
+                      <br>
+                      <p>
+                        Developed real-time signal processing on software-defined radio for communication and passive sensing systems <a href="#radarconf_20">[RadarConf '20]</a>.
+                      </p>
+                      
+                    </td>
+                    <td style="padding: 0px; height: 80px; width: 20%;">
+                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/psdsarc.png">
+                    </td>
+                  </tr> 
+                </table>
               </td>
-            </tr>
+            </tr>        
+
+            <tr>
+              <td style="padding-left:20px;width:100%;vertical-align:middle;">
+                <table style="width: 100%; table-layout: fixed;"> 
+                  <tr>
+                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                      <span class="papertitle">Purdue University</span>
+                      <br>
+                      Graduate Student Researcher with <a href="https://www.qiguo.org" target="_blank" rel="noopener noreferrer">Professor Qi Guo</a>
+                      <br>
+                      West Lafayette, IN &nbsp; · &nbsp; <em> May 2022 - May 2023 </em>
+                      <br>
+                      <p>
+                        Developed a framework to improve stereo image reconstruction <a href="#arxiv_22">[arXiv '22]</a>.
+                      </p>
+                    </td>
+                    <td style="padding: 0px; height: 80px; width: 20%;">
+                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/purdue.png">
+                    </td>
+                  </tr> 
+                </table>
+              </td>
+            </tr>    
           </tbody></table>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <table  id="education" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td>
                 <h2>Education</h2>
                 <hr>
               </td>
             </tr>
-          </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
-              </td>
-              <td width="75%" valign="center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-                <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-              </td>
-            </tr>
-          </tbody></table>
+          </tbody><tr>
+          <td style="padding-left:20px;width:100%;vertical-align:middle;">
+            <table style="width: 100%; table-layout: fixed;"> 
+              <tr>
+                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                  <span class="papertitle">University of California, San Diego</span>
+                  <br>
+                  PhD in Computer Science
+                  <br>
+                  La Jolla, CA &nbsp; · &nbsp; <em> 2023 - <span style="color: red;">Present</span></em>
+                  <br>
+                  Advisor: <a href="https://cseweb.ucsd.edu/~jmcauley/">Julian McAuley</a>
+                </td>
+                <td style="padding: 0px; height: 80px; width: 20%;">
+                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/ucsd.png">
+                </td>
+              </tr> </table>
+          </td>
+        </tr>        
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+
+        <tr>
+          <td style="padding-left:20px;width:100%;vertical-align:middle;">
+            <table style="width: 100%; table-layout: fixed;"> 
+              <tr>
+                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                  <span class="papertitle">Purdue University</span>
+                  <br>
+                  MS in Electrical and Computer Engineering
+                  <br>
+                  West Lafayette, IN &nbsp; · &nbsp; <em> 2021 - 2023</em>
+                </td>
+                <td style="padding: 0px; height: 80px; width: 20%;">
+                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/purdue.png">
+                </td>
+              </tr> </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding-left:20px;width:100%;vertical-align:middle;">
+            <table style="width: 100%; table-layout: fixed;"> 
+              <tr>
+                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
+                  <span class="papertitle">King Saud University</span>
+                  <br>
+                  BS in Electrical Engineering
+                  <br>
+                  Riyadh, Saudi Arabia &nbsp; · &nbsp; <em> 2013 - 2018</em>
+                  <!-- <br>
+                  Minor in communication systems with a focus on signal processing -->
+                </td>
+                <td style="padding: 0px; height: 80px; width: 20%;">
+                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/ksu.png">
+                </td>
+              </tr> 
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+          <table id="talkandposter" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td>
                 <h2>Talk and Poster</h2>
@@ -149,23 +306,24 @@
               </td>
             </tr>
           </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
-              </td>
-              <td width="75%" valign="center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-                <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-              </td>
-            </tr>
-          </tbody></table>
+          <table id="selected-awards" style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>          
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jan 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">Outstanding Master's Graduate, Excellence Award. <a href="https://www.hfs.org.sa">Huraymila Foundation for Sciences, Saudi Arabia</a></td>
+              </tr>
+
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>2023 - 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">CSE Departmental Fellowship Receipient. <a href="https://cse.ucsd.edu">University of California, San Diego, CA</a></td>
+              </tr>
+            </tbody>        
+          </table>   
+
+          <br>
+
+          <table  id="awards" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td>
                 <h2>Selected Awards</h2>
@@ -173,21 +331,20 @@
               </td>
             </tr>
           </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
-              </td>
-              <td width="75%" valign="center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-                <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-              </td>
-            </tr>
-          </tbody></table>
+          <table style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>          
+
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jan 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">Outstanding Master's Graduate, Excellence Award. <a href="https://www.hfs.org.sa">Huraymila Foundation for Sciences, Saudi Arabia</a></td>
+              </tr>
+
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>2023 - 2024:</b></td>
+                <td style="padding-left:10px;padding-right:20px">CSE Departmental Fellowship Receipient. <a href="https://cse.ucsd.edu">University of California, San Diego, CA</a></td>
+              </tr>
+            </tbody>        
+          </table>   
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -206,5 +363,6 @@
         </td>
       </tr>
     </table>
+  </div>
   </body>
 </html>
