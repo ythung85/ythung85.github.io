@@ -35,9 +35,6 @@
                   <a href="#education"><b>Education</b></a> &nbsp;/&nbsp;
                   <a href="#talkandposter"><b>Talk and Poster</b></a> &nbsp;/&nbsp;
                   <a href="#awards"><b>Selected Awards</b></a> &nbsp;/&nbsp;
-                  <!--<a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jonbarron/">Github</a>-->
                 </p>
                 </div>
   <div class = "main-content">
@@ -80,7 +77,12 @@
           </table>
 
           <table style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>  
+            <tbody> 
+              <tr>
+                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Sep 2025:</b></td>
+                <td style="padding-left:10px;padding-right:20px">The new paper <span class="highlight"><i>...</i></span> was submitted to the conference and it's on arXiv now!</td>
+              </tr>  
+
               <tr>
                 <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jan 2025:</b></td>
                 <td style="padding-left:10px;padding-right:20px">The paper <span class="highlight"><i>Deep P-Spline: Fast Tuning, Theory, and Application</i></span> was selected as a Winner for the SPES + Q&P Student Paper Competition. I will present our work to judges during the <a href="https://ww2.amstat.org/meetings/jsm/2025/">2025 Joint Statistical Meetings (JSM) </a> in Nashville, Tennessee!</td>
@@ -111,10 +113,49 @@
           
     <!-- pub -->
     <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <!--
     <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
+    -->
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/recon.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/SDAMI.png' style="width:120%; height:100%;">
+        </div>
+        <script type="text/javascript">
+          function recon_start() {
+            document.getElementById('recon_image').style.opacity = "1";
+          }
+
+          function recon_stop() {
+            document.getElementById('recon_image').style.opacity = "0";
+          }
+          recon_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        
+      <span class="papertitle">Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</span> 2025,<em> Submitted</em>
+        
+        <br>
+        <strong> Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun
+        <br>
+        <a href="https://arxiv.org/abs/2509.23068">[arXiv]</a>
+        <p>
+        Recent advances in deep learning highlight the need for personalized models that can learn from small or moderate samples, handle high-dimensional features, and remain interpretable. To address this challenge, we propose the Sparse Deep Additive Model with Interactions (SDAMI), a framework that combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional deep learning models, which often function as black boxes, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability.
+        </p>
+      </td>
+    </tr>
+          </tbody></table>
+    <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
+
     <!--
     <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0"> 
     -->
+
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
