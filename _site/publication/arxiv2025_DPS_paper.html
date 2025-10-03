@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Deep P-Spline: Theory, Fast Tuning, and Application  | Donghoon Shin</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+  <link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215543768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-215543768-1');
+</script>
+
+  <!-- favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/main/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/main/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/main/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/main/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/main/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/main/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/main/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/main/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/main/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/main/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/main/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/main/favicon/favicon-16x16.png">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/main/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/publication/arxiv2025_DPS_paper.jpg">
+  <meta property="og:title" content="Deep P-Spline: Theory, Fast Tuning, and Application  | Donghoon Shin">
+  <meta property="og:description" content="Paper overview of Hung et al., 2025">
+
+  <!-- Google scholar -->
+  
+  <meta name="citation_title" content="Deep P-Spline: Theory, Fast Tuning, and Application ">
+  
+  <meta name="citation_author" content="Hung, Noah">
+  
+  <meta name="citation_author" content="Lin, Li-Hsiang">
+  
+  <meta name="citation_author" content="Calhoun, Vince">
+  
+  <meta name="citation_publication_date" content="2025">
+  
+  <meta name="citation_conference_title" content="arXiv">
+  
+  <meta name="citation_pdf_url" content="https://donghoon.io/assets/pdf/arxiv2025_DPS_paper.pdf">
+  
+</head>
+<body><header class="page-content">
+  <nav class="navbar navbar-expand-md navbar-light py-4">
+    <div class="container-fluid">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto mt-4 mt-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link  active " aria-current="page" href="/publication">Publication</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/music">Music</a>
+          </li>
+        -->
+          <!--
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" target="_blank" rel="noopener noreferrer" href="https://donghoon.io/blog/">Blog<i class="fa-regular fa-arrow-up-right-from-square" style="padding-left: 5px;"></i></a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .dropdown-toggle {
+    background-color: transparent;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  .dropdown-toggle:hover {
+    font-weight: 500
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+ .dropdown-menu {
+    --bs-dropdown-border-radius: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important
+ }
+ .dropdown-item {
+  font-size: .95rem !important;
+  padding: .3rem .75rem !important;
+ }
+ .dropdown-item:active {
+  background-color: #999 !important
+ }
+</style><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="container py-4">
+  <div class="row pb-3">
+    <p class="publication-title">Deep P-Spline: Theory, Fast Tuning, and Application </p>
+    
+    <p><span style="font-weight: 400">arXiv.</span> (Major Revision)</p>
+    
+    
+  </div>
+  <div class="row mb-5">
+    <p style="font-size: .8rem; font-weight: 400; text-align: right;">(* co-first authorship)</p>
+    
+    
+    
+    <div class="col my-3">
+      <div class="row">
+        <div class="author-image" style="background-image: url(/assets/images/author/default.jpg)"></div>
+      </div>
+      <div class="row mt-2">
+        <p class="author-name">Noah Hung</p>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="col my-3">
+      <div class="row">
+        <div class="author-image" style="background-image: url(/assets/images/author/default.jpg)"></div>
+      </div>
+      <div class="row mt-2">
+        <p class="author-name">Li-Hsiang Lin</p>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="col my-3">
+      <div class="row">
+        <div class="author-image" style="background-image: url(/assets/images/author/default.jpg)"></div>
+      </div>
+      <div class="row mt-2">
+        <p class="author-name">Vince Calhoun</p>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="row mb-5">
+    <img class="publication-image" alt="Landscape" src="/assets/images/publication/arxiv2025_DPS_paper.jpg"/>
+  </div>
+  <div class="row mb-5">
+    <p class="section-title">Abstract</p>
+    <p>A personally tailored exercise regimen is crucial to ensuring sufficient physical activities, yet challenging to create as people have complex schedules and considerations and the creation of plans often requires iterations with experts. We present PlanFitting, a conversational AI that assists in personalized exercise planning. Leveraging generative capabilities of large language models, PlanFitting enables users to describe various constraints and queries in natural language, thereby facilitating the creation and refinement of their weekly exercise plan to suit their specific circumstances while staying grounded in foundational principles. Through a user study where participants (N=18) generated a personalized exercise plan using PlanFitting and expert planners (N=3) evaluated these plans, we identified the potential of PlanFitting in generating personalized, actionable, and evidence-based exercise plans. We discuss future design opportunities for AI assistants in creating plans that better comply with exercise principles and accommodate personal constraints.</p>
+  </div>
+  <div class="row">
+    <p class="section-title">Materials</p>
+    <p class="metadata">
+      <a style="padding-right: 4px" href="/assets/pdf/arxiv2025_DPS_paper.pdf" rel="external"><i class="fa-solid fa-file-pdf"></i> Preprint</a> 
+      
+      
+      
+      
+      
+    </p>
+  </div>
+</div>
+      </div>
+    </main><footer>
+  <hr style="margin-left: 15px; color: #000 !important; background-color: #000 !important; opacity: 1 !important; width: 40px; height: .5px !important; margin-bottom: 1rem !important;">
+  <div class="row m-0">
+    <div class="col-12 col-md-4 col-sm-3 mb-4 mb-sm-0">
+      <p class="footer-text"><a href="https://github.com/donghoon-io/donghoon-io.github.io" style="font-weight: 300">Noah's theme</a><br>Up-to-date as of <span id="date">loading...</span></p>
+      <p class="footer-text"><i class="fas fa-location-dot pr-3"></i> <span class="ms-1">Atlanta is </span><img style="width: auto; height: 23px;" id="weather_icon"><span id="weather">Loading...</span></p>
+    </div>
+    <div class="col-12 col-md-8 col-sm-9 mb-4 mb-sm-0">
+      <p>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en"><i class="fab fa-google-scholar" style="margin-right: 8px"></i>Google Scholar</a><br>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/yitinghung/"><i class="fab fa-linkedin" style="margin-right: 10.5px"></i>LinkedIn</a><br><!--
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/donghoon.io"><i class="fab fa-instagram" style="margin-right: 10.5px"></i>Instagram</a><br>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://twitter.com/donghoon_io"><i class="fab fa-x-twitter" style="margin-right: 7.5px"></i>X</a>-->
+      </p>
+    </div>
+    <p> Website template developed by <a href = "https://donghoon.io" >Donghoon </a>, thank you!</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+<script src="/assets/js/weather.js"></script>
+<script src="/assets/js/github_date.js"></script>
+</body>
+
+</html>

@@ -1,501 +1,186 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08EBF3M4K7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-08EBF3M4K7');
-  </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+---
+layout: default
+title: Noah Yi-Ting Hung
+description: HCI researcher | Ph.D. student at the University of Washington
+---
 
-    <title>Noah's Website</title>
+{% assign projects = site.data.project-main.project %}
+{% assign news = site.data.news.list %}
+{% assign musics = site.data.music.musics %}
 
-    <meta name="author" content="Jon Barron">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/ps.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<div class="container pt-3 pb-4">
+    <div class="container vertical-center">
+        <div class="row">
+            <div class="d-none d-md-block col-12 col-md-4 col-xxl-3 align-self-center text-center">
+                <img style = "width:100%; border-radius:78% 22% 78% 22% / 22% 78% 22% 78%" ; src="/assets/images/profile.png" class="w-100" style="max-width: 155px;"/>
+            </div>
+            <div class="col-12 col-md-8 col-xxl-9 ps-0 align-self-center">
+                <h4><img class="flag" src="{{ 'assets/images/misc/kitty.svg' | relative_url }}"/> Noah Yi-Ting Hung <img class="flag" src="{{ 'assets/images/misc/flag.svg' | relative_url }}"/></h4>
+                <p class="mt-3">I am PhD candidate in <a href="">Machine Learning and Data Science</a>, Department of Mathematics and Statistics at Georgia State University, under the guidance of Professor <a href="">Li-Hsiang Lin</a>. My research focuses on the intersection of machine learning, image science, and uncertainty control, with a particular interest in non-parametric modeling and portfolio optimization</p>
+                <p>I received my Master's in Joint Statistics and Computer Science at <a href="">Purdue University</a>, where I worked with Professor <a href="">Qi Guo</a> on a computer vision project. Prior to starting my PhD, I was a graduate research assistant under the supervision of Professor <a href="">Henry Horng-Shing Lu</a>, working on deep mixture density networks. I completed my undergraduate studies at <a href="">National Taiwan University</a>, working with <a href="">Ku-Wei Liao</a> on reliability research. </p>
+            
+            <p style="background-color: white; position:relative; font-size:.95rem;font-weight: 500;line-height: 2rem;" class="myemail">
     
-  </head>
-
-  <body>
-    <div class="fixed-top">
-                <p style="text-align:center">
-                  <!--<a href="mailto:yhung7@gsu.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;-->
-                  <a href="#info"><b>About me</b></a> &nbsp;/&nbsp;
-                  <a href="#news"><b>News</b></a> &nbsp;/&nbsp;
-                  <a href="#publications"><b>Publication</b></a> &nbsp;/&nbsp;
-                  <a href="#rexperience"><b>Research Experience</b></a> &nbsp;/&nbsp;
-                  <a href="#wexperience"><b>Working Experience</b></a> &nbsp;/&nbsp;
-                  <a href="#education"><b>Education</b></a> &nbsp;/&nbsp;
-                  <a href="#talkandposter"><b>Talk and Poster</b></a> &nbsp;/&nbsp;
-                  <a href="#awards"><b>Selected Awards</b></a> &nbsp;/&nbsp;
-                </p>
-                </div>
-  <div class = "main-content">
-    <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table id="info" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Noah Hung
-                </p>
-                <p>I am a second-year Machine Learning Ph.D. at Georgia State University Mathematics and Statistics, under the guidance of Professor <a href="https://sites.google.com/prod/view/li-hsianglin">Li-Hsiang Lin</a>. My research focuses on the intersection of <span class="highlight">machine learning, image science, bioinformatics, and uncertainty control</span>, with a particular interest in health information technology and model simplification.
-                </p>
-                <p>
-                  I earned my Master's in Joint Statistics and Computer Science from <a href="https://www.stat.purdue.edu/">Purdue University</a>, where I worked with Professor Qi Guo on a computer vision project. Prior to starting my PhD, I was a graduate research assistant under the supervision of Professor <a href="https://misg.stat.nycu.edu.tw/">Henry Horng-Shing Lu</a>, working on deep mixture density networks. I completed my undergraduate studies at <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>, working with <a href="https://kliao.weebly.com/">Ku-Wei Liao </a> on reliability research.
-                </p>
-                <p>
-                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=uhPzWCEAAAAJ"> [Google Scholar]</a>
-                </p>
-              
-
-              </td>
-              <td style="padding:2.5%;width:50%;max-width:80%">
-                <a href="images/profile.png"><img style="width:80%;max-width:80%;object-fit: cover; border-radius: 40%;" alt="profile photo" src="images/profile.png" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-
-    <!-- News -->
-          <table id="news" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
-            <tbody>
-                <tr>
-                    <td style="padding:20px; width:100%; vertical-align:middle">
-                        <h2 class="heading-with-line">News</h2>
-                        <hr>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
-
-          <table style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody> 
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Sep 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">The new paper <span class="highlight"><i>...</i></span> was submitted to the conference and it's on arXiv now!</td>
-              </tr>  
-
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jan 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">The paper <span class="highlight"><i>Deep P-Spline: Fast Tuning, Theory, and Application</i></span> was selected as a Winner for the SPES + Q&P Student Paper Competition. I will present our work to judges during the <a href="https://ww2.amstat.org/meetings/jsm/2025/">2025 Joint Statistical Meetings (JSM) </a> in Nashville, Tennessee!</td>
-              </tr>      
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jul 2024:</b></td>
-                <td style="padding-left:10px;padding-right:20px">Started my PhD journey in Department of Mathematics and Statistics at Georgia State University</td>
-              </tr>      
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>May 2020:</b></td>
-                <td style="padding-left:10px;padding-right:20px">Graduated from Department of Bio-environmental Systems Engineering with honor!</td>
-              </tr>
-            </tbody>        
-          </table>
-
-
-          <!-- Publication -->
-
-          <table id="publications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2 class="heading-with-line">Publication</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody></table>
-          
-    <!-- pub -->
-    <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <!--
-    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
-    -->
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/recon.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/SDAMI.png' style="width:120%; height:100%;">
+            <a href="mailto:yhung7@gsu.edu" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope" style="font-weight: 500;margin-left:12.5px;padding-right:10px;margin-right:2px" aria-hidden="true"></i></a><span style="padding-left:10px; padding-right:10px">yhung7@gsu.edu</span><span class="small-screen-br"></span><a style="font-weight: 500;margin-left:0.5px;padding-right:10px;margin-right:10px" href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa fa-graduation-cap" style="margin-left: 10px;margin-right: 9px;font-size: 16.5px;"></i>g-scholar</a>
+            <!--<a style="font-weight: 500;margin-left:12.5px;padding-right:10px;margin-right:10px" href="https://drive.google.com/file/d/1UKFflnVb_Tys2lncaU56uxMfYAgL-0Dv/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa fa-file" style="margin-left: 10px;margin-right: 10px;font-size: 15.5px;"></i><span style="font-size:.98rem">cv</span> <span style="font-size:.8rem">(08/2024)</span></a>-->
+            </p>
+            </div>
         </div>
-        <script type="text/javascript">
-          function recon_start() {
-            document.getElementById('recon_image').style.opacity = "1";
-          }
 
-          function recon_stop() {
-            document.getElementById('recon_image').style.opacity = "0";
-          }
-          recon_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        
-      <span class="papertitle">Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</span> 2025,<em> Submitted</em>
-        
-        <br>
-        <strong> Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun
-        <br>
-        <a href="https://arxiv.org/abs/2509.23068">[arXiv]</a>
-        <p>
-        Recent advances in deep learning highlight the need for personalized models that can learn from small or moderate samples, handle high-dimensional features, and remain interpretable. To address this challenge, we propose the Sparse Deep Additive Model with Interactions (SDAMI), a framework that combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional deep learning models, which often function as black boxes, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability.
+    </div>
+</div>
+
+
+<div class="container pb-3 px-0 px-md-3" id="research" style="padding-top: 2rem;">
+    <h4 style="font-weight: 600 !important; padding-bottom: .5rem;">✎<span style="font-size: 0.6rem">ᝰ.</span> Publication</h4>
+ <p style="font-size:.85rem"> 
+        <!-- Research Statement -->
+          I am eager to learn and join exciting AI and uncertainty qualification projects. Please do not hesitate to <a href="mailto:yhung7@gsu.edu" target="_blank" rel="noopener noreferrer">reach out for collaboration!!</a>
         </p>
-      </td>
-    </tr>
-          </tbody></table>
-    <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
-
-    <!--
-    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0"> 
-    -->
-
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/recon.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/DPS.png' style="width:120%; height:100%;">
-        </div>
-        <script type="text/javascript">
-          function recon_start() {
-            document.getElementById('recon_image').style.opacity = "1";
-          }
-
-          function recon_stop() {
-            document.getElementById('recon_image').style.opacity = "0";
-          }
-          recon_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
+    <div class="row mt-4">
         
-      <span class="papertitle">Deep P-Spline: Fast tuning, Theory, and Applications,</span> 2024
-        
-        <br>
-        <strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun
-        <br>
-        <em>Under Revision at Journal of American Statistical Association (JASA).</em> <a href="https://arxiv.org/abs/2501.01376">[arXiv]</a>
-        <p>
-        We introduce a difference penalty that automates knot selection, thereby simplifying the complexities of neuron selection. We name this method Deep P-Spline (DPS). This approach extends the class of models considered in conventional DNN modeling and forms the basis for a latent variable modeling framework using the Expectation-Conditional Maximization (ECM) algorithm for efficient network structure tuning with theoretical guarantees.
-        </p>
-      </td>
-    </tr>
-          </tbody></table>
-    <br>
-
-    <!-- pub -->
-    <table style="width:95%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <!--
-    <tr onmouseout="recon_stop()" onmouseover="recon_stopt()" bgcolor="#ffffd0">
-    -->
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/recon.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/smc.png' style="width:120%; height:100%;">
-        </div>
-        <script type="text/javascript">
-          function recon_start() {
-            document.getElementById('recon_image').style.opacity = "1";
-          }
-
-          function recon_stop() {
-            document.getElementById('recon_image').style.opacity = "0";
-          }
-          recon_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        
-      <span class="papertitle">Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States,</span> 2024,<em> JSHM.</em>
-        
-        <br>
-        Jonh Thedy, Kuo-Wei Liao,<strong> Noah Yi-Ting Hung</strong>
-        <br>
-        <a href="https://journals.sagepub.com/doi/10.1177/14759217241277969">[Paper Link]</a>
-        <p>
-        Adopting the Semi-Markov Process, which accommodates non-exponential distribution of state durations, to formulate optimal maintenance strategies for Tainter gate systems that are noted for their prolonged dormancy and significant operational uncertainties.
-        </p>
-      </td>
-    </tr>
-          </tbody></table>
-
-        <!-- Experience -->
-          <table  id="rexperience" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td>
-                <h2>Research Experience</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
 
 
-            <tr>
-              <td style="padding-left:20px;width:100%;vertical-align:middle;">
-                <table style="width: 100%; table-layout: fixed;"> 
-                  <tr>
-                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                      <span class="papertitle">National Yang Ming Chiao Tung University</span>
-                      <br>
-                      Summer Research Assistant with 
-                      Professor <a href="https://misg.stat.nycu.edu.tw/">Henry Horng-Shing Lu</a>
-                      <br>
-                      Hsinchu, TW &nbsp; · &nbsp; <em> May 2024 - Aug 2024 </em>
-                      <br>
-                      <ul>
-                        <li>
-                        Integrated Pre-trained Models with Mixture Density Networks for task of medical image classification.
-                        </li>
-                      </ul>
-                    </td>
-                    <td style="padding: 0px; height: 80px; width: 20%;">
-                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/nycu.png">
-                    </td>
-                  </tr> 
-                </table>
-              </td>
-            </tr> 
-
-            <tr>
-              <td style="padding-left:20px;width:100%;vertical-align:middle;">
-                <table style="width: 100%; table-layout: fixed;"> 
-                  <tr>
-                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                      <span class="papertitle">Purdue University</span>
-                      <br>
-                      Graduate Student Researcher with <a href="https://www.qiguo.org" target="_blank" rel="noopener noreferrer">Professor Qi Guo</a>
-                      <br>
-                      West Lafayette, IN &nbsp; · &nbsp; <em> May 2022 - May 2023 </em>
-                      <br>
-                      <ul>
-                        <li>
-                          Executed CNN model on depth sensing with confidence map under adverse weather.
-                        </li>
-                        <li>
-                          Utilized GANs to optimize performance of Deep CNN on re-corrupted image denoising.
-                        </li>
-                      </ul>
-                    </td>
-                    <td style="padding: 0px; height: 80px; width: 20%;">
-                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/purdue.png">
-                    </td>
-                  </tr> 
-                </table>
-              </td>
-            </tr>    
-          </tbody></table>
-
-          <table  id="wexperience" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td>
-                <h2>Wokring Experience</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
-            <tr>
-              <td style="padding-left:20px;width:100%;vertical-align:middle;">
-                <table style="width: 100%; table-layout: fixed;"> 
-                  <tr>
-                    <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                      <span class="papertitle">AI Camp Inc.</span>
-                      <br>
-                      Data Scientist Intern
-                      <br>
-                      Palo Alto, CA &nbsp; · &nbsp; <em> May 2022 - Aug 2022 </em>
-                      <br>
-                      <ul>
-                        <li>Conducted A/B testing analysis on user interaction data, built predictive models for sales forecasting resulting in 25% improvement in conversion rates.</li>
-                        <li>Engineered a full-stack web application using Flask, HTML/CSS for model deployment, handling 100+ daily user requests for real-time image processing.</li>
-                        <li>Developed and implemented a deep learning model using VGG-19 architecture for Neural Style Transfer (NST)</li>
-                      </ul> 
-                    </td>
-                    <td style="padding: 0px; height: 80px; width: 20%;">
-                      <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/aicamp.png">
-                    </td>
-                  </tr> 
-                </table>
-              </td>
-            </tr>           
-          </tbody></table>
-
-          <table  id="education" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td>
-                <h2>Education</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody><tr>
-          <td style="padding-left:20px;width:100%;vertical-align:middle;">
-            <table style="width: 100%; table-layout: fixed;"> 
-              <tr>
-                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                  <span class="papertitle">Georgia State University</span>
-                  <br>
-                  PhD in Mathematics and Statistics
-                  <br>
-                  Atlanta, GA &nbsp; · &nbsp; <em> 2024 - <span style="color: red;">Present</span></em>
-                  <br>
-                  Advisor: <a href="https://ai.google/research">Li-Hsiang Lin</a>
-                </td>
-                <td style="padding: 0px; height: 80px; width: 20%;">
-                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/gsu.jpg">
-                </td>
-              </tr> </table>
-          </td>
-        </tr>        
+    <!-- SDAMI -->
+    <div class="col-12 col-md-2  align-self-center mb-4 mb-md-0">
+      <img src="assets/images/SDAMI.png" width="100%" style="vertical-align: middle;" alt="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model." title="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model."><br><br>
+    </div>
+<div class="col-12 col-md-10 align-self-center mb-4 mb-md-0">
+  <p class="mb-1" style="font-size: 1rem; font-weight: 500 !important;"><img src="assets/images/spline.png" width="3.0%" style="min-width:30px; vertical-align: bottom;margin-top:-5%"> &nbsp;Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun; <i>(Submitted.)</i></p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;"><span style="font-weight: 400;font-size:.8rem;background-color:rgba(255, 105, 24, 0.251); ">&nbsp;arXiv 2025&nbsp;</span>  Recent advances in deep learning highlight the need for personalized models that can learn from small or moderate samples, handle high-dimensional features, and remain interpretable. To address this challenge, we propose the Sparse Deep Additive Model with Interactions (SDAMI), a framework that combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional deep learning models, which often function as black boxes, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability. </p>
+  <p style="font-size: .9rem; font-weight: 300 !important;" class="nonselectable">
+    <a href="https://arxiv.org/pdf/2501.01376" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;<i class="fa fa-file">
+    </i>&nbsp;&nbsp;PDF&nbsp;&nbsp;</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href="https://arxiv.org/abs/2509.23068" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;<img src="assets/images/logo/arxiv-logo.svg" style="height: 1rem; filter: brightness(0%);">&nbsp;&nbsp;arXiv&nbsp;&nbsp;</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:b_GfGgaFiG8J:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3uSCo:AFWwaeYAAAAAZ4HoUCrnQQCSvrSnmtugQtPxYM4&scisig=AFWwaeYAAAAAZ4HoUNCqQetwvyjBSBb-HE2byf4&scisf=4&ct=citation&cd=-1&hl=en
+" target="_blank" rel="noopener noreferrer" class="hyperlinkn">&nbsp;&nbsp;<i class="fa fa-quote-right"></i>&nbsp;&nbsp;BibTeX&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+  </p><hr></div>
 
 
-        <tr>
-          <td style="padding-left:20px;width:100%;vertical-align:middle;">
-            <table style="width: 100%; table-layout: fixed;"> 
-              <tr>
-                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                  <span class="papertitle">Purdue University</span>
-                  <br>
-                  MS in Joint Computer Science and Statistics
-                  <br>
-                  West Lafayette, IN &nbsp; · &nbsp; <em> 2021 - 2023</em>
-                </td>
-                <td style="padding: 0px; height: 80px; width: 20%;">
-                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/purdue.png">
-                </td>
-              </tr> </table>
-          </td>
-        </tr>
+      <!-- Deep P-Spline -->
+    <div class="col-12 col-md-2  align-self-center mb-4 mb-md-0">
+      <img src="assets/images/DPS.png" width="100%" style="vertical-align: middle;" alt="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model." title="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model."><br><br>
+    </div>
+<div class="col-12 col-md-10 align-self-center mb-4 mb-md-0">
+  <p class="mb-1" style="font-size: 1rem; font-weight: 500 !important;"><img src="assets/images/spline.png" width="3.0%" style="min-width:30px; vertical-align: bottom;margin-top:-5%"> &nbsp;Deep P-Spline: Theory, Fast Tuning, and Application</p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun; <i>(Under Revison.)</i></p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;"><span style="font-weight: 400;font-size:.8rem;background-color:rgba(255, 105, 24, 0.251); ">&nbsp;arXiv 2025&nbsp;</span>  We introduce a difference penalty that automates knot selection, thereby simplifying the complexities of neuron selection. We name this method Deep P-Spline (DPS). This approach extends the class of models considered in conventional DNN modeling and forms the basis for a latent variable modeling framework using the Expectation-Conditional Maximization (ECM) algorithm for efficient network structure tuning with theoretical guarantees. </p>
+  <p style="font-size: .9rem; font-weight: 300 !important;" class="nonselectable">
+    <a href="https://arxiv.org/pdf/2501.01376" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;<i class="fa fa-file">
+    </i>&nbsp;&nbsp;PDF&nbsp;&nbsp;</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href="https://arxiv.org/abs/2501.01376" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;<img src="assets/images/logo/arxiv-logo.svg" style="height: 1rem; filter: brightness(0%);">&nbsp;&nbsp;arXiv&nbsp;&nbsp;</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:b_GfGgaFiG8J:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3uSCo:AFWwaeYAAAAAZ4HoUCrnQQCSvrSnmtugQtPxYM4&scisig=AFWwaeYAAAAAZ4HoUNCqQetwvyjBSBb-HE2byf4&scisf=4&ct=citation&cd=-1&hl=en
+" target="_blank" rel="noopener noreferrer" class="hyperlinkn">&nbsp;&nbsp;<i class="fa fa-quote-right"></i>&nbsp;&nbsp;BibTeX&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+  </p><hr></div>
 
-        <tr>
-          <td style="padding-left:20px;width:100%;vertical-align:middle;">
-            <table style="width: 100%; table-layout: fixed;"> 
-              <tr>
-                <td style="width: 80%;padding-bottom: 8px; padding-top: 8px;">
-                  <span class="papertitle">National Taiwan University</span>
-                  <br>
-                  BS in Bio-environmental Systems Engineering
-                  <br>
-                  Taipei, Taiwan &nbsp; · &nbsp; <em> 2016 - 2020</em>
-                  <!-- <br>
-                  Minor in communication systems with a focus on signal processing -->
-                </td>
-                <td style="padding: 0px; height: 80px; width: 20%;">
-                  <img style="vertical-align: middle; height: 80%; margin-left: auto; margin-right: auto; display: block;" src="images/ntu.jpg">
-                </td>
-              </tr> 
-            </table>
-          </td>
-        </tr>
-      </table>
 
+
+<!-- Semi Markov -->
+    <div class="col-12 col-md-2  align-self-center mb-4 mb-md-0">
+      <img src="assets/images/smc.png" width="100%" style="vertical-align: middle;" alt="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model." title="An overview of Generative Disco, a generative AI system that facilitates text-to-video generation for music visualization using a large language model and a text-to-image model."><br><br>
+    </div>
+<div class="col-12 col-md-10 align-self-center mb-4 mb-md-0">
+  <p class="mb-1" style="font-size: 1rem; font-weight: 500 !important;"><img src="assets/images/bridge.jpg" width="3.0%" style="min-width:30px; vertical-align: bottom;margin-top:-5%"> &nbsp;Semi-Markov process-driven maintenance scheduling for Tainter gate system considering multiplelimit states</p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;">John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong>; <i>(Accepted.)</i></p>
+  <p class="mb-1" style="font-size: .9rem; font-weight: 200 !important;"><span style="font-weight: 400;font-size:.8rem;background-color:rgba(255, 105, 24, 0.251);">&nbsp;JSHM 2024&nbsp;</span>  Adopting the Semi-Markov Process, which accommodates non-exponential distribution of state durations, to formulate optimal maintenance strategies for Tainter gate systems that are noted for their prolonged dormancy and significant operational uncertainties.</p>
+  <p style="font-size: .9rem; font-weight: 300 !important;" class="nonselectable">
+    <a href="https://journals.sagepub.com/doi/10.1177/14759217241277969" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;<i class="fa fa-file">
+    </i>&nbsp;&nbsp;PDF&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:nK1RNG6n0kIJ:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3g8DE:AFWwaeYAAAAAZ4Hm6DEkVJJVDmEJeay2SPKe6Oc&scisig=AFWwaeYAAAAAZ4Hm6BrEaWSuALKRMhOodRJM-BI&scisf=4&ct=citation&cd=-1&hl=en" target="_blank" rel="noopener noreferrer" class="hyperlinkn">&nbsp;&nbsp;<i class="fa fa-quote-right"></i>&nbsp;&nbsp;BibTeX&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+  </p><hr></div>
+
+
+</div>
+</div>
+
+<div class="container">
+    <h4 style="font-weight: 600 !important; padding-bottom: .5rem;">✎<span style="font-size: 0.6rem">ᝰ.</span> Recent projects</h4>
+    <!--<p style="font-weight: 500 !important; text-transform: uppercase;">Recent projects</p>-->
+	<div class="scroller">
+		<div class="scroller-inner">
+            {% for project in projects %}
+			<div class="paper-container non-select">
+                <img src="{{ '/assets/images/main-project/' | append: project.image | relative_url }}" alt="" style="height: auto; width: 100%;">
+                <p class="pt-2 mt-md-2" style="font-size: .85rem; font-weight: 300 !important; line-height: 1rem; text-align: center;">{{ project.title }}{% if project.venue %}<a class="project-venue" href="{{ project.slug | prepend: 'publication/' | relative_url }}">{{ project.venue }}</a>{% endif %}</p>
+			</div>
+            {% endfor %}
+		</div>
+	</div>
+    <div class="d-flex flex-row-reverse mt-4">
+        <a href="{{ 'project' | relative_url }}" class="view-all">> View All</a>
+    </div>
+</div>
+
+<div class="container pb-3 px-0 px-md-3" id="news" style="padding-top: 3rem;">
+  <h4 style="font-weight: 600 !important; padding-bottom: .5rem;">✎<span style="font-size: 0.6rem">ᝰ.</span> News</h4><br>
+    <div class="col-12">
+        <span class="mb-1" style="font-size: .8rem; font-weight: 200 !important; display:inline-block"> Aug 2025 </span><br>
+      <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block;"> Presented our work, "<span style="font-weight: 400;font-size:.8rem;background-color:rgba(55, 155, 24, 0.251); ">&nbsp;<i>Deep P-Spline: Fast Tuning, Theory, and Application</i>&nbsp;</span>" during the 2025 CAPASUS Conference in Atlanta, Georgia! </p>
       <br>
-          <table id="talkandposter" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td>
-                <h2>Talk and Poster</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody></table>
-          <table id="selected-awards" style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>          
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Aug 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">
-
-              Joint Statistical Meetings (JSM) "Deep P-Spline: Fast Tuning, Theory, and Application"
-            </td>
-              </tr>
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>May 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">
-
-              Institute for Mathematical and Statistical Innovation (IMSI) workshop `Kernel Methods in Uncertainty Quantification and Experimental Design`  
-              <br>
-              "Deep P-Spline: Fast Tuning, Theory, and Application"
-            </td>
-              </tr>
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Jan 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">
-
-              University of Florida Department of Statistics `Annual Winter Workshop` (<a href = "https://stat.ufl.edu/winter-workshop/2025-computational-methods-in-bayesian-statistics/">WW 2025</a>) 
-              <br>
-              "A Novel Framework for Efficient Select Network Structure of Deep P-Spline"
-            </td>
-              </tr>
-
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>May 2023:</b></td>
-                <td style="padding-left:10px;padding-right:20px">
-
-              Midwest Machine Learning Symposium (<a href = "https://midwest-ml.org/2023/">MMLS 2023</a>) 
-              <br>
-              (<a href="https://drive.google.com/file/d/1J8dkuN5OqKFzABENfcgiFVAKopRR70zB/view">Poster</a>) "Stability-driven binary matrix factorization for mixed infections of malaria"
-            </td>
-              </tr>
-            </tbody>        
-          </table>   
-
-          <br>
-
-          <table  id="awards" style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td>
-                <h2>Selected Awards</h2>
-                <hr>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%; overflow:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody> 
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Feb 2025:</b></td>
-                <td style="padding-left:10px;padding-right:20px">Best Student Paper in SPES + Q&P Paper Competition, <a href="https://community.amstat.org/spes/outreach/studentpapercompetition">JSM 2025</a></td>
-              </tr>         
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>May 2020:</b></td>
-                <td style="padding-left:10px;padding-right:20px">Tomotake Takasaka Scholarship, <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a></td>
-              </tr>
-
-              <tr>
-                <td style="text-align:right;padding-left:10px;width:15%;vertical-align:top;"><b>Apr 2020:</b></td>
-                <td style="padding-left:10px;padding-right:20px">4th National Taiwan University Best Undergraduate Thesis Award, <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a></td>
-              </tr>
-            </tbody>        
-          </table>   
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          
-
-          
-          
-        </td>
-      </tr>
-    </table>
+      <span class="mb-1" style="font-size: .8rem; font-weight: 200 !important; display:inline-block"> Feb 2025 </span>
+      <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block;"> The paper <span style="font-weight: 400;font-size:.8rem;background-color:rgba(55, 155, 24, 0.251); ">&nbsp;<i>Deep P-Spline: Fast Tuning, Theory, and Application</i>&nbsp;</span> was selected as a winner for SPES + Q&P Student Paper Competition. I will present our work during the 2025 Joint Statistical Meetings (JSM) in Nashville, Tennessee! </p>
+      <br>
+      <span class="mb-1" style="font-size: .8rem; font-weight: 200 !important; display:inline-block"> Jan 2025 </span>
+      <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block;"> Headed for University of Florida Department of Statistics’ Annual Winter Workshop (WW 2025) </p>
   </div>
-  </body>
-</html>
+
+    </div>
+    <details style="display: inline-block; font-size: 16px">
+      <summary style="padding-left:5px; margin-top:5px; margin-bottom:-10px; font-size: 16px"><span style="font-size: 14px"> See More</span></summary>
+      <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block">
+
+
+
+      </p><div class="col-12">
+        <span class="mb-1" style="font-size: .8rem; font-weight: 200 !important; display:inline-block"> Jan 2025 </span>
+        <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block;"> Headed for University of Florida Department of Statistics’ Annual Winter Workshop (WW 2025) </p></div>
+      
+        <div class="col-12">
+        <span class="mb-1" style="font-size: .8rem; font-weight: 200 !important; display:inline-block"> May 2023 </span>
+        <p class="mb-0" style="font-size: 0.9rem; font-weight: 400 !important; display:inline-block;"> Attended to Chicaog for Midwest Machine Learning Symposium (MMLS 2023) for poster.</p></div>
+      
+</details>
+
+<!--
+<div class="container">
+    <p style="font-weight: 500 !important; text-transform: uppercase;">News</p>
+    <div class="row mt-4">
+        {% for new in news limit: 4 %}
+        <div class="col-12 col-sm-6">
+            <p class="mb-0" style="font-weight: 400 !important;">{{ new.title }}</p>
+            <p class="mb-1" style="font-size: .8rem; font-weight: 200 !important;">{{ new.date | date: "%b %-d, %Y" }}</p>
+            <p style="font-weight: 300 !important;">{{ new.description }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="d-flex flex-row-reverse mt-4">
+        <a href="{{ 'news' | relative_url }}" class="view-all">> View All</a>
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex flex-row-reverse mt-4">
+        <p class="misc-news"><i class="fa-solid fa-music" style="margin-right: .5rem;"></i>Check out my GarageBand cover of <a href="{{ '/music/' | relative_url }}"><span style="white-space: nowrap;">Girls' Generation</span> - <span style="white-space: nowrap;">Into the New World</span></a></p>
+    </div>
+</div>
+-->
+<script>
+	function addAnimation(scrollers) {
+		scrollers.forEach((scroller) => {
+			scroller.setAttribute("data-animated", true);
+
+			const scrollerInner = scroller.querySelector(".scroller-inner");
+			const scrollerContent = Array.from(scrollerInner.children);
+            
+			scrollerContent.forEach((item) => {
+				const duplicatedItem = item.cloneNode(true);
+				duplicatedItem.setAttribute("aria-hidden", true);
+				scrollerInner.appendChild(duplicatedItem);
+			});
+		});
+	}
+	const scrollers = document.querySelectorAll(".scroller");
+	addAnimation(scrollers);
+</script>

@@ -1,0 +1,282 @@
+---
+layout: default
+baseurl: /cv
+title: CV
+description: Curriculum vitae of Donghoon Shin
+---
+
+{% assign publications = site.publication | group_by: 'year' | sort: 'name' | reverse %}
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <main>
+                <header>
+                  <!--
+                  <h1>Noah Yi-Ting Hung<a class="pdf" href="{{ '/assets/pdf/cv.pdf' | relative_url }}" rel="external"><i class="fas fa-file-pdf"></i> <b>PDF</b></a></h1>
+                  <p><a href="#" class="cryptedmail"
+                    data-name="yhung7"
+                    data-domain="gsu"
+                    data-tld="edu"
+                    onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a></p>
+                </header>-->
+                <section id="education">
+                  <h2>Education</h2>
+                  <div class="dated-entry">
+                      <div class="dated-date">2024 -</div>
+                      <div class="dated-content"><b><a href="https://uw.edu">Georgia State University</a></b>, Altanta, GA<br>
+                      Ph.D., <a href="https://hcde.uw.edu">Mathematics and Statistics (Concentration in Machine Learning and Data Science</a><br>
+                      <small>Advisor: <a href="https://faculty.washington.edu/garyhs/">Li-Hsiang Lin</a></a></small><br>
+                      </div>
+                  </div>
+                  <div class="dated-entry">
+                      <div class="dated-date">2024 -</div>
+                      <div class="dated-content"><b><a href="https://uw.edu">Purdue University</a></b>, West Lafayette, IN<br>
+                      M.S., <a class="pe-1" href="https://hcde.uw.edu">Joint Statistics and Computer Science</a>
+                      </div>
+                  </div>
+                  <div class="dated-entry">
+                      <div class="dated-date">2016 - 2022</div>
+                      <div class="dated-content"><b><a href="https://snu.ac.kr/">National Taiwan University</a></b>, Taipei, Taiwan<br>
+                      B.S., <a href="https://ee.snu.ac.kr/">Bio-environmental Systems Engineering</a><br>
+                      <small>Graduated Rank: <i>4/ 54</i></small><br>
+                      </div>
+                  </div>
+                </section>
+                <section id="employment">
+                  <h2>Employment</h2>
+                  <div class="dated-entry">
+                    <div class="dated-date">Summer 2022</div>
+                    <div class="dated-content">
+                      <b><a href="https://research.adobe.com/">AI Camp Inc</a></b>, San Francisco, CA<br>
+                      Machine Learning Research<br>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="dated-entry">
+                    <div class="dated-date">Summer 2024</div>
+                    <div class="dated-content">
+                      <b><a href="https://research.adobe.com/">Adobe Research</a></b>, San Jose, CA<br>
+                      Research Scientist Intern<br>
+                      <small>Mentor: <a href="https://gromitchan.com/">Gromit Yeuk-Yin Chan</a></small>
+                    </div>
+                  </div>
+                  <div class="dated-entry">
+                    <div class="dated-date">Summer 2023</div>
+                    <div class="dated-content">
+                      <b><a href="https://clova.ai/en/research/research-areas.html">Naver AI Lab</a></b>, Seongnam, Korea<br>
+                      Research Intern<br>
+                      <small>Mentor: <a href="http://younghokim.net/">Young-Ho Kim</a></small>
+                    </div>
+                  </div>
+                  <div class="dated-entry">
+                    <div class="dated-date">2020 - 2021</div>
+                    <div class="dated-content">
+                      <b><a href="https://elecle.bike/">Elecle</a></b>, Seoul, Korea</a><br>
+                      iOS developer<br>
+                    </div>
+                  </div>
+                -->
+                </section>
+                <section id="publications">
+                  <h2>Publications</h2>
+                  {% for pubs in publications %}
+                    {% assign pub_items_sorted = pubs.items | sort: "month" | reverse %}
+                    {% for pub in pub_items_sorted %}
+                    <div class="dated-entry">
+                      <div class="dated-date">{% if forloop.first %}{{ pubs.name }}{% endif %}</div>
+                      <div class="dated-content"><a style="font-weight: 400" href="{{ '/publication/' | append: pub.slug | relative_url }}">{{ pub.title }}</a><br>
+                        {% for author in pub.authors %}
+                        {% assign author_data = site.data.people.people | where:"name", author | first %}
+                        {% if author == "Donghoon Shin" %}<a style="font-weight: 400 !important" href="https://donghoon.io">Donghoon Shin</a>{% if pub.coauthors contains author %}*{% endif %}{% else %}{% if pub.coauthors contains author %}{% if author_data.website %}<a href="{{ author_data.website }}" class="coauthor" style="font-weight: 400 !important">{{ author }}</a>*{% else %}<span class="coauthor" style="font-weight: 400 !important">{{ author }}</span>*{% endif %}{% else %}{% if author_data.website %}<a href="{{ author_data.website }}" class="coauthor">{{ author }}</a>{% else %}<span class="coauthor">{{ author }}</span>{% endif %}{% endif %}{% endif %}{% unless forloop.last%}, {% endunless %}
+                        {% endfor %}{% if pub.coauthors %}<span style="font-size: .8rem; font-weight: 300" class="ms-2">(* co-first authorship)</span>{% endif %}
+                        <br>
+                        {{ pub.venue }}.{% if pub.note %} <span style="font-weight: 200 !important">({{ pub.note}})</span>{% endif %}<br>
+                        {% if pub.award %}<i class="fas fa-medal"></i><span style="font-weight: 400">{{ pub.award }}</span><br>{% endif %}
+                      </div>
+                    </div>
+                    {% endfor %}
+                  {% endfor %}
+                </section>
+                <!--
+                <section id="patents">
+                  <h2>Patent</h2>
+                  <div class="dated-entry">
+                    <div class="dated-date">2021</div>
+                    <div class="dated-content">
+                      <b>Method and Apparatus for Mimicking Conversational Style</b><br>
+                      <span class="coauthor">Youjin Hwang</span>, <span class="coauthor">Joonhwan Lee</span>, Donghoon Shin<br>
+                      Republic of Korea Patent <span class="ms-1" style="font-weight: 200 !important">(10-2021-0032858)</span>
+                    </div>
+                  </div>
+                </section>
+              -->
+                <section id="awards">
+                  <h2>Honors and Awards</h2>
+                  <div class="dated-entry">
+                    <div class="dated-date">2023</div>
+                    <div class="dated-content">
+                      <b>Graduate School Conference Presentation Award</b>, University of Washington<br>
+                      Conference presentation award for presenting a paper at CHI
+                    </div>
+                  </div>
+                  <div class="dated-entry">
+                    <div class="dated-date">2022</div>
+                    <div class="dated-content">
+                      <b>Government Scholarship for Overseas Study</b>, Republic of Korea<br>
+                      Merit-based scholarship for graduate studies funded by the Korean government (~ 50 recipients selected annually)
+                    </div>
+                  </div>
+
+                </section>
+                <section id="teaching">
+                  <h2>Teaching Experience</h2>
+                  <div class="dated-entry">
+                    <div class="dated-date">2023 -</div>
+                    <div class="dated-content"><b>Graduate Teaching Assistant</b>, University of Washington<br>
+                      Information Visualization (HCDE 511)<br>
+                      Designing for Behavior Change (HCDE 538)</div>
+                  </div>
+                  <div class="dated-entry">
+                    <div class="dated-date">2021</div>
+                    <div class="dated-content"><b>Undergraduate Teaching Assistant</b>, Seoul National University<br>
+                      Basic Computing (L0444.000400)</div>
+                  </div>
+                </section>
+                <section id="research">
+                  <h2>Research Experience</h2>
+                  <div class="dated-entry">
+                    <div class="dated-date">2020 - 2022</div>
+                    <div class="dated-content">
+                      <b><a href="https://thecoalalab.com/">Research Lab</a></b>, <a href="https://cmu.edu/">Georgia State University</a><br>
+                      Research intern<br>
+                      <small>Mentor: <a href="https://kenholstein.com/">Li-Hsiang Lin</a></small>
+                    </div>
+                  </div>
+                  <div class="dated-entry">
+                    <div class="dated-date">2019 - 2020</div>
+                    <div class="dated-content">
+                      <b><a href="https://hcid.snu.ac.kr/">K-Lab</a></b>, <a href="https://snu.ac.kr/">National Taiwan University</a><br>
+                      Research intern<br>
+                      <small>Mentor: <a href="https://hcid.snu.ac.kr/people/joonhwan">Kuo-Wei Liao</a></small>
+                    </div>
+                  </div>
+                </section>
+                <section id="service">
+                  <h2>Services</h2>
+                  <h3>Program Committee</h3>
+                  <div class="oneline-entries">
+                    <div class="dated-entry">
+                      <div class="dated-date">2025</div>
+                      <div class="dated-content">ACM IUI</div>
+                    </div>
+                    <div class="dated-entry">
+                      <div class="dated-date">2024</div>
+                      <div class="dated-content">ACM CHI</div>
+                    </div>
+                  </div>
+                  <h3>Reviewer</h3>
+                  <div class="oneline-entries">
+                    <div class="dated-entry">
+                      <div class="dated-date">2020 -</div>
+                      <div class="dated-content">ACM CHI</div>
+                    </div>
+                    <div class="dated-entry">
+                      <div class="dated-date">2024</div>
+                      <div class="dated-content">ACM CSCW</div>
+                    </div>
+                    <div class="dated-entry">
+                      <div class="dated-date">2023</div>
+                      <div class="dated-content">ACM DIS</div>
+                    </div>
+                    <div class="dated-entry">
+                      <div class="dated-date">2021</div>
+                      <div class="dated-content">ACM MobileHCI</div>
+                    </div>
+                    <div class="dated-entry">
+                      <div class="dated-date">2021</div>
+                      <div class="dated-content">Journal of Medical Internet Research</div>
+                    </div>
+                  </div>
+                  <h3>Admission Committee</h3>
+                  <div class="oneline-entries">
+                    <div class="dated-entry">
+                      <div class="dated-date">2023</div>
+                      <div class="dated-content">Student reviewer for UW HCDE Ph.D. admission</div>
+                    </div>
+                  </div>
+                  <h3>Student Volunteer</h3>
+                  <div class="oneline-entries">
+                    <div class="dated-entry">
+                      <div class="dated-date">2020</div>
+                      <div class="dated-content">ACM ISS</div>
+                    </div>
+                  </div>
+                </section>
+              </main>
+        </div>
+    </div>
+</div>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+<style>
+    /* reset base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+    /* page header */
+    header { margin-bottom: 2rem; padding-left: 6.5rem; }
+    header h1 { font-size: 1.5rem; }
+    header p { margin: .5rem 0; font-size: 1rem !important}
+
+    main b {font-weight: 500}
+  
+    /* normal body content */
+    h2 { font-size: 1.1rem; margin-bottom: 0.75rem; margin-left: 6.5rem; text-transform: uppercase; }
+    h3 { border-bottom: 1px solid black; font-size: .9rem; margin: 1rem 0 .5rem 6.5rem }
+    p { margin-bottom: 0.5rem; }
+    a { color: inherit; /*#0000ee;*/ }
+    section { margin-bottom: 3rem; }
+  
+    /* misc */
+    .pdf { font-size: .9rem !important; font-weight: 300; margin-left: 1.5rem; white-space: nowrap;}
+    .pdf i { margin-right: .1rem;}
+    
+    .material { font-size: small; margin-left: .5rem;}
+    :global(i) {
+      padding-right: 4px !important
+    }
+  
+    /* dated entries */
+    .dated-entry { display: flex; flex-flow: row wrap; position: relative; margin-bottom: 1rem; }
+    .dated-date { width: 6.5rem; text-align: right; padding-top: .15rem; padding-right: 1.5rem; font-size: .8rem }
+    .dated-content { width: calc(100% - 6.5rem); font-size: .95rem}
+  
+    .oneline-entries { margin-bottom: 0.5rem; }
+    .oneline-entries .dated-entry { margin-bottom: 0; }
+  
+    /* hide extra awards info for now, not sure what to include */
+    #awards em { display: none; }
+    
+    .author-tooltip {
+      font-weight: 400;
+      font-size: .8rem !important;
+      text-align: center;
+    }
+  
+    /* on narrow displays, make the font smaller */
+    @media (max-width: 480px) {
+      html { font-size: 14px; }
+    }
+  
+    /* when printing, make the font smaller and the page full-width */
+    @media print {
+      html { font-size: 12px; }
+      main { margin-top: 0; max-width: 100%; }
+    }
+    </style>

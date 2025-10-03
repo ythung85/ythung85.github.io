@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Music | Donghoon Shin</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+  <link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215543768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-215543768-1');
+</script>
+
+  <!-- favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/main/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/main/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/main/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/main/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/main/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/main/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/main/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/main/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/main/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/main/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/main/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/main/favicon/favicon-16x16.png">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/main/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/main/opengraph.jpg">
+  <meta property="og:title" content="Music | Donghoon Shin">
+  <meta property="og:description" content="Some musics of Donghoon Shin">
+
+  <!-- Google scholar -->
+  
+</head>
+<body><header class="page-content">
+  <nav class="navbar navbar-expand-md navbar-light py-4">
+    <div class="container-fluid">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto mt-4 mt-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/publication">Publication</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " aria-current="page" href="/music">Music</a>
+          </li>
+        -->
+          <!--
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" target="_blank" rel="noopener noreferrer" href="https://donghoon.io/blog/">Blog<i class="fa-regular fa-arrow-up-right-from-square" style="padding-left: 5px;"></i></a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .dropdown-toggle {
+    background-color: transparent;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  .dropdown-toggle:hover {
+    font-weight: 500
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+ .dropdown-menu {
+    --bs-dropdown-border-radius: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important
+ }
+ .dropdown-item {
+  font-size: .95rem !important;
+  padding: .3rem .75rem !important;
+ }
+ .dropdown-item:active {
+  background-color: #999 !important
+ }
+</style><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="container py-4">
+    <p style="font-weight: 500 !important; text-transform: uppercase;">Music</p>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Girls' Generation - Into the New World</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/P0fQP633sTc&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/P0fQP633sTc?autoplay=1><img src=https://img.youtube.com/vi/P0fQP633sTc/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/into-the-new-world/854926859?i=854927955"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>LE SSERAFIM - UNFORGIVEN</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/ol-dlmoGhQA&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ol-dlmoGhQA?autoplay=1><img src=https://img.youtube.com/vi/ol-dlmoGhQA/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/unforgiven/1682502020?i=1682502472"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Adele - When We Were Young</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/lsrhRUQbcLM&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/lsrhRUQbcLM?autoplay=1><img src=https://img.youtube.com/vi/lsrhRUQbcLM/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/when-we-were-young/1544494115?i=1544494407"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Keyboard)</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Adele - Someone Like You</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/ibrTB0mA8hc&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ibrTB0mA8hc?autoplay=1><img src=https://img.youtube.com/vi/ibrTB0mA8hc/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/someone-like-you/1544491232?i=1544491998"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Keyboard)</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Taylor Swift - Cruel Summer</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/pL0nv2AGeUc&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/pL0nv2AGeUc?autoplay=1><img src=https://img.youtube.com/vi/pL0nv2AGeUc/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/cruel-summer/1468058165?i=1468058171"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>IVE - LOVE DIVE</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/rPoPYQ5qEAU&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/rPoPYQ5qEAU?autoplay=1><img src=https://img.youtube.com/vi/rPoPYQ5qEAU/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/1616804151?i=1616804152"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>aespa - Illusion</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/QAvw-Q6cq9s&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/QAvw-Q6cq9s?autoplay=1><img src=https://img.youtube.com/vi/QAvw-Q6cq9s/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/illusion/1626752981?i=1626752986"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Maktub - To You My Light</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/TC-cafoDrn8&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/TC-cafoDrn8?autoplay=1><img src=https://img.youtube.com/vi/TC-cafoDrn8/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/to-you-my-light-feat-lee-raon/1467378200?i=1467378201"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Rosé - On The Ground</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/uckY63zDUBk&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/uckY63zDUBk?autoplay=1><img src=https://img.youtube.com/vi/uckY63zDUBk/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/on-the-ground/1557744841?i=1557745420"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Kim feel - Someday, The Boy</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/pSwQiAzK1-E&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/pSwQiAzK1-E?autoplay=1><img src=https://img.youtube.com/vi/pSwQiAzK1-E/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%EA%B7%B8%EB%95%8C-%EA%B7%B8-%EC%95%84%EC%9D%B8/1686851932?i=1686851933"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Ariana Grande & <span style='white-space:nowrap'>Justin Bieber</span> - Stuck With U</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/SIqHO6Wp4i8&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/SIqHO6Wp4i8?autoplay=1><img src=https://img.youtube.com/vi/SIqHO6Wp4i8/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/stuck-with-u/1511562938?i=1511562950"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Bon Jovi - Bed of Roses</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/4IMOlkGx4vo&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/4IMOlkGx4vo?autoplay=1><img src=https://img.youtube.com/vi/4IMOlkGx4vo/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/bed-of-roses/1440826842?i=1440826868"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Rosé - On The Ground</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/TE5guujngCA&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/TE5guujngCA?autoplay=1><img src=https://img.youtube.com/vi/TE5guujngCA/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/on-the-ground/1557744841?i=1557745420"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Taylor Swift - Cruel Summer</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/w0AOmseKpAU&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/w0AOmseKpAU?autoplay=1><img src=https://img.youtube.com/vi/w0AOmseKpAU/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/cruel-summer/1468058165?i=1468058171"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>IU - Celebrity</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/WZbIrvzpoXI&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/WZbIrvzpoXI?autoplay=1><img src=https://img.youtube.com/vi/WZbIrvzpoXI/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/celebrity/1550907177?i=1550907178"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>IZ*ONE - Violeta</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/jhrj195Ahcw&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jhrj195Ahcw?autoplay=1><img src=https://img.youtube.com/vi/jhrj195Ahcw/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/violeta/1569293222?i=1569293224"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Ellie Goulding - Love Me Like You Do</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/edzT2jVAGig&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/edzT2jVAGig?autoplay=1><img src=https://img.youtube.com/vi/edzT2jVAGig/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/love-me-like-you-do/1440845197?i=1440845808"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Ellie Goulding - Love Me Like You Do</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/K1zSgJTnfYY&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/K1zSgJTnfYY?autoplay=1><img src=https://img.youtube.com/vi/K1zSgJTnfYY/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/love-me-like-you-do/1440845197?i=1440845808"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>GFriend - Me Gustas Tu</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/Tl9EFafG40w&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Tl9EFafG40w?autoplay=1><img src=https://img.youtube.com/vi/Tl9EFafG40w/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/me-gustas-tu/1754044863?i=1754044871"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>GFriend - Me Gustas Tu</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/a5EjdVQt3Kg&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/a5EjdVQt3Kg?autoplay=1><img src=https://img.youtube.com/vi/a5EjdVQt3Kg/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/me-gustas-tu/1754044863?i=1754044871"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Taylor Swift - Style</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/VSgoMEGp55o&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/VSgoMEGp55o?autoplay=1><img src=https://img.youtube.com/vi/VSgoMEGp55o/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/style/1440935467?i=1440935812"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>(G)I-DLE - Señorita</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/ValKpeRchFo&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ValKpeRchFo?autoplay=1><img src=https://img.youtube.com/vi/ValKpeRchFo/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/se%C3%B1orita/1454363872?i=1454363873"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>GFriend - Rough</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/U4Hu8g3LxoQ&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/U4Hu8g3LxoQ?autoplay=1><img src=https://img.youtube.com/vi/U4Hu8g3LxoQ/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/rough/1754048179?i=1754048194"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>GFriend - Rough</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/jYONyo1PPU0&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jYONyo1PPU0?autoplay=1><img src=https://img.youtube.com/vi/jYONyo1PPU0/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/rough/1754048179?i=1754048194"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Adele - Make You Feel My Love</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/CV3CgVXjSnU&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/CV3CgVXjSnU?autoplay=1><img src=https://img.youtube.com/vi/CV3CgVXjSnU/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/make-you-feel-my-love/1545382283?i=1545382976"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Yves (LOONA) - New</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/aVaXe810xLQ&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/aVaXe810xLQ?autoplay=1><img src=https://img.youtube.com/vi/aVaXe810xLQ/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/new/1317708847?i=1317708941"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>(G)I-DLE - LION</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/NXF1S9DAkVk&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/NXF1S9DAkVk?autoplay=1><img src=https://img.youtube.com/vi/NXF1S9DAkVk/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/lion/1504618353?i=1504618600"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Billie Eilish - Wish You Were Gay</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/J4FBj071HZs&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/J4FBj071HZs?autoplay=1><img src=https://img.youtube.com/vi/J4FBj071HZs/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/wish-you-were-gay/1450695723?i=1450695871"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Ulala Session - Western Sky</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/pPp1nfJMa0g&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/pPp1nfJMa0g?autoplay=1><img src=https://img.youtube.com/vi/pPp1nfJMa0g/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%EC%84%9C%EC%AA%BD-%ED%95%98%EB%8A%98/1688123514?i=1688123535"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Adele - When We Were Young</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/ESZBkmPgcvo&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ESZBkmPgcvo?autoplay=1><img src=https://img.youtube.com/vi/ESZBkmPgcvo/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/when-we-were-young/1544494115?i=1544494407"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>NAUL - One's Way Back</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/Cz3IctD6rig&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Cz3IctD6rig?autoplay=1><img src=https://img.youtube.com/vi/Cz3IctD6rig/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%EA%B7%80%EB%A1%9C/1673931678?i=1673931985"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>TWICE - Cheer Up</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/1CfaRMrpYHE&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/1CfaRMrpYHE?autoplay=1><img src=https://img.youtube.com/vi/1CfaRMrpYHE/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/cheer-up/1555389971?i=1555389973"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>BLACKPINK - How You Like That</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/lgww4uXx5WQ&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/lgww4uXx5WQ?autoplay=1><img src=https://img.youtube.com/vi/lgww4uXx5WQ/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/how-you-like-that/1520233748?i=1520233767"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Taeyang - Eyes, Nose, Lips</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/TgK95chxQuc&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/TgK95chxQuc?autoplay=1><img src=https://img.youtube.com/vi/TgK95chxQuc/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/eyes-nose-lips/1317322300?i=1317322831"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Piano cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Sam Smith - I’m Not The Only One</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/X8bV_tSvJak&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/X8bV_tSvJak?autoplay=1><img src=https://img.youtube.com/vi/X8bV_tSvJak/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/im-not-the-only-one/1536993568?i=1536993857"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Sam Smith - Stay With Me</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/IONQVm5q5BU&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/IONQVm5q5BU?autoplay=1><img src=https://img.youtube.com/vi/IONQVm5q5BU/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/stay-with-me/1536993568?i=1536993755"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Punch - When Night Is Falling</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/BRgLHwsFovI&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/BRgLHwsFovI?autoplay=1><img src=https://img.youtube.com/vi/BRgLHwsFovI/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/when-night-is-falling/1624445935?i=1624445942"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Keyboard)</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Roy Kim - The Moon of Seoul</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/AGfyG7E44D8&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/AGfyG7E44D8?autoplay=1><img src=https://img.youtube.com/vi/AGfyG7E44D8/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/the-moon-of-seoul/1655096851?i=1655096860"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Vocal), I have no idea why I wore this weird costume then...</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Jang Beom June - Karaoke</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/cmVwSbQt1xw&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/cmVwSbQt1xw?autoplay=1><img src=https://img.youtube.com/vi/cmVwSbQt1xw/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/karaoke/1457171018?i=1457171018"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; GarageBand cover</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Jaurim - Twentyfive Twentyone</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/Q0tDczd_sUE&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Q0tDczd_sUE?autoplay=1><img src=https://img.youtube.com/vi/Q0tDczd_sUE/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%EC%8A%A4%EB%AC%BC%EB%8B%A4%EC%84%AF-%EC%8A%A4%EB%AC%BC%ED%95%98%EB%82%98/1404760680?i=1404760688"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Keyboard)</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <p>Delispice - Confession</p>
+        </div>
+        <div class="col-12 col-md-8 mb-3 mb-md-0 align-self-center">
+            <div class="h_iframe">
+                <p align="center">
+                    <iframe loading="auto" src="https://www.youtube.com/embed/ynrTJeQW0Uo&autoplay=1" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ynrTJeQW0Uo?autoplay=1><img src=https://img.youtube.com/vi/ynrTJeQW0Uo/hqdefault.jpg alt='Donghoon's video'><span>▶</span></a>"
+                        ></iframe>
+                </p>
+            </div>
+            <iframe loading="auto" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%EA%B3%A0%EB%B0%B1/1449535556?i=1449535562"></iframe>
+            <p class="section-body pub-detail pt-2"><i class="fa-solid fa-music"></i>&nbsp;&nbsp; Band cover (Vocal)</p>
+        </div>
+    </div>
+    
+</div>
+
+      </div>
+    </main><footer>
+  <hr style="margin-left: 15px; color: #000 !important; background-color: #000 !important; opacity: 1 !important; width: 40px; height: .5px !important; margin-bottom: 1rem !important;">
+  <div class="row m-0">
+    <div class="col-12 col-md-4 col-sm-3 mb-4 mb-sm-0">
+      <p class="footer-text"><a href="https://github.com/donghoon-io/donghoon-io.github.io" style="font-weight: 300">Noah's theme</a><br>Up-to-date as of <span id="date">loading...</span></p>
+      <p class="footer-text"><i class="fas fa-location-dot pr-3"></i> <span class="ms-1">Atlanta is </span><img style="width: auto; height: 23px;" id="weather_icon"><span id="weather">Loading...</span></p>
+    </div>
+    <div class="col-12 col-md-8 col-sm-9 mb-4 mb-sm-0">
+      <p>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en"><i class="fab fa-google-scholar" style="margin-right: 8px"></i>Google Scholar</a><br>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/yitinghung/"><i class="fab fa-linkedin" style="margin-right: 10.5px"></i>LinkedIn</a><br><!--
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/donghoon.io"><i class="fab fa-instagram" style="margin-right: 10.5px"></i>Instagram</a><br>
+        <a class="footer-text" target="_blank" rel="noopener noreferrer" href="https://twitter.com/donghoon_io"><i class="fab fa-x-twitter" style="margin-right: 7.5px"></i>X</a>-->
+      </p>
+    </div>
+    <p> Website template developed by <a href = "https://donghoon.io" >Donghoon </a>, thank you!</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+<script src="/assets/js/weather.js"></script>
+<script src="/assets/js/github_date.js"></script>
+</body>
+
+</html>

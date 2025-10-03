@@ -1,0 +1,9 @@
+project:
+  - title: "Semi-Markov process-driven maintenance scheduling for Tainter gate system considering multiplelimit states"
+    image: "smc.png"
+    venue: JSHM '24
+    slug: chi2024_paper2card_paper
+  - title: "Deep P-Spline: Theory, Fast Tuning, and Application"
+    image: "DPS.png"
+    venue: arXiv
+    slug: Semi-markov-process

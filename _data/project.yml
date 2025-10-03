@@ -1,0 +1,50 @@
+project:
+  
+  - title: Semi-Markov process-driven maintenance scheduling for Tainter gate system considering multiplelimit states
+    image: smc.png
+    #link: 'https://paper2card.com'
+    paper: Semi-markov-process.pdf
+    detail: >
+      <p>Advised by <a href='https://www.llwang.net/'>John Thedy</a> and <a href='https://faculty.washington.edu/garyhs/'>Kuo-Wei Liao</a>, I ...</p>
+
+      <img src="assets/images/smc.png" class='img-responsive' alt='keyscreen of our system'>
+
+      <p style='text-align: center;'><b>...</b></p>
+
+      <hr>
+
+      <p><b>[My role in this project]</b><br>Methodology and programming.</p>
+    tags:
+      - Research
+      - <i class='fas fa-book'></i>&nbsp; JSHM '24
+      - Semi-Markov Process
+      - Optimization
+    description: >-
+      Scheduling gate maintenance based on Semi-Markov process.
+    id: Semi-markov-process
+
+  - title: Deep P-Spline Theory, Fast Tuning, and Application
+    image: DPS.png
+    #link: 'https://paper2card.com'
+    paper: Deep-P-Spline.pdf
+    detail: >
+      <p>Advised by <a href='https://www.llwang.net/'>Li-Hsiang Lin</a> and <a href='https://faculty.washington.edu/garyhs/'>Vince Calhoun</a>, I ...</p>
+
+      <img src="assets/images/DPS.png" class='img-responsive' alt='keyscreen of our system'>
+
+      <p style='text-align: center;'><b>...</b></p>
+
+      <hr>
+
+      <p><b>[My role in this project]</b><br>Methodology, Theory and programming.</p>
+    tags:
+      - Research
+      - <i class='fas fa-book'></i>&nbsp; arXiv
+      - Non-parametric Regression
+      - Uncertainty Quantification
+      - Image Analysis
+    description: >-
+      Integrating spline expansion with deep neuron networks (DNNs).
+    id: Deep-P-Spline
+
+  
