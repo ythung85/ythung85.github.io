@@ -47,4 +47,30 @@ project:
       Integrating spline expansion with deep neuron networks (DNNs).
     id: Deep-P-Spline
 
+- title: Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability.
+    image: SDAMI.png
+    #link: 'https://paper2card.com'
+    paper: Deep-P-Spline.pdf
+    detail: >
+      <p>Advised by <a href='https://www.llwang.net/'>Li-Hsiang Lin</a> and <a href='https://faculty.washington.edu/garyhs/'>Vince Calhoun</a>, I ...</p>
+
+      <img src="assets/images/DPS.png" class='img-responsive' alt='keyscreen of our system'>
+
+      <p style='text-align: center;'><b>...</b></p>
+
+      <hr>
+
+      <p><b>[My role in this project]</b><br>Methodology, Theory and programming.</p>
+    tags:
+      - Research
+      - <i class='fas fa-book'></i>&nbsp; arXiv
+      - Non-parametric Regression
+      - Uncertainty Quantification
+      - Image Analysis
+    description: >-
+      Integrating spline expansion with deep neuron networks (DNNs).
+    id: Deep-P-Spline
+
+
+
   
