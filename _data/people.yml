@@ -1,4 +1,8 @@
 people:
+  - name: Noah Yi-Ting Hung
+    affiliation: Georgia State University
+    website: "/"
+    image: noahhung.JPG
   - name: Donghoon Shin
     affiliation: University of Washington
     website: "https://donghoon.io"

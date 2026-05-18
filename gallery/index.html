@@ -1,0 +1,243 @@
+---
+layout: home
+title: Gallery
+description: Photography and travel by Noah Yi-Ting Hung
+page_title: Gallery
+permalink: /gallery
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- ══ Photo Grid ══════════════════════════════════════════════ -->
+<section style="margin-bottom:2.4rem;">
+  <div class="section-heading">📸 Photos</div>
+  <p style="font-size:.83rem;color:var(--faint);margin-bottom:.9rem;">
+    Click any photo to expand. Click a location label to animate the route from home.
+  </p>
+
+  <div class="gallery-grid" id="gallery-grid">
+    {% assign photos = site.data.gallery.photos %}
+    {% for photo in photos limit:9 %}
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox({{ forloop.index0 }})">
+        <img
+          src="{{ '/assets/images/' | append: photo.src | relative_url }}"
+          alt="{{ photo.title }}"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>{{ photo.title }}</span></div>
+      </div>
+      <div class="gallery-caption">
+        {% if photo.transport %}
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('{{ photo.location }}', '{{ photo.transport }}', this)">
+          {{ photo.location }}
+        </button>
+        <span class="gallery-transport-badge" id="tb-{{ forloop.index0 }}">
+          {% if photo.transport == 'plane' %}✈{% elsif photo.transport == 'car' %}🚗{% elsif photo.transport == 'train' %}🚆{% endif %}
+        </span>
+        {% else %}
+        <span class="gallery-loc-static">{{ photo.location }}</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ══ Travel Map ═══════════════════════════════════════════════ -->
+<section>
+  <div class="section-heading">🗺️ Travel</div>
+  <p style="font-size:.83rem;color:var(--faint);margin-bottom:.75rem;">
+    Click a marker or photo location label to animate the route.
+  </p>
+  <div id="travel-map"></div>
+</section>
+
+<!-- ══ Lightbox ═════════════════════════════════════════════════ -->
+<div class="lb-overlay" id="lb-overlay" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">×</button>
+  <button class="lb-arrow lb-prev" onclick="event.stopPropagation();shiftLightbox(-1)">&#8249;</button>
+  <div class="lb-content" onclick="event.stopPropagation()">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-info">
+      <span id="lb-title" class="lb-title"></span>
+      <span id="lb-loc"   class="lb-loc"></span>
+      <span id="lb-date"  class="lb-date"></span>
+    </div>
+  </div>
+  <button class="lb-arrow lb-next" onclick="event.stopPropagation();shiftLightbox(1)">&#8250;</button>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* ── Data from Jekyll ── */
+const PHOTOS = [
+  {% for p in site.data.gallery.photos %}
+  { src:"{{ '/assets/images/' | append: p.src | relative_url }}", title:"{{ p.title }}", location:"{{ p.location }}", date:"{{ p.date }}", transport:"{{ p.transport }}" }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+const LOCATIONS = [
+  {% for loc in site.data.gallery.locations %}
+  { name:"{{ loc.name }}", lat:{{ loc.lat }}, lng:{{ loc.lng }}, home:{{ loc.home | default: false }}, transport:"{{ loc.transport }}", desc:"{{ loc.desc }}" }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+const HOME = LOCATIONS.find(l => l.home) || { lat: 33.749, lng: -84.388 };
+
+/* ── Lightbox ── */
+let currentIdx = 0;
+function openLightbox(idx) {
+  currentIdx = idx;
+  const p = PHOTOS[idx];
+  document.getElementById('lb-img').src  = p.src;
+  document.getElementById('lb-title').textContent = p.title;
+  document.getElementById('lb-loc').textContent   = p.location;
+  document.getElementById('lb-date').textContent  = p.date;
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function shiftLightbox(dir) { openLightbox((currentIdx + dir + PHOTOS.length) % PHOTOS.length); }
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb-overlay').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') shiftLightbox(1);
+  if (e.key === 'ArrowLeft')  shiftLightbox(-1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+/* ── Caption click → map ── */
+function activateLocation(locName, transport, btn) {
+  document.querySelectorAll('.gallery-loc-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const badge = btn.parentElement.querySelector('.gallery-transport-badge');
+  if (badge) { badge.classList.add('flash'); setTimeout(() => badge.classList.remove('flash'), 700); }
+  const loc = LOCATIONS.find(l => l.name === locName);
+  if (loc && !loc.home) flyTo(loc);
+}
+
+/* ── Map ── */
+const map = L.map('travel-map', { center:[28,-10], zoom:2, scrollWheelZoom:false, attributionControl:false });
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom:19 }).addTo(map);
+L.control.attribution({ prefix:false })
+  .addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>')
+  .addTo(map);
+
+const homeIcon  = L.divIcon({ className:'', html:'<div class="map-marker map-home"></div>',  iconSize:[14,14], iconAnchor:[7,7] });
+const placeIcon = L.divIcon({ className:'', html:'<div class="map-marker map-place"></div>', iconSize:[10,10], iconAnchor:[5,5] });
+
+let activeLine    = null;
+let vehicleMarker = null;
+let animTimer     = null;
+
+/* Quadratic bezier */
+function bz(t, a, c, b) { return (1-t)*(1-t)*a + 2*(1-t)*t*c + t*t*b; }
+
+function calcArc(home, dest, isPlane, steps) {
+  const dy   = dest.lat - home.lat, dx = dest.lng - home.lng;
+  const dist = Math.sqrt(dx*dx + dy*dy);
+  /* tall arc for plane, barely curved for car */
+  const lift = isPlane ? Math.max(dist * 0.33, 6) : Math.max(dist * 0.05, 1.5);
+  const cLat = (home.lat + dest.lat) / 2 + lift;
+  const cLng = (home.lng + dest.lng) / 2;
+  const pts  = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    pts.push([ bz(t, home.lat, cLat, dest.lat), bz(t, home.lng, cLng, dest.lng) ]);
+  }
+  return pts;
+}
+
+function flyTo(dest) {
+  /* Clean up */
+  if (activeLine)    { map.removeLayer(activeLine);    activeLine    = null; }
+  if (vehicleMarker) { map.removeLayer(vehicleMarker); vehicleMarker = null; }
+  if (animTimer)     { cancelAnimationFrame(animTimer); animTimer    = null; }
+
+  const isPlane = dest.transport !== 'car';
+  const arcPts  = calcArc(HOME, dest, isPlane, 100);
+
+  /* Draw full arc as a styled polyline (no progressive drawing — keeps it stable) */
+  activeLine = L.polyline(arcPts, {
+    color:     isPlane ? '#9B8264' : '#5A9BDC',
+    weight:    isPlane ? 2.2 : 2,
+    dashArray: isPlane ? '1, 0' : '9, 6',
+    opacity:   0.65,
+    lineCap:  'round',
+    lineJoin: 'round'
+  }).addTo(map);
+
+  /* Vehicle marker — icon is a simple div that we rotate via its child span */
+  const emoji   = isPlane ? '✈' : '🚗';
+  const iconHtml = `<span class="v-emoji" style="transform-origin:center center;">${emoji}</span>`;
+  vehicleMarker = L.marker(arcPts[0], {
+    icon: L.divIcon({
+      className:  'v-icon-wrap',
+      html:        iconHtml,
+      iconSize:   [36, 36],
+      iconAnchor: [18, 18]
+    }),
+    zIndexOffset: 1000
+  }).addTo(map);
+
+  /* Time-based smooth animation with ease-in-out */
+  const DURATION = 2800;
+  let startTime  = null;
+
+  function tick(now) {
+    if (!startTime) startTime = now;
+    const raw = Math.min((now - startTime) / DURATION, 1);
+
+    /* Cubic ease-in-out */
+    const t = raw < 0.5 ? 4 * raw * raw * raw : 1 - Math.pow(-2 * raw + 2, 3) / 2;
+
+    /* Interpolate position on arc */
+    const total  = arcPts.length - 1;
+    const fi     = t * total;
+    const i0     = Math.min(Math.floor(fi), total - 1);
+    const i1     = Math.min(i0 + 1, total);
+    const frac   = fi - i0;
+    const lat    = arcPts[i0][0] + frac * (arcPts[i1][0] - arcPts[i0][0]);
+    const lng    = arcPts[i0][1] + frac * (arcPts[i1][1] - arcPts[i0][1]);
+
+    vehicleMarker.setLatLng([lat, lng]);
+
+    /* Rotate the emoji span toward heading (not the Leaflet container) */
+    if (isPlane) {
+      const ahead = arcPts[Math.min(i0 + 3, total)];
+      const cur   = arcPts[i0];
+      /* atan2 for 2D lat/lng — approximate, good enough for display */
+      const angle = Math.atan2(ahead[1] - cur[1], ahead[0] - cur[0]) * 180 / Math.PI;
+      /* getElement() returns the Leaflet wrapper div; find our span inside it */
+      const wrapper = vehicleMarker.getElement();
+      if (wrapper) {
+        const span = wrapper.querySelector('.v-emoji');
+        if (span) span.style.transform = `rotate(${angle}deg)`;
+      }
+    }
+
+    if (raw < 1) {
+      animTimer = requestAnimationFrame(tick);
+    }
+  }
+
+  /* One rAF delay so Leaflet has time to insert the marker's DOM element */
+  requestAnimationFrame(() => requestAnimationFrame(tick));
+
+  map.flyTo([dest.lat, dest.lng], Math.min(map.getZoom() + 1, 5), { duration: 1.3 });
+}
+
+/* Add map markers */
+LOCATIONS.forEach(loc => {
+  const icon = loc.home ? homeIcon : placeIcon;
+  const m    = L.marker([loc.lat, loc.lng], { icon }).addTo(map);
+  const tip  = `<strong>${loc.name}</strong>${loc.desc ? `<br><span style="font-size:.74rem;font-weight:300;">${loc.desc}</span>` : ''}`;
+  m.bindTooltip(tip, { direction:'top', offset:[0,-8], opacity:.97 });
+  if (!loc.home) {
+    m.on('click', () => flyTo(loc));
+    m.on('add',   () => { const el = m.getElement(); if (el) el.style.cursor = 'pointer'; });
+  }
+});
+</script>

@@ -2,79 +2,76 @@
 layout: default
 ---
 
-<div class="container py-4">
-  <div class="row pb-3">
-    <p class="publication-title">{{ page.title }}</p>
+<section class="container py-4">
+  <div class="page-hero">
+    <span class="section-kicker">{{ page.venue }}</span>
+    <h1>{{ page.title }}</h1>
     {% if page.note %}
-    <p><span style="font-weight: 400">{{ page.venue }}.</span> ({{ page.note }})</p>
+    <p>{{ page.note }}</p>
     {% else %}
-    <p style="font-weight: 400">Published in {{ page.venue }}.</p>
+    <p>Published in {{ page.venue }}.</p>
     {% endif %}
     {% if page.award %}
-    <p style="font-weight: 400"><i class="fa-solid fa-medal" style="margin-right: 6px"></i>{{ page.award }}</p>
+    <p class="entry-meta"><i class="fa-solid fa-medal"></i>{{ page.award }}</p>
     {% endif %}
   </div>
-  <div class="row mb-5">
-    {% if page.coauthors %}<p style="font-size: .8rem; font-weight: 400; text-align: right;">(* co-first authorship)</p>{% endif %}
-    {% for author in page.authors %}
-    {% assign author_data = site.data.people.people | where:"name", author | first %}
-    {% if author_data %}
-    <div class="col my-3">
-      <div class="row">
-        {% if author_data.website %}
-        {% if author_data.image %}
-        <a href="{{ author_data.website }}"><div class="author-image" style="{{ author_data.image | prepend: '/assets/images/author/' | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div></a>
-        {% else %}
-        <a href="{{ author_data.website }}"><div class="author-image" style="{{ '/assets/images/author/default.jpg' | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div></a>
-        {% endif %}
-        {% else %}
-        {% if author_data.image %}
-        <div class="author-image" style="{{ author_data.image | prepend: '/assets/images/author/' | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div>
-        {% else %}
-        <div class="author-image" style="{{ '/assets/images/author/default.jpg' | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div>
-        {% endif %}
-        {% endif %}
+
+  <section class="section-card publication-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-4">
+        <img class="publication-thumb publication-detail-image" alt="{{ page.title }}" src="{{ page.slug | prepend: '/assets/images/publication/' | append: '.jpg' | relative_url }}">
       </div>
-      <div class="row mt-2">
-        {% if author_data.website %}
-        <a href="{{ author_data.website }}">
-          <p class="author-name">{{ author_data.name }} {% for co in page.coauthors %}{% if co == author_data.name %}*{% endif %}{% endfor %}</p>
-          <p class="affiliation-name">{{ author_data.affiliation }}</p>
-        </a>
-        {% else %}
-        <p class="author-name">{{ author_data.name }} {% for co in page.coauthors %}{% if co == author_data.name %}*{% endif %}{% endfor %}</p>
-        <p class="affiliation-name">{{ author_data.affiliation }}</p>
+      <div class="col-12 col-lg-8">
+        <div class="author-grid">
+          {% for author in page.authors %}
+          {% assign author_data = site.data.people.people | where:"name", author | first %}
+          <div class="author-card">
+            {% assign author_image = author_data.image | default: 'default.jpg' %}
+            {% if author_data.website %}
+            <a href="{{ author_data.website }}">
+              <div class="author-image" style="background-image: url('{{ author_image | prepend: '/assets/images/author/' | relative_url }}')"></div>
+              <div class="author-name">{{ author_data.name }} {% for co in page.coauthors %}{% if co == author_data.name %}*{% endif %}{% endfor %}</div>
+              <div class="affiliation-name">{{ author_data.affiliation }}</div>
+            </a>
+            {% else %}
+              <div class="author-image" style="background-image: url('{{ author_image | prepend: '/assets/images/author/' | relative_url }}')"></div>
+              <div class="author-name">{{ author_data.name }}</div>
+              <div class="affiliation-name">{{ author_data.affiliation }}</div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% if page.coauthors %}
+        <p class="note-meta mt-3">* co-first authorship</p>
         {% endif %}
       </div>
     </div>
-    {% else %}
-    <div class="col my-3">
-      <div class="row">
-        <div class="author-image" style="{{ '/assets/images/author/default.jpg' | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div>
-      </div>
-      <div class="row mt-2">
-        <p class="author-name">{{ author }}</p>
+  </section>
+
+  <section class="section-card publication-text-card mt-4">
+    <div class="section-heading mb-0">
+      <span class="section-kicker">Abstract</span>
+      <p class="mb-0">{{ page.abstract }}</p>
+    </div>
+  </section>
+
+  <section class="section-card publication-text-card mt-4">
+    <div class="section-heading mb-0">
+      <span class="section-kicker">Materials</span>
+      <div class="entry-links mt-2">
+        {% if page.venue == "arXiv" or page.note == "to appear" %}
+        <a href="{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}" rel="external"><i class="fa-solid fa-file-pdf"></i> Preprint</a>
+        {% else %}
+        {% unless page.pdf == false %}
+        <a href="{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}" rel="external"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+        {% endunless %}
+        {% endif %}
+        {% if page.video %}<a href="{{ page.video | prepend: 'https://youtu.be/'}}" rel="external"><i class="fa-solid fa-play"></i> Video</a>{% endif %}
+        {% if page.slide %}<a href="{{ page.slide | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i class="fa-solid fa-file-powerpoint"></i> Slide</a>{% endif %}
+        {% if page.poster %}<a href="{{ page.poster | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i class="fa-solid fa-presentation-screen"></i> Poster</a>{% endif %}
+        {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> Demo</a>{% endif %}
+        {% if page.bibtex %}<a href="{{ '/' | relative_url }}" rel="external"><i class="fa-solid fa-book"></i> BibTeX</a>{% endif %}
       </div>
     </div>
-    {% endif %}
-    {% endfor %}
-  </div>
-  <div class="row mb-5">
-    <img class="publication-image" alt="Landscape" src="{{ page.slug | prepend: '/assets/images/publication/' | append: '.jpg' | relative_url }}"/>
-  </div>
-  <div class="row mb-5">
-    <p class="section-title">Abstract</p>
-    <p>{{ page.abstract }}</p>
-  </div>
-  <div class="row">
-    <p class="section-title">Materials</p>
-    <p class="metadata">
-      {% if page.venue == "arXiv" or page.note == "to appear" %}<a style="padding-right: 4px" href="{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}" rel="external"><i class="fa-solid fa-file-pdf"></i> Preprint</a> {% else %}{% unless page.pdf == false %}<a style="padding-right: 4px" href="{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}" rel="external"><i class="fa-solid fa-file-pdf"></i> PDF</a> {% endunless %}{% endif %}
-      {% if page.video %}<a style="padding-right: 4px" href="{{ page.video | prepend: 'https://youtu.be/'}}" rel="external"><i class="fa-solid fa-play"></i> Video</a>{% endif %}
-      {% if page.slide %}<a style="padding-right: 4px" href="{{ page.slide | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i class="fa-solid fa-file-powerpoint"></i> Slide</a> {% endif %}
-      {% if page.poster %}<a style="padding-right: 4px" href="{{ page.poster | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i class="fa-solid fa-presentation-screen"></i> Poster</a> {% endif %}
-      {% if page.demo %}<a style="padding-right: 4px" href="{{ page.demo }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> Demo</a>{% endif %}
-      {% if page.bibtex %}<a style="padding-right: 4px" href="https://donghoon.io" rel="external"><i class="fa-solid fa-book"></i> BibTeX</a>{% endif %}
-    </p>
-  </div>
-</div>
+  </section>
+</section>

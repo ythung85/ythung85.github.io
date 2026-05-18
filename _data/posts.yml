@@ -1,0 +1,18 @@
+list:
+  - title: "Understanding Deep P-Splines: A Visual Introduction"
+    date: "Aug 2025"
+    excerpt: "A gentle walkthrough of how difference penalties automate knot selection in deep neural networks, with interactive visualizations and intuition-first explanations."
+    tags: ["stat", "ml"]
+    url: "#"
+
+  - title: "Optimal Transport for Machine Learning Practitioners"
+    date: "Mar 2025"
+    excerpt: "From theory to implementation — understanding how optimal transport reshapes probability distributions and why it matters for preference learning and domain adaptation."
+    tags: ["stat", "ml"]
+    url: "#"
+
+  - title: "PU Learning: When You Only Have Positives"
+    date: "Jan 2025"
+    excerpt: "An intuitive guide to Positive-Unlabeled learning: what it is, when to use it, and how it connects to classical binary classification through risk reformulation."
+    tags: ["stat", "ml"]
+    url: "#"

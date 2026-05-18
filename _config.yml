@@ -1,15 +1,15 @@
-title: Donghoon Shin
+title: Noah Yi-Ting Hung
 author:
-  name: Donghoon Shin
-  email: dhoon@uw.edu
+  name: Noah Yi-Ting Hung
+  email: yhung7@gsu.edu
 description: >
-  HCI researcher | Ph.D. student at the Unviersity of Washington
+  PhD student in machine learning and statistics focused on interpretable modeling, uncertainty, and scientific computing
 google_analytics_id: UA-215543768-1
 
 show_excerpts: false # set to true to show excerpts on the homepage
 permalink: /:title
 
-url: "https://donghoon.io" # the base hostname & protocol for your site
+url: "https://ythung85.github.io" # the base hostname & protocol for your site
 
 plugins:
  - jekyll-feed

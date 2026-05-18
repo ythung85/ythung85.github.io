@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Understanding Deep P-Splines: A Visual Introduction | Noah Yi-Ting Hung</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+TC&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+  <!-- Math rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215543768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-215543768-1');
+</script>
+
+  <!-- favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/main/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/main/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/main/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/main/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/main/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/main/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/main/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/main/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/main/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/main/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/main/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/main/favicon/favicon-16x16.png">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/main/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/publication/deep-p-splines.jpg">
+  <meta property="og:title" content="Understanding Deep P-Splines: A Visual Introduction | Donghoon Shin">
+  <meta property="og:description" content="Paper overview of  et al., ">
+
+  <!-- Google scholar -->
+  
+  <meta name="citation_title" content="Understanding Deep P-Splines: A Visual Introduction">
+  
+  <meta name="citation_publication_date" content="">
+  
+  <meta name="citation_conference_title" content="">
+  
+  <meta name="citation_pdf_url" content="https://donghoon.io/assets/pdf/deep-p-splines.pdf">
+  
+</head>
+<body class="home-page">
+
+    <div class="home-wrap">
+      <div class="home-layout">
+
+        <!-- ── Sidebar ──────────────────────────────── -->
+        <aside class="home-sidebar">
+          <div class="sidebar-inner">
+
+            <div class="sidebar-photo-wrap">
+              <img src="/assets/images/profile.png" alt="Noah Yi-Ting Hung" class="sidebar-photo"/>
+            </div>
+
+            <h1 class="sidebar-name">Noah Yi-Ting <strong>Hung</strong></h1>
+
+            <p class="sidebar-role">PhD Candidate</p>
+            <p class="sidebar-affil">Machine Learning &amp; Data Science<br>Georgia State University</p>
+
+            <div class="sidebar-links">
+              <a href="mailto:yhung7@gsu.edu" title="Email"><i class="fa fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/yitinghung/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <p class="sidebar-location"><i class="fas fa-location-dot"></i>&nbsp; Atlanta, GA</p>
+
+          </div>
+        </aside>
+
+        <!-- ── Content ──────────────────────────────── -->
+        <main class="home-content">
+
+          <!-- Dynamic header: title changes per page, nav shows other pages -->
+          <div class="content-header content-header-post">
+            <div>
+              <h2 class="page-title">Understanding Deep P-Splines: A Visual Introduction</h2>
+              <div class="page-title-bar"></div>
+            </div>
+            <nav class="content-nav">
+              
+              <a href="/" class="content-nav-link">Home</a>
+              
+              
+              <a href="/publication" class="content-nav-link">Research</a>
+              
+              
+              <a href="/post" class="content-nav-link">Posts</a>
+              
+              
+              <a href="/gallery" class="content-nav-link">Gallery</a>
+              
+            </nav>
+          </div>
+
+          <article class="post-single">
+  <div class="post-meta-row" style="margin-bottom:.65rem;">
+    <span class="post-date">August 01, 2025</span>
+    
+    <span class="pub-meta-sep">·</span>
+    
+    <span class="pub-tag tag-stat">stat</span>
+    
+    <span class="pub-tag tag-ml">ml</span>
+    
+    
+  </div>
+  <div class="post-body">
+    <h2 id="motivation">Motivation</h2>
+
+<p>Classical spline methods are powerful but require users to manually choose the number and placement of knots — a fragile process that rarely generalizes well. <strong>Deep P-Splines (DPS)</strong> bypass this entirely by embedding a difference penalty directly into the network’s loss function, letting the data determine the effective number of active basis functions.</p>
+
+<h2 id="the-core-idea">The Core Idea</h2>
+
+<p>Given a one-dimensional input $x$, a standard B-spline expansion writes:</p>
+
+\[\hat{f}(x) = \sum_{j=1}^{K} \theta_j B_j(x)\]
+
+<p>where $B_j$ are basis functions over a fixed knot grid. The P-spline penalty adds a roughness term:</p>
+
+\[\lambda \sum_{j=d+1}^{K} (\Delta^d \theta_j)^2\]
+
+<p>where $\Delta^d$ is the $d$-th order difference operator. This shrinks neighboring coefficients together, effectively smoothing the fit.</p>
+
+<p><strong>DPS extends this to neural networks.</strong> Instead of spline coefficients, we penalize the differences between adjacent neuron weights in a layer. The result: the network automatically discovers the smoothness structure that best fits the data.</p>
+
+<h2 id="why-it-works">Why It Works</h2>
+
+<p>The key insight is that the difference penalty acts as a <strong>continuous knot-selection mechanism</strong>. When the penalty is large, groups of adjacent neurons collapse to the same effective value — shrinking the model. When it’s small, the neurons express independent, high-frequency variation.</p>
+
+<p>This duality connects DPS to classical non-parametric regression while preserving the expressive power of deep architectures.</p>
+
+<h2 id="fast-tuning-via-the-ecm-algorithm">Fast Tuning via the ECM Algorithm</h2>
+
+<p>Choosing the penalty parameter $\lambda$ is crucial. DPS introduces a latent variable framework where $\lambda$ is estimated jointly with the network weights using the <strong>ECM algorithm</strong> — a variant of EM that alternates between:</p>
+
+<ol>
+  <li><strong>E-step</strong>: compute expected penalty weights given current estimates</li>
+  <li><strong>CM-step</strong>: update network weights with closed-form shrinkage</li>
+</ol>
+
+<p>This eliminates expensive cross-validation, making DPS practical for large datasets.</p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<ul>
+  <li>DPS unifies non-parametric smoothing with deep learning under a single penalized objective.</li>
+  <li>The ECM-based tuning is fast, theoretically grounded, and avoids cross-validation entirely.</li>
+  <li>On small-to-moderate datasets, DPS often outperforms both classical splines and unpenalized DNNs.</li>
+</ul>
+
+<p>The paper is available on <a href="https://arxiv.org/abs/2501.01376">arXiv</a>.</p>
+
+  </div>
+  <div class="post-single-footer">
+    <a href="/post" class="post-back-link">← Back to Posts</a>
+  </div>
+</article>
+
+
+          <footer class="home-footer">
+            <p>Last updated: <span id="date">…</span></p>
+          </footer>
+        </main>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="/assets/js/github_date.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+---
+layout: home
+---
+<article class="post-single">
+  <div class="post-meta-row" style="margin-bottom:.65rem;">
+    <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+    {% if page.tags %}
+    <span class="pub-meta-sep">·</span>
+    {% for tag in page.tags %}
+    <span class="pub-tag tag-{{ tag }}">{{ tag }}</span>
+    {% endfor %}
+    {% endif %}
+  </div>
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <div class="post-single-footer">
+    <a href="/post" class="post-back-link">← Back to Posts</a>
+  </div>
+</article>

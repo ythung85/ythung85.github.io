@@ -4,11 +4,11 @@ title: "Deep P-Spline: Theory, Fast Tuning, and Application "
 year: 2025
 month: 1
 authors:
-  - Noah Hung
+  - Noah Yi-Ting Hung
   - Li-Hsiang Lin
   - Vince Calhoun
 coauthors:
-  - Noah Hung
+  - Noah Yi-Ting Hung
   - Li-Hsiang Lin
 venue: arXiv
 note: Major Revision

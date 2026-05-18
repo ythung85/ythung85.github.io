@@ -1,0 +1,83 @@
+photos:
+  - src: gallery/01.jpg
+    title: "Home Base"
+    location: "Atlanta, United States"
+    transport: null
+    date: "2024"
+  - src: gallery/02.jpg
+    title: "MMLS 2023"
+    location: "Chicago, United States"
+    transport: plane
+    date: "May 2023"
+  - src: gallery/03.jpg
+    title: "UF Winter Workshop"
+    location: "Gainesville, United States"
+    transport: car
+    date: "Jan 2025"
+  - src: gallery/04.jpg
+    title: "JSM 2025"
+    location: "Nashville, United States"
+    transport: plane
+    date: "Jul 2025"
+  - src: gallery/05.jpg
+    title: "Purdue University"
+    location: "West Lafayette, United States"
+    transport: plane
+    date: "2022"
+  - src: gallery/06.jpg
+    title: "National Taiwan University"
+    location: "Taipei, Taiwan"
+    transport: plane
+    date: "2020"
+  - src: gallery/07.jpg
+    title: "CAPASUS Conference"
+    location: "Atlanta, United States"
+    transport: null
+    date: "Aug 2025"
+  - src: gallery/08.jpg
+    title: "NCTU Research"
+    location: "Hsinchu, Taiwan"
+    transport: car
+    date: "2020"
+  - src: gallery/09.jpg
+    title: "Atlanta Moments"
+    location: "Atlanta, United States"
+    transport: null
+    date: "2024"
+
+locations:
+  - name: "Atlanta, United States"
+    lat: 33.749
+    lng: -84.388
+    home: true
+    desc: "Home · Georgia State University"
+  - name: "West Lafayette, United States"
+    lat: 40.425
+    lng: -86.909
+    transport: plane
+    desc: "Purdue University · M.S."
+  - name: "Nashville, United States"
+    lat: 36.174
+    lng: -86.768
+    transport: plane
+    desc: "JSM 2025"
+  - name: "Gainesville, United States"
+    lat: 29.652
+    lng: -82.325
+    transport: car
+    desc: "UF Winter Workshop 2025"
+  - name: "Chicago, United States"
+    lat: 41.878
+    lng: -87.630
+    transport: plane
+    desc: "MMLS 2023"
+  - name: "Taipei, Taiwan"
+    lat: 25.033
+    lng: 121.565
+    transport: plane
+    desc: "National Taiwan University · B.S."
+  - name: "Hsinchu, Taiwan"
+    lat: 24.803
+    lng: 120.971
+    transport: car
+    desc: "NCTU · Research Assistant"

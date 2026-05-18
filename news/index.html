@@ -1,22 +1,26 @@
 ---
 layout: default
-baseurl: /news
 title: News
-description: Recent news of Donghoon Shin
+description: Recent news and updates from Noah Yi-Ting Hung
+permalink: /news
 ---
 
 {% assign news = site.data.news.list %}
 
-<div class="container py-4">
-    <p style="font-weight: 500 !important; text-transform: uppercase;">News</p>
-    <div class="row mt-4">
-        {% for new in news %}
-        <div class="col-12 col-sm-6">
-            <p class="mb-0" style="font-size: 1rem; font-weight: 400 !important;">{{ new.title }}</p>
-            <p class="mb-1" style="font-size: .85rem; font-weight: 200 !important;">{{ new.date | date_to_long_string }}</p>
-            <p style="font-size: .95rem; font-weight: 300 !important;">{{ new.description }}</p>
-            <hr>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+<section class="container py-4">
+  <div class="page-hero">
+    <span class="section-kicker">News</span>
+    <h1>Recent updates</h1>
+    <p>Talks, accepted papers, awards, and other milestones.</p>
+  </div>
+
+  <div class="note-grid">
+    {% for item in news %}
+    <article class="note-card">
+      <div class="note-meta">{{ item.date | date_to_long_string }}</div>
+      <h2 class="note-title">{{ item.title }}</h2>
+      <p class="note-excerpt">{{ item.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,263 +1,475 @@
 ---
-layout: default
+layout: home
 title: Noah Yi-Ting Hung
 description: PhD Candidate | Machine Learning & Data Science | Georgia State University
+page_title: About
 ---
 
-{% assign projects = site.data.project-main.project %}
-{% assign news = site.data.news.list %}
+<!-- ══ About ══════════════════════════════════════════════════ -->
+<section class="intro-section" style="margin-bottom: 2.4rem;">
+  <p>I am a PhD candidate in Machine Learning and Data Science at the Department of Mathematics and Statistics,
+  <a href="https://gsu.edu" class="inst inst-gsu">
+    <img class="inst-logo inst-logo-wide" src="/assets/images/logo/gsu.png" alt="GSU logo">Georgia State University</a>,
+  advised by Professor <a href="" class="advisor">Li-Hsiang Lin</a>. My research sits at the intersection of statistical modeling, machine learning, and uncertainty quantification —
+  with particular focus on non-parametric methods, interpretable deep models, and portfolio optimization.</p>
+
+  <p>I received my M.S. in Joint Statistics and Computer Science from
+  <a href="https://purdue.edu" class="inst inst-purdue">
+    <img class="inst-logo inst-logo-wide" src="/assets/images/logo/purdue.png" alt="Purdue University logo">Purdue University</a>,
+  working with Professor <a href="" class="advisor">Qi Guo</a> on computer vision.
+  I completed my B.S. at
+  <a href="https://ntu.edu.tw" class="inst inst-ntu">
+    <img class="inst-logo" src="/assets/images/logo/ntu.png" alt="National Taiwan University logo">National Taiwan University</a>
+  under <a href="" class="advisor">Ku-Wei Liao</a> on reliability engineering.
+  Before my PhD, I was a graduate research assistant under Professor <a href="" class="advisor">Henry Horng-Shing Lu</a>,
+  working on deep mixture density networks.</p>
+</section>
 
 
-<!-- ── Hero ──────────────────────────────────────────────── -->
-<div class="container pt-4 pb-3">
-  <div class="row align-items-center">
-
-    <div class="d-none d-md-block col-md-3 col-xxl-2 text-center">
-      <img src="/assets/images/profile.png"
-           style="width:82%; border-radius: 50%; border: 4px solid var(--wood-border); box-shadow: 0 4px 18px rgba(139,99,68,.18);"
-           alt="Noah Yi-Ting Hung"/>
-    </div>
-
-    <div class="col-12 col-md-9 col-xxl-10 ps-md-4">
-      <h2 style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; margin-bottom: .3rem; color: var(--wood-text);">
-        <img class="flag" src="{{ 'assets/images/misc/kitty.svg' | relative_url }}"/>
-        Noah Yi-Ting Hung
-        <img class="flag" src="{{ 'assets/images/misc/flag.svg' | relative_url }}"/>
-      </h2>
-      <p style="font-size:.95rem; color: var(--wood-muted); margin-bottom: .8rem !important; font-weight: 400;">
-        PhD Candidate &middot; Machine Learning &amp; Data Science &middot; Georgia State University
-      </p>
-
-      <p style="font-size:.93rem; line-height:1.75; margin-bottom: .6rem !important;">
-        I am a PhD candidate in <a href="">Machine Learning and Data Science</a>, Department of Mathematics and Statistics at Georgia State University, under the guidance of Professor <a href="">Li-Hsiang Lin</a>. My research focuses on the intersection of machine learning, image science, and uncertainty control, with a particular interest in non-parametric modeling and portfolio optimization.
-      </p>
-      <p style="font-size:.93rem; line-height:1.75; margin-bottom: 1rem !important;">
-        I received my Master's in Joint Statistics and Computer Science at <a href="">Purdue University</a>, where I worked with Professor <a href="">Qi Guo</a> on computer vision. Prior to my PhD, I was a graduate research assistant under Professor <a href="">Henry Horng-Shing Lu</a>, working on deep mixture density networks. I completed undergraduate studies at <a href="">National Taiwan University</a> with <a href="">Ku-Wei Liao</a> on reliability research.
-      </p>
-
-      <p class="myemail">
-        <a href="mailto:yhung7@gsu.edu" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-envelope" style="margin-right:6px;" aria-hidden="true"></i>yhung7@gsu.edu
-        </a>
-        <span style="color: var(--wood-border); margin: 0 .7rem;">|</span>
-        <a href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-graduation-cap" style="margin-right:6px;"></i>Google Scholar
-        </a>
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ── Selected Publications ─────────────────────────────── -->
-<div class="container pb-2 px-0 px-md-3" id="research" style="padding-top: 2.5rem;">
-
-  <h4 class="section-heading">Selected Publications</h4>
-
-  <!-- AURA -->
-  <div class="pub-card">
-    <div class="row align-items-start g-3">
-      <div class="col-12 col-md-2">
-        <img src="assets/images/AURA.png" width="100%" style="border-radius:6px; border:1px solid var(--wood-border);"
-             alt="AURA framework overview"/>
-      </div>
-      <div class="col-12 col-md-10">
-        <p class="pub-title">AURA: Adaptive Uncertainty-guided Refinement and Annotation for LLM-as-a-Judge</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, et al. &nbsp;<i>(Preprint)</i></p>
-        <div style="margin-bottom:.55rem;">
-          <span class="pub-badge pub-badge-orange">arXiv 2025</span>
-          <span class="pub-badge pub-badge-blue">LLM Evaluation</span>
-        </div>
-        <p class="pub-abstract">
-          We propose AURA, a framework that iteratively refines LLM-judge consistency via a trainable encoder, OT-based relabeling, and human-guided verification. The system combines confidence updates from model evidence, local consistency, anchor support, and transport inflow to produce reliable pairwise preference labels with minimal human annotation cost.
-        </p>
-        <div class="pub-links">
-          <a href="#" target="_blank"><i class="fa fa-file"></i> PDF</a>
-          <a href="#" target="_blank"><img src="assets/images/logo/arxiv-logo.svg" alt="arXiv"> arXiv</a>
-          <a href="#" target="_blank"><i class="fa fa-quote-right"></i> BibTeX</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- LLM PU Audit -->
-  <div class="pub-card">
-    <div class="row align-items-start g-3">
-      <div class="col-12 col-md-2">
-        <img src="assets/images/LLM_PU.png" width="100%" style="border-radius:6px; border:1px solid var(--wood-border);"
-             alt="LLM PU Audit framework overview"/>
-      </div>
-      <div class="col-12 col-md-10">
-        <p class="pub-title">Auditing LLM Preference Alignment via Positive-Unlabeled Optimal Transport</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, et al. &nbsp;<i>(Preprint)</i></p>
-        <div style="margin-bottom:.55rem;">
-          <span class="pub-badge pub-badge-orange">arXiv 2025</span>
-          <span class="pub-badge pub-badge-blue">RLHF</span>
-        </div>
-        <p class="pub-abstract">
-          We introduce a framework for auditing LLM preference alignment using Positive-Unlabeled (PU) learning and optimal transport. Reward model embeddings are constructed from Chatbot Arena comparisons, then difference embeddings are transported between a labeled positive pool and an unlabeled pool to identify misaligned preference annotations.
-        </p>
-        <div class="pub-links">
-          <a href="#" target="_blank"><i class="fa fa-file"></i> PDF</a>
-          <a href="#" target="_blank"><img src="assets/images/logo/arxiv-logo.svg" alt="arXiv"> arXiv</a>
-          <a href="#" target="_blank"><i class="fa fa-quote-right"></i> BibTeX</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SDAMI -->
-  <div class="pub-card">
-    <div class="row align-items-start g-3">
-      <div class="col-12 col-md-2">
-        <img src="assets/images/SDAMI.png" width="100%" style="border-radius:6px; border:1px solid var(--wood-border);"
-             alt="SDAMI overview"/>
-      </div>
-      <div class="col-12 col-md-10">
-        <p class="pub-title">Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun &nbsp;<i>(Submitted)</i></p>
-        <div style="margin-bottom:.55rem;">
-          <span class="pub-badge pub-badge-orange">arXiv 2025</span>
-          <span class="pub-badge pub-badge-blue">Interpretable ML</span>
-        </div>
-        <p class="pub-abstract">
-          SDAMI combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional black-box deep learning models, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability while maintaining predictive power on small or moderate samples with high-dimensional features.
-        </p>
-        <div class="pub-links">
-          <a href="https://arxiv.org/pdf/2501.01376" target="_blank"><i class="fa fa-file"></i> PDF</a>
-          <a href="https://arxiv.org/abs/2509.23068" target="_blank"><img src="assets/images/logo/arxiv-logo.svg" alt="arXiv"> arXiv</a>
-          <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:b_GfGgaFiG8J:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3uSCo:AFWwaeYAAAAAZ4HoUCrnQQCSvrSnmtugQtPxYM4&scisig=AFWwaeYAAAAAZ4HoUNCqQetwvyjBSBb-HE2byf4&scisf=4&ct=citation&cd=-1&hl=en" target="_blank"><i class="fa fa-quote-right"></i> BibTeX</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Deep P-Spline -->
-  <div class="pub-card">
-    <div class="row align-items-start g-3">
-      <div class="col-12 col-md-2">
-        <img src="assets/images/DPS.png" width="100%" style="border-radius:6px; border:1px solid var(--wood-border);"
-             alt="Deep P-Spline overview"/>
-      </div>
-      <div class="col-12 col-md-10">
-        <p class="pub-title">Deep P-Spline: Theory, Fast Tuning, and Application</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun &nbsp;<i>(Under Revision)</i></p>
-        <div style="margin-bottom:.55rem;">
-          <span class="pub-badge pub-badge-orange">arXiv 2025</span>
-          <span class="pub-badge pub-badge-green">SPES Award Winner</span>
-        </div>
-        <p class="pub-abstract">
-          We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. Deep P-Spline (DPS) extends conventional DNN modeling and forms the basis for a latent variable framework using the Expectation-Conditional Maximization (ECM) algorithm for efficient structure tuning with theoretical guarantees.
-        </p>
-        <div class="pub-links">
-          <a href="https://arxiv.org/pdf/2501.01376" target="_blank"><i class="fa fa-file"></i> PDF</a>
-          <a href="https://arxiv.org/abs/2501.01376" target="_blank"><img src="assets/images/logo/arxiv-logo.svg" alt="arXiv"> arXiv</a>
-          <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:b_GfGgaFiG8J:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3uSCo:AFWwaeYAAAAAZ4HoUCrnQQCSvrSnmtugQtPxYM4&scisig=AFWwaeYAAAAAZ4HoUNCqQetwvyjBSBb-HE2byf4&scisf=4&ct=citation&cd=-1&hl=en" target="_blank"><i class="fa fa-quote-right"></i> BibTeX</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Semi-Markov -->
-  <div class="pub-card">
-    <div class="row align-items-start g-3">
-      <div class="col-12 col-md-2">
-        <img src="assets/images/smc.png" width="100%" style="border-radius:6px; border:1px solid var(--wood-border);"
-             alt="Semi-Markov maintenance overview"/>
-      </div>
-      <div class="col-12 col-md-10">
-        <p class="pub-title">Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States</p>
-        <p class="pub-authors">John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong> &nbsp;<i>(Accepted)</i></p>
-        <div style="margin-bottom:.55rem;">
-          <span class="pub-badge pub-badge-orange">JSHM 2024</span>
-          <span class="pub-badge pub-badge-blue">Reliability</span>
-        </div>
-        <p class="pub-abstract">
-          Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.
-        </p>
-        <div class="pub-links">
-          <a href="https://journals.sagepub.com/doi/10.1177/14759217241277969" target="_blank"><i class="fa fa-file"></i> PDF</a>
-          <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:nK1RNG6n0kIJ:scholar.google.com/&output=citation&scisdr=ClGoFMUSEKK15T3g8DE:AFWwaeYAAAAAZ4Hm6DEkVJJVDmEJeay2SPKe6Oc&scisig=AFWwaeYAAAAAZ4Hm6BrEaWSuALKRMhOodRJM-BI&scisf=4&ct=citation&cd=-1&hl=en" target="_blank"><i class="fa fa-quote-right"></i> BibTeX</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-<!-- ── Recent Projects ────────────────────────────────────── -->
-<div class="container" style="padding-top: 2rem;">
-  <h4 class="section-heading">Recent Projects</h4>
-  <div class="scroller">
-    <div class="scroller-inner">
-      {% for project in projects %}
-      <div class="paper-container non-select">
-        <img src="{{ '/assets/images/main-project/' | append: project.image | relative_url }}" alt="" style="height: auto; width: 100%; border-radius: 6px;">
-        <p class="pt-2 mt-md-2" style="font-size: .85rem; font-weight: 300 !important; line-height: 1rem; text-align: center; color: var(--wood-muted);">
-          {{ project.title }}{% if project.venue %}<a class="project-venue" href="{{ project.slug | prepend: 'publication/' | relative_url }}">{{ project.venue }}</a>{% endif %}
-        </p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="d-flex flex-row-reverse mt-3">
-    <a href="{{ 'project' | relative_url }}" class="view-all">> View All</a>
-  </div>
-</div>
-
-
-<!-- ── News ──────────────────────────────────────────────── -->
-<div class="container px-0 px-md-3" id="news" style="padding-top: 2.5rem; padding-bottom: 2rem;">
-  <h4 class="section-heading">News</h4>
-
-  <div class="news-item">
-    <span class="news-date">Aug 2025</span>
-    <p class="mb-0" style="font-size:.92rem;">
-      Presented <span style="background-color:var(--wood-badge-green); color:#2E5E2E; padding:1px 7px; border-radius:4px; font-size:.82rem;"><i>Deep P-Spline: Fast Tuning, Theory, and Application</i></span> at the 2025 CAPASUS Conference in Atlanta, Georgia.
-    </p>
-  </div>
-
-  <div class="news-item">
-    <span class="news-date">Feb 2025</span>
-    <p class="mb-0" style="font-size:.92rem;">
-      <span style="background-color:var(--wood-badge-green); color:#2E5E2E; padding:1px 7px; border-radius:4px; font-size:.82rem;"><i>Deep P-Spline</i></span> selected as winner of the SPES + Q&amp;P Student Paper Competition. Will present at JSM 2025 in Nashville, Tennessee.
-    </p>
-  </div>
-
-  <div class="news-item">
-    <span class="news-date">Jan 2025</span>
-    <p class="mb-0" style="font-size:.92rem;">
-      Attended University of Florida Department of Statistics' Annual Winter Workshop (WW 2025).
-    </p>
-  </div>
-
-  <details style="margin-top: .5rem;">
-    <summary>See older news</summary>
-    <div class="news-item" style="margin-top:.9rem;">
-      <span class="news-date">May 2023</span>
-      <p class="mb-0" style="font-size:.92rem;">
-        Attended Midwest Machine Learning Symposium (MMLS 2023) in Chicago for poster presentation.
-      </p>
-    </div>
+<!-- ══ News ═══════════════════════════════════════════════════ -->
+<section style="margin-bottom: 2.4rem;">
+  <div class="section-heading">📌 News</div>
+  <ul class="news-list">
+    <li class="news-row">
+      <span class="news-pill">Jun. 2026</span>
+      <span class="news-text">💼 I will start my internship at <a href="https://www.jpmorganchase.com" class="inst inst-jpmc">
+        <img class="inst-logo inst-logo-wide" src="/assets/images/logo/chase.png" alt="JP Morgan Chase logo">JP Morgan Chase</a> as a PhD Quantitative Risk Intern in Palo Alto, CA.</span>
+    </li>
+    <li class="news-row">
+      <span class="news-pill">Apr. 2026</span>
+      <span class="news-text">📰 Our work <span class="news-highlight">Deep P-Spline: Fast Tuning, Theory, and Application</span> is accepted by Journal of the American Statistical Association (JASA).</span>
+    </li>
+    <li class="news-row">
+      <span class="news-pill">Aug. 2025</span>
+      <span class="news-text">🏆 <span class="news-highlight">Deep P-Spline</span> selected as winner of the <strong>SPES + Q&amp;P Student Paper Competition</strong>. Presenting at JSM 2025 in Nashville, TN.</span>
+    </li>
+    <li class="news-row">
+      <span class="news-pill">Jan. 2025</span>
+      <span class="news-text">🏛️ Attended the University of Florida Dept. of Statistics' Annual Winter Workshop (WW 2025).</span>
+    </li>
+  </ul>
+  <details class="news-more">
+    <summary>Older news</summary>
+    <ul class="news-list" style="margin-top:.2rem;">
+      <li class="news-row">
+        <span class="news-pill">May 2023</span>
+        <span class="news-text">📄 Presented a poster at Midwest Machine Learning Symposium (MMLS 2023) in Chicago.</span>
+      </li>
+    </ul>
   </details>
-</div>
+</section>
 
 
+<!-- ══ Selected Research ══════════════════════════════════════ -->
+<section style="margin-bottom: 2.4rem;">
+  <div class="section-heading">📄 Selected Research</div>
+
+  <div class="pub-filters">
+    <span class="filter-label">Tags:</span>
+    <div class="filter-tags">
+      <button class="filter-btn fbt-llm"  data-filter="llm">LLM</button>
+      <button class="filter-btn fbt-ml"   data-filter="ml">Machine Learning</button>
+      <button class="filter-btn fbt-stat" data-filter="stat">Statistics</button>
+      <button class="filter-btn fbt-rel"  data-filter="rel">Reliability</button>
+    </div>
+  </div>
+
+  <ul class="pub-list" id="pub-list">
+    <li class="pub-card" id="pub-aura" data-tags="llm,ml">
+      <div class="pub-card-body">
+        <p class="pub-title">AURA: Adaptive Uncertainty--aware Refinement for LLM-as-a-Judge Auditing.</p>
+        <p class="pub-authors">Zilong Zhang,<strong> Noah Yi-Ting Hung</strong>, Weiyi He, Lei Ding, Junxi Chang, Chi-Kuang Yeh.</p>
+        <div class="pub-meta-row">
+          <span>Preprint</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
+          <span class="pub-tag tag-llm">LLM Evaluation</span><span class="pub-tag tag-ml">Active Learning</span>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            <a href="#" aria-label="arXiv">📄</a>
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">@misc{zhang2025aura,
+  title={AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing},
+  author={Zhang, Zilong and Hung, Noah Yi-Ting and He, Weiyi and Ding, Lei and Chang, Junxi and Yeh, Chi-Kuang},
+  year={2025},
+  note={arXiv preprint}
+}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-aura')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">Large language models (LLMs) are increasingly used as judges for open-ended generation, as large-scale human evaluation is often expensive and difficult to scale, yet their preferences remain imperfect proxies for human judgment. Existing auditing pipelines often assume that a reliable subset of examples or clean supervision signals are available beforehand, for example from human annotation, heuristic filtering, or the outputs of strong judges. In LLM evaluation, this assumption is fragile: the initial split may inherit judge bias, while human verification is typically too scarce to define stable groups at scale. We propose AURA, an adaptive uncertainty--aware refinement framework for auditing pairwise LLM--as--a--judge decisions under selected human verification. AURA iteratively learns a human-consistency signal, propagates reliable evidence, and prioritizes uncertain comparisons for human review. The key idea is to treat trust in a judge as a latent quantity that is progressively refined as evidence accumulates. We provide a compact formulation, a stable refinement procedure, and a comprehensive evaluation on both synthetic and real pairwise LLM-answer data.</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="assets/images/AURA.png" alt="AURA"/></div>
+    </li>
+
+    <li class="pub-card" id="pub-pu" data-tags="llm,ml">
+      <div class="pub-card-body">
+        <p class="pub-title">Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning.</p>
+        <p class="pub-authors">Zilong Zhang<sup>*</sup>, <strong>Noah Yi-Ting Hung<sup>*</sup></strong>, Lei Ding, Chi-Kuang Yeh.</p>
+        <div class="pub-meta-row">
+          <span>Preprint</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
+          <span class="pub-tag tag-llm">LLM Evaluation</span><span class="pub-tag tag-stat">PU Learning</span>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            <a href="#" aria-label="arXiv">📄</a>
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">@misc{zhang2025llm_pu,
+  title={Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning},
+  author={Zhang, Zilong and Hung, Noah Yi-Ting and Ding, Lei and Yeh, Chi-Kuang},
+  year={2025},
+  note={arXiv preprint}
+}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-pu')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM-as-a-Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive–unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human-verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human-consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM-as-a-judge pipelines.</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="assets/images/LLM_PU.png" alt="LLM PU"/></div>
+    </li>
+
+    <li class="pub-card" id="pub-sdami" data-tags="ml,stat">
+      <div class="pub-card-body">
+        <p class="pub-title">Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</p>
+        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun</p>
+        <div class="pub-meta-row">
+          <span>Submitted</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
+          <span class="pub-tag tag-stat">Interpretable ML</span><span class="pub-tag tag-stat">Non-parametric</span><span class="pub-tag tag-ml">Deep Learning</span>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            <a href="https://arxiv.org/abs/2509.23068" target="_blank" aria-label="arXiv">📄</a>
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">@misc{hung2025sdami,
+  title={Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability},
+  author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D.},
+  year={2025},
+  note={arXiv preprint}
+}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-sdami')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">SDAMI combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional black-box models, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability while maintaining predictive power on small or moderate samples with high-dimensional features.</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="assets/images/SDAMI.png" alt="SDAMI"/></div>
+    </li>
+
+    <li class="pub-card" id="pub-dps" data-tags="stat">
+      <div class="pub-card-body">
+        <p class="pub-title">Deep P-Spline: Theory, Fast Tuning, and Application</p>
+        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun</p>
+        <div class="pub-meta-row">
+          <span>Accepted</span><span class="pub-meta-sep">·</span><span>JASA 2026</span><span class="pub-meta-sep"> | </span>
+          <span class="pub-tag tag-stat">Non-parametric</span><span class="pub-tag tag-award">🏆 JSM SPES Award</span>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            <a href="https://arxiv.org/abs/2501.01376" target="_blank" aria-label="arXiv">📄</a>
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">@article{hung2026dps,
+  title={Deep P-Spline: Theory, Fast Tuning, and Application},
+  author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D.},
+  journal={Journal of the American Statistical Association},
+  year={2026}
+}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-dps')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="assets/images/DPS.png" alt="Deep P-Spline"/></div>
+    </li>
+
+    <li class="pub-card" id="pub-smc" data-tags="stat,rel">
+      <div class="pub-card-body">
+        <p class="pub-title">Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States</p>
+        <p class="pub-authors">John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong></p>
+        <div class="pub-meta-row">
+          <span>Accepted</span><span class="pub-meta-sep">·</span><span>JSHM 2024</span><span class="pub-meta-sep"> | </span>
+          <span class="pub-tag tag-rel">Reliability</span><span class="pub-tag tag-stat">Stochastic Processes</span>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            <a href="https://journals.sagepub.com/doi/10.1177/14759217241277969" target="_blank" aria-label="paper">📄</a>
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">@article{thedy2024smc,
+  title={Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States},
+  author={Thedy, John and Liao, Kuo-Wei and Hung, Noah Yi-Ting},
+  journal={Journal of Structural Health Monitoring},
+  year={2024}
+}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-smc')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="assets/images/smc.png" alt="Semi-Markov"/></div>
+    </li>
+  </ul>
+</section>
+
+
+<!-- ══ Travel Globe ═══════════════════════════════════════════ -->
+<section>
+  <div class="section-heading">🌏 Around the World</div>
+  <p style="font-size:.83rem;color:var(--faint);margin-bottom:.85rem;">
+    Drag to rotate · places I've lived, studied, and presented
+  </p>
+  <div class="globe-rect" id="globe-wrap">
+    <svg id="globe-svg"></svg>
+    <div class="globe-controls">
+      <button class="globe-btn" id="g-zoom-in"  title="Zoom in">+</button>
+      <button class="globe-btn" id="g-zoom-out" title="Zoom out">−</button>
+      <button class="globe-btn" id="g-reset"    title="Reset view">⟳</button>
+    </div>
+  </div>
+</section>
+
+<!-- D3 + topojson — both have proper UMD/IIFE CDN builds -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
-  function addAnimation(scrollers) {
-    scrollers.forEach((scroller) => {
-      scroller.setAttribute("data-animated", true);
-      const scrollerInner = scroller.querySelector(".scroller-inner");
-      const scrollerContent = Array.from(scrollerInner.children);
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.appendChild(duplicatedItem);
-      });
-    });
+  /* ── Publication filter ── */
+  function toggleAbstract(id) {
+    document.getElementById(id).classList.toggle('expanded');
   }
-  const scrollers = document.querySelectorAll(".scroller");
-  addAnimation(scrollers);
+  (function () {
+    const btns  = document.querySelectorAll('.filter-btn');
+    const cards = [...document.querySelectorAll('#pub-list .pub-card')];
+    function applyFilter(tag) {
+      cards.forEach(c => {
+        const show = !tag || (c.dataset.tags || '').split(',').includes(tag);
+        if (show) {
+          if (c._hideTimer) { clearTimeout(c._hideTimer); c._hideTimer = null; }
+          c.style.display = '';
+          c.style.opacity = '0'; c.style.transform = 'translateY(8px)';
+          requestAnimationFrame(() => requestAnimationFrame(() => { c.style.opacity = ''; c.style.transform = ''; }));
+        } else {
+          c.style.opacity = '0'; c.style.transform = 'translateY(-4px)';
+          c._hideTimer = setTimeout(() => { c.style.display = 'none'; c.style.opacity = ''; c.style.transform = ''; }, 210);
+        }
+      });
+    }
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      const tag = btn.dataset.filter, isActive = btn.classList.contains('active');
+      btns.forEach(b => b.classList.remove('active'));
+      isActive ? applyFilter(null) : (btn.classList.add('active'), applyFilter(tag));
+    }));
+  })();
+
+  /* ── D3 Globe ── */
+  (function () {
+    const LOCS = [
+      {% for loc in site.data.gallery.locations %}
+      { lat:{{ loc.lat }}, lng:{{ loc.lng }}, name:"{{ loc.name }}",
+        home:{{ loc.home | default: false }}, desc:"{{ loc.desc }}" }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    const HOME     = LOCS.find(l => l.home);
+    const NON_HOME = LOCS.filter(l => !l.home);
+
+    /* ── Sizing ── */
+    const wrap = document.getElementById('globe-wrap');
+    const W = wrap.clientWidth;
+    wrap.style.height = Math.round(W * 0.52) + 'px';
+    const R = W / 2 - 2;
+
+    /* Initial view: North America centre (lng ≈ −96, lat ≈ 38) */
+    const INIT_λ = 96, INIT_φ = -38;
+    let λ = INIT_λ, φ = INIT_φ;
+    let curScale = R;
+    const MIN_SCALE = R * 0.55, MAX_SCALE = R * 5;
+    let dragging = false, lastMX, lastMY;
+
+    const svg = d3.select('#globe-svg').attr('width', W).attr('height', W);
+    const projection = d3.geoOrthographic()
+      .scale(curScale).translate([W/2, W/2]).clipAngle(90).rotate([λ, φ]);
+    const pathGen = d3.geoPath().projection(projection);
+
+    /* Clip */
+    svg.append('defs').append('clipPath').attr('id', 'gc')
+      .append('circle').attr('cx', W/2).attr('cy', W/2).attr('r', R);
+
+    /* Ocean */
+    svg.append('circle').attr('cx', W/2).attr('cy', W/2).attr('r', R).attr('fill', '#B8CFE0');
+
+    const cG = svg.append('g').attr('clip-path', 'url(#gc)');
+
+    /* Graticule */
+    const gLine = cG.append('path').datum(d3.geoGraticule()())
+      .attr('fill', 'none').attr('stroke', 'rgba(255,255,255,.2)').attr('stroke-width', .4);
+
+    /* Layer groups (z-order: land → country lines → state lines → routes → markers) */
+    const landG    = cG.append('g');
+    const countryG = cG.append('g');
+    const stateG   = cG.append('g');
+    const routeG   = cG.append('g');
+    const markerG  = cG.append('g');
+
+    /* Sphere ring */
+    svg.append('circle').attr('cx', W/2).attr('cy', W/2).attr('r', R)
+      .attr('fill', 'none').attr('stroke', 'rgba(150,140,130,.28)').attr('stroke-width', 1.5);
+
+    /* Dashed great-circle routes from home to each location */
+    const routeFeatures = NON_HOME.map(dest => {
+      const interp = d3.geoInterpolate([HOME.lng, HOME.lat], [dest.lng, dest.lat]);
+      return { type:'Feature', geometry:{ type:'LineString',
+        coordinates: d3.range(81).map(i => interp(i/80)) } };
+    });
+    const routes = routeG.selectAll('path.gr').data(routeFeatures)
+      .join('path').attr('class', 'gr')
+      .attr('fill', 'none').attr('stroke', '#9B8264').attr('stroke-width', 1.5)
+      .attr('stroke-dasharray', '5,4').attr('stroke-linecap', 'round').attr('opacity', .7);
+
+    /* Markers */
+    const markers = markerG.selectAll('g.gm').data(LOCS)
+      .join(enter => {
+        const g = enter.append('g').attr('class', 'gm');
+        g.append('circle')
+          .attr('r', d => d.home ? 7 : 5)
+          .attr('fill', d => d.home ? '#9B8264' : '#4A8FC0')
+          .attr('stroke', 'white').attr('stroke-width', 2);
+        return g;
+      });
+
+    /* Tooltip */
+    const tt = Object.assign(document.createElement('div'), { className: 'globe-tt' });
+    tt.style.cssText = 'display:none;position:absolute;pointer-events:none;z-index:5;background:white;border-radius:7px;padding:5px 10px;font-size:.76rem;line-height:1.4;box-shadow:0 2px 10px rgba(0,0,0,.13)';
+    wrap.appendChild(tt);
+    markers.filter(d => !d.home)
+      .on('mouseover', (e, d) => {
+        const r = wrap.getBoundingClientRect();
+        tt.innerHTML = `<strong>${d.name.split(',')[0]}</strong><br><span style="color:#999">${d.desc||''}</span>`;
+        tt.style.display = 'block';
+        tt.style.left = (e.clientX - r.left + 12) + 'px';
+        tt.style.top  = (e.clientY - r.top  - 42) + 'px';
+      })
+      .on('mousemove', e => {
+        const r = wrap.getBoundingClientRect();
+        tt.style.left = (e.clientX - r.left + 12) + 'px';
+        tt.style.top  = (e.clientY - r.top  - 42) + 'px';
+      })
+      .on('mouseout', () => { tt.style.display = 'none'; });
+
+    /* ── Redraw ── */
+    function redraw() {
+      gLine.attr('d', pathGen);
+      landG.selectAll('path').attr('d', pathGen);
+      countryG.selectAll('path').attr('d', pathGen);
+      stateG.selectAll('path').attr('d', pathGen);
+      routes.attr('d', d => pathGen(d));
+      markers.each(function(d) {
+        const p = projection([d.lng, d.lat]);
+        d3.select(this).attr('transform', p ? `translate(${p[0]},${p[1]})` : 'translate(-9999,-9999)');
+      });
+    }
+
+    /* ── Zoom ── */
+    function applyScale(s) {
+      curScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, s));
+      projection.scale(curScale);
+      redraw();
+    }
+
+    /* ── Reset to North America (animated) ── */
+    function resetView() {
+      const sλ = λ, sφ = φ, sS = curScale;
+      let dλ = INIT_λ - sλ;
+      while (dλ > 180) dλ -= 360; while (dλ < -180) dλ += 360;
+      const eλ = sλ + dλ;
+      const DUR = 750; let t0 = null;
+      (function tick(now) {
+        if (!t0) t0 = now;
+        const raw = Math.min((now - t0) / DUR, 1);
+        const t = 1 - Math.pow(1 - raw, 3);
+        λ = sλ + (eλ - sλ) * t;
+        φ = sφ + (INIT_φ - sφ) * t;
+        curScale = sS + (R - sS) * t;
+        projection.rotate([λ, φ]).scale(curScale);
+        redraw();
+        if (raw < 1) requestAnimationFrame(tick);
+        else { λ = INIT_λ; φ = INIT_φ; curScale = R; }
+      })(performance.now());
+    }
+
+    /* Button handlers */
+    document.getElementById('g-zoom-in') .onclick = () => applyScale(curScale * 1.35);
+    document.getElementById('g-zoom-out').onclick = () => applyScale(curScale / 1.35);
+    document.getElementById('g-reset')   .onclick = resetView;
+
+    /* ── Mouse drag ── */
+    svg.on('mousedown', e => { dragging = true; lastMX = e.clientX; lastMY = e.clientY; });
+    d3.select(window)
+      .on('mousemove.g', e => {
+        if (!dragging) return;
+        λ += (e.clientX - lastMX) * 0.38;
+        φ = Math.max(-80, Math.min(80, φ - (e.clientY - lastMY) * 0.38));
+        lastMX = e.clientX; lastMY = e.clientY;
+        projection.rotate([λ, φ]); redraw();
+      })
+      .on('mouseup.g', () => { dragging = false; });
+
+    /* ── Touch drag ── */
+    svg.on('touchstart', e => {
+      if (e.touches.length !== 1) return;
+      e.preventDefault();
+      dragging = true; lastMX = e.touches[0].clientX; lastMY = e.touches[0].clientY;
+    }, { passive: false })
+    .on('touchmove', e => {
+      if (!dragging || e.touches.length !== 1) return;
+      e.preventDefault();
+      λ += (e.touches[0].clientX - lastMX) * 0.38;
+      φ = Math.max(-80, Math.min(80, φ - (e.touches[0].clientY - lastMY) * 0.38));
+      lastMX = e.touches[0].clientX; lastMY = e.touches[0].clientY;
+      projection.rotate([λ, φ]); redraw();
+    }, { passive: false })
+    .on('touchend', () => { dragging = false; });
+
+    /* ── Load data ──
+         world-atlas/countries-50m  → filled land + country borders (50m = much more detail)
+         Natural Earth 110m admin-1 → US state + global province lines (geographic coordinates)
+    ── */
+    Promise.all([
+      d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'),
+      d3.json('https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@v5.1.2/geojson/ne_110m_admin_1_states_provinces_lines.geojson')
+        .catch(() => null)  /* graceful fail if CDN unreachable */
+    ]).then(([world, admin1]) => {
+      landG.append('path')
+        .datum(topojson.feature(world, world.objects.land))
+        .attr('fill', '#E2DACB');
+
+      countryG.append('path')
+        .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
+        .attr('fill', 'none')
+        .attr('stroke', 'rgba(155,138,108,.55)').attr('stroke-width', .4);
+
+      if (admin1) {
+        stateG.append('path')
+          .datum(admin1)
+          .attr('fill', 'none')
+          .attr('stroke', 'rgba(155,138,108,.35)').attr('stroke-width', .28);
+      }
+
+      redraw();
+    });
+  })();
 </script>

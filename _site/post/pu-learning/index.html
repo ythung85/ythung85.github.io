@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>PU Learning: When You Only Have Positives | Noah Yi-Ting Hung</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+TC&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+  <!-- Math rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215543768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-215543768-1');
+</script>
+
+  <!-- favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/main/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/main/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/main/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/main/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/main/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/main/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/main/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/main/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/main/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/main/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/main/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/main/favicon/favicon-16x16.png">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/main/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/publication/pu-learning.jpg">
+  <meta property="og:title" content="PU Learning: When You Only Have Positives | Donghoon Shin">
+  <meta property="og:description" content="Paper overview of  et al., ">
+
+  <!-- Google scholar -->
+  
+  <meta name="citation_title" content="PU Learning: When You Only Have Positives">
+  
+  <meta name="citation_publication_date" content="">
+  
+  <meta name="citation_conference_title" content="">
+  
+  <meta name="citation_pdf_url" content="https://donghoon.io/assets/pdf/pu-learning.pdf">
+  
+</head>
+<body class="home-page">
+
+    <div class="home-wrap">
+      <div class="home-layout">
+
+        <!-- ── Sidebar ──────────────────────────────── -->
+        <aside class="home-sidebar">
+          <div class="sidebar-inner">
+
+            <div class="sidebar-photo-wrap">
+              <img src="/assets/images/profile.png" alt="Noah Yi-Ting Hung" class="sidebar-photo"/>
+            </div>
+
+            <h1 class="sidebar-name">Noah Yi-Ting <strong>Hung</strong></h1>
+
+            <p class="sidebar-role">PhD Candidate</p>
+            <p class="sidebar-affil">Machine Learning &amp; Data Science<br>Georgia State University</p>
+
+            <div class="sidebar-links">
+              <a href="mailto:yhung7@gsu.edu" title="Email"><i class="fa fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/yitinghung/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <p class="sidebar-location"><i class="fas fa-location-dot"></i>&nbsp; Atlanta, GA</p>
+
+          </div>
+        </aside>
+
+        <!-- ── Content ──────────────────────────────── -->
+        <main class="home-content">
+
+          <!-- Dynamic header: title changes per page, nav shows other pages -->
+          <div class="content-header content-header-post">
+            <div>
+              <h2 class="page-title">PU Learning: When You Only Have Positives</h2>
+              <div class="page-title-bar"></div>
+            </div>
+            <nav class="content-nav">
+              
+              <a href="/" class="content-nav-link">Home</a>
+              
+              
+              <a href="/publication" class="content-nav-link">Research</a>
+              
+              
+              <a href="/post" class="content-nav-link">Posts</a>
+              
+              
+              <a href="/gallery" class="content-nav-link">Gallery</a>
+              
+            </nav>
+          </div>
+
+          <article class="post-single">
+  <div class="post-meta-row" style="margin-bottom:.65rem;">
+    <span class="post-date">January 10, 2025</span>
+    
+    <span class="pub-meta-sep">·</span>
+    
+    <span class="pub-tag tag-stat">stat</span>
+    
+    <span class="pub-tag tag-ml">ml</span>
+    
+    
+  </div>
+  <div class="post-body">
+    <h2 id="the-problem-setup">The Problem Setup</h2>
+
+<p>In classical binary classification, you have labeled positive and negative examples. But what if you only have <strong>positives</strong> and a pool of <strong>unlabeled</strong> data — where some unlabeled points are actually positives but you don’t know which?</p>
+
+<p>This is <strong>Positive-Unlabeled (PU) learning</strong>, and it comes up more often than you might think:</p>
+
+<ul>
+  <li>Identifying fraudulent transactions (confirmed fraud vs. unknown)</li>
+  <li>Drug discovery (known active compounds vs. untested molecules)</li>
+  <li>Preference learning from implicit feedback (clicked vs. not-clicked-but-maybe-relevant)</li>
+</ul>
+
+<h2 id="the-key-insight-risk-reformulation">The Key Insight: Risk Reformulation</h2>
+
+<p>Let $p(x)$ be the positive class density and $u(x)$ the unlabeled density. The unlabeled set is a mixture:</p>
+
+\[u(x) = \pi \cdot p(x) + (1 - \pi) \cdot n(x)\]
+
+<p>where $\pi = P(Y=1)$ is the class prior and $n(x)$ is the negative density.</p>
+
+<p>The standard binary risk can be rewritten as:</p>
+
+\[R(f) = \pi \, \mathbb{E}_p[\ell(f(x), +1)] + (1-\pi) \, \mathbb{E}_n[\ell(f(x), -1)]\]
+
+<p>Since we can estimate $\mathbb{E}_n[\ell]$ from the unlabeled set (after subtracting the positive contribution), PU learning becomes tractable without ever observing negative labels directly.</p>
+
+<h2 id="non-negative-risk-estimator">Non-Negative Risk Estimator</h2>
+
+<p>A practical challenge: the estimated risk can go negative during training, causing overfitting. The <strong>nnPU estimator</strong> (Kiryo et al., 2017) clips the negative part:</p>
+
+\[\hat{R}_{nnPU}(f) = \pi \, \hat{\mathbb{E}}_p[\ell_+] + \max\!\left(0,\, \hat{\mathbb{E}}_u[\ell_-] - \pi \, \hat{\mathbb{E}}_p[\ell_-]\right)\]
+
+<p>This simple fix dramatically stabilizes training and is now the default in most PU implementations.</p>
+
+<h2 id="connection-to-my-research">Connection to My Research</h2>
+
+<p>In our work on <a href="/post/optimal-transport/">LLM preference auditing</a>, we model the RLHF annotation process as a PU problem: gold-standard pairwise comparisons form the positive pool, and a large collection of model-generated preferences forms the unlabeled pool. OT then bridges the two, yielding a principled confidence score for each unlabeled preference annotation.</p>
+
+<h2 id="when-to-use-pu-learning">When to Use PU Learning</h2>
+
+<p>PU learning is the right tool when:</p>
+<ol>
+  <li>Collecting negative labels is <strong>expensive or impossible</strong></li>
+  <li>Your unlabeled data is a realistic mixture of both classes</li>
+  <li>You have at least a rough estimate of the class prior $\pi$</li>
+</ol>
+
+<p>A common pitfall: treating unlabeled as negative. This introduces systematic label noise that biases the classifier toward over-predicting negatives. PU methods avoid this by design.</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">pulearn</code></strong> (Python): sklearn-compatible PU classifiers</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">pu-learning</code></strong> on GitHub: nnPU and unbiased PU implementations in PyTorch</li>
+</ul>
+
+  </div>
+  <div class="post-single-footer">
+    <a href="/post" class="post-back-link">← Back to Posts</a>
+  </div>
+</article>
+
+
+          <footer class="home-footer">
+            <p>Last updated: <span id="date">…</span></p>
+          </footer>
+        </main>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="/assets/js/github_date.js"></script>
+
+  </body>
+</html>

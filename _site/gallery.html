@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Gallery | Noah Yi-Ting Hung</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+TC&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+  <!-- Math rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215543768-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-215543768-1');
+</script>
+
+  <!-- favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/main/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/main/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/main/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/main/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/main/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/main/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/main/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/main/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/main/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/main/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/main/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/main/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/main/favicon/favicon-16x16.png">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/main/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/main/opengraph.jpg">
+  <meta property="og:title" content="Gallery | Donghoon Shin">
+  <meta property="og:description" content="Photography and travel by Noah Yi-Ting Hung">
+
+  <!-- Google scholar -->
+  
+</head>
+<body class="home-page">
+
+    <div class="home-wrap">
+      <div class="home-layout">
+
+        <!-- ── Sidebar ──────────────────────────────── -->
+        <aside class="home-sidebar">
+          <div class="sidebar-inner">
+
+            <div class="sidebar-photo-wrap">
+              <img src="/assets/images/profile.png" alt="Noah Yi-Ting Hung" class="sidebar-photo"/>
+            </div>
+
+            <h1 class="sidebar-name">Noah Yi-Ting <strong>Hung</strong></h1>
+
+            <p class="sidebar-role">PhD Candidate</p>
+            <p class="sidebar-affil">Machine Learning &amp; Data Science<br>Georgia State University</p>
+
+            <div class="sidebar-links">
+              <a href="mailto:yhung7@gsu.edu" title="Email"><i class="fa fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/yitinghung/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <p class="sidebar-location"><i class="fas fa-location-dot"></i>&nbsp; Atlanta, GA</p>
+
+          </div>
+        </aside>
+
+        <!-- ── Content ──────────────────────────────── -->
+        <main class="home-content">
+
+          <!-- Dynamic header: title changes per page, nav shows other pages -->
+          <div class="content-header ">
+            <div>
+              <h2 class="page-title">Gallery</h2>
+              <div class="page-title-bar"></div>
+            </div>
+            <nav class="content-nav">
+              
+              <a href="/" class="content-nav-link">Home</a>
+              
+              
+              <a href="/publication" class="content-nav-link">Research</a>
+              
+              
+              <a href="/post" class="content-nav-link">Posts</a>
+              
+              
+            </nav>
+          </div>
+
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- ══ Photo Grid ══════════════════════════════════════════════ -->
+<section style="margin-bottom:2.4rem;">
+  <div class="section-heading">📸 Photos</div>
+  <p style="font-size:.83rem;color:var(--faint);margin-bottom:.9rem;">
+    Click any photo to expand. Click a location label to animate the route from home.
+  </p>
+
+  <div class="gallery-grid" id="gallery-grid">
+    
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(0)">
+        <img
+          src="/assets/images/gallery/01.jpg"
+          alt="Home Base"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>Home Base</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <span class="gallery-loc-static">Atlanta, United States</span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(1)">
+        <img
+          src="/assets/images/gallery/02.jpg"
+          alt="MMLS 2023"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>MMLS 2023</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('Chicago, United States', 'plane', this)">
+          Chicago, United States
+        </button>
+        <span class="gallery-transport-badge" id="tb-1">
+          ✈
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(2)">
+        <img
+          src="/assets/images/gallery/03.jpg"
+          alt="UF Winter Workshop"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>UF Winter Workshop</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('Gainesville, United States', 'car', this)">
+          Gainesville, United States
+        </button>
+        <span class="gallery-transport-badge" id="tb-2">
+          🚗
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(3)">
+        <img
+          src="/assets/images/gallery/04.jpg"
+          alt="JSM 2025"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>JSM 2025</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('Nashville, United States', 'plane', this)">
+          Nashville, United States
+        </button>
+        <span class="gallery-transport-badge" id="tb-3">
+          ✈
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(4)">
+        <img
+          src="/assets/images/gallery/05.jpg"
+          alt="Purdue University"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>Purdue University</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('West Lafayette, United States', 'plane', this)">
+          West Lafayette, United States
+        </button>
+        <span class="gallery-transport-badge" id="tb-4">
+          ✈
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(5)">
+        <img
+          src="/assets/images/gallery/06.jpg"
+          alt="National Taiwan University"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>National Taiwan University</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('Taipei, Taiwan', 'plane', this)">
+          Taipei, Taiwan
+        </button>
+        <span class="gallery-transport-badge" id="tb-5">
+          ✈
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(6)">
+        <img
+          src="/assets/images/gallery/07.jpg"
+          alt="CAPASUS Conference"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>CAPASUS Conference</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <span class="gallery-loc-static">Atlanta, United States</span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(7)">
+        <img
+          src="/assets/images/gallery/08.jpg"
+          alt="NCTU Research"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>NCTU Research</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <button class="gallery-loc-btn"
+          onclick="activateLocation('Hsinchu, Taiwan', 'car', this)">
+          Hsinchu, Taiwan
+        </button>
+        <span class="gallery-transport-badge" id="tb-7">
+          🚗
+        </span>
+        
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-cell" onclick="openLightbox(8)">
+        <img
+          src="/assets/images/gallery/09.jpg"
+          alt="Atlanta Moments"
+          loading="lazy"
+          onerror="this.style.display='none';this.parentElement.classList.add('gallery-empty')">
+        <div class="gallery-hover"><span>Atlanta Moments</span></div>
+      </div>
+      <div class="gallery-caption">
+        
+        <span class="gallery-loc-static">Atlanta, United States</span>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ══ Travel Map ═══════════════════════════════════════════════ -->
+<section>
+  <div class="section-heading">🗺️ Travel</div>
+  <p style="font-size:.83rem;color:var(--faint);margin-bottom:.75rem;">
+    Click a marker or photo location label to animate the route.
+  </p>
+  <div id="travel-map"></div>
+</section>
+
+<!-- ══ Lightbox ═════════════════════════════════════════════════ -->
+<div class="lb-overlay" id="lb-overlay" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">×</button>
+  <button class="lb-arrow lb-prev" onclick="event.stopPropagation();shiftLightbox(-1)">&#8249;</button>
+  <div class="lb-content" onclick="event.stopPropagation()">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-info">
+      <span id="lb-title" class="lb-title"></span>
+      <span id="lb-loc"   class="lb-loc"></span>
+      <span id="lb-date"  class="lb-date"></span>
+    </div>
+  </div>
+  <button class="lb-arrow lb-next" onclick="event.stopPropagation();shiftLightbox(1)">&#8250;</button>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* ── Data from Jekyll ── */
+const PHOTOS = [
+  
+  { src:"/assets/images/gallery/01.jpg", title:"Home Base", location:"Atlanta, United States", date:"2024", transport:"" },
+  
+  { src:"/assets/images/gallery/02.jpg", title:"MMLS 2023", location:"Chicago, United States", date:"May 2023", transport:"plane" },
+  
+  { src:"/assets/images/gallery/03.jpg", title:"UF Winter Workshop", location:"Gainesville, United States", date:"Jan 2025", transport:"car" },
+  
+  { src:"/assets/images/gallery/04.jpg", title:"JSM 2025", location:"Nashville, United States", date:"Jul 2025", transport:"plane" },
+  
+  { src:"/assets/images/gallery/05.jpg", title:"Purdue University", location:"West Lafayette, United States", date:"2022", transport:"plane" },
+  
+  { src:"/assets/images/gallery/06.jpg", title:"National Taiwan University", location:"Taipei, Taiwan", date:"2020", transport:"plane" },
+  
+  { src:"/assets/images/gallery/07.jpg", title:"CAPASUS Conference", location:"Atlanta, United States", date:"Aug 2025", transport:"" },
+  
+  { src:"/assets/images/gallery/08.jpg", title:"NCTU Research", location:"Hsinchu, Taiwan", date:"2020", transport:"car" },
+  
+  { src:"/assets/images/gallery/09.jpg", title:"Atlanta Moments", location:"Atlanta, United States", date:"2024", transport:"" }
+  
+];
+const LOCATIONS = [
+  
+  { name:"Atlanta, United States", lat:33.749, lng:-84.388, home:true, transport:"", desc:"Home · Georgia State University" },
+  
+  { name:"West Lafayette, United States", lat:40.425, lng:-86.909, home:false, transport:"plane", desc:"Purdue University · M.S." },
+  
+  { name:"Nashville, United States", lat:36.174, lng:-86.768, home:false, transport:"plane", desc:"JSM 2025" },
+  
+  { name:"Gainesville, United States", lat:29.652, lng:-82.325, home:false, transport:"car", desc:"UF Winter Workshop 2025" },
+  
+  { name:"Chicago, United States", lat:41.878, lng:-87.63, home:false, transport:"plane", desc:"MMLS 2023" },
+  
+  { name:"Taipei, Taiwan", lat:25.033, lng:121.565, home:false, transport:"plane", desc:"National Taiwan University · B.S." },
+  
+  { name:"Hsinchu, Taiwan", lat:24.803, lng:120.971, home:false, transport:"car", desc:"NCTU · Research Assistant" }
+  
+];
+const HOME = LOCATIONS.find(l => l.home) || { lat: 33.749, lng: -84.388 };
+
+/* ── Lightbox ── */
+let currentIdx = 0;
+function openLightbox(idx) {
+  currentIdx = idx;
+  const p = PHOTOS[idx];
+  document.getElementById('lb-img').src  = p.src;
+  document.getElementById('lb-title').textContent = p.title;
+  document.getElementById('lb-loc').textContent   = p.location;
+  document.getElementById('lb-date').textContent  = p.date;
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function shiftLightbox(dir) { openLightbox((currentIdx + dir + PHOTOS.length) % PHOTOS.length); }
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb-overlay').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') shiftLightbox(1);
+  if (e.key === 'ArrowLeft')  shiftLightbox(-1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+/* ── Caption click → map ── */
+function activateLocation(locName, transport, btn) {
+  document.querySelectorAll('.gallery-loc-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const badge = btn.parentElement.querySelector('.gallery-transport-badge');
+  if (badge) { badge.classList.add('flash'); setTimeout(() => badge.classList.remove('flash'), 700); }
+  const loc = LOCATIONS.find(l => l.name === locName);
+  if (loc && !loc.home) flyTo(loc);
+}
+
+/* ── Map ── */
+const map = L.map('travel-map', { center:[28,-10], zoom:2, scrollWheelZoom:false, attributionControl:false });
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom:19 }).addTo(map);
+L.control.attribution({ prefix:false })
+  .addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>')
+  .addTo(map);
+
+const homeIcon  = L.divIcon({ className:'', html:'<div class="map-marker map-home"></div>',  iconSize:[14,14], iconAnchor:[7,7] });
+const placeIcon = L.divIcon({ className:'', html:'<div class="map-marker map-place"></div>', iconSize:[10,10], iconAnchor:[5,5] });
+
+let activeLine    = null;
+let vehicleMarker = null;
+let animTimer     = null;
+
+/* Quadratic bezier */
+function bz(t, a, c, b) { return (1-t)*(1-t)*a + 2*(1-t)*t*c + t*t*b; }
+
+function calcArc(home, dest, isPlane, steps) {
+  const dy   = dest.lat - home.lat, dx = dest.lng - home.lng;
+  const dist = Math.sqrt(dx*dx + dy*dy);
+  /* tall arc for plane, barely curved for car */
+  const lift = isPlane ? Math.max(dist * 0.33, 6) : Math.max(dist * 0.05, 1.5);
+  const cLat = (home.lat + dest.lat) / 2 + lift;
+  const cLng = (home.lng + dest.lng) / 2;
+  const pts  = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    pts.push([ bz(t, home.lat, cLat, dest.lat), bz(t, home.lng, cLng, dest.lng) ]);
+  }
+  return pts;
+}
+
+function flyTo(dest) {
+  /* Clean up */
+  if (activeLine)    { map.removeLayer(activeLine);    activeLine    = null; }
+  if (vehicleMarker) { map.removeLayer(vehicleMarker); vehicleMarker = null; }
+  if (animTimer)     { cancelAnimationFrame(animTimer); animTimer    = null; }
+
+  const isPlane = dest.transport !== 'car';
+  const arcPts  = calcArc(HOME, dest, isPlane, 100);
+
+  /* Draw full arc as a styled polyline (no progressive drawing — keeps it stable) */
+  activeLine = L.polyline(arcPts, {
+    color:     isPlane ? '#9B8264' : '#5A9BDC',
+    weight:    isPlane ? 2.2 : 2,
+    dashArray: isPlane ? '1, 0' : '9, 6',
+    opacity:   0.65,
+    lineCap:  'round',
+    lineJoin: 'round'
+  }).addTo(map);
+
+  /* Vehicle marker — icon is a simple div that we rotate via its child span */
+  const emoji   = isPlane ? '✈' : '🚗';
+  const iconHtml = `<span class="v-emoji" style="transform-origin:center center;">${emoji}</span>`;
+  vehicleMarker = L.marker(arcPts[0], {
+    icon: L.divIcon({
+      className:  'v-icon-wrap',
+      html:        iconHtml,
+      iconSize:   [36, 36],
+      iconAnchor: [18, 18]
+    }),
+    zIndexOffset: 1000
+  }).addTo(map);
+
+  /* Time-based smooth animation with ease-in-out */
+  const DURATION = 2800;
+  let startTime  = null;
+
+  function tick(now) {
+    if (!startTime) startTime = now;
+    const raw = Math.min((now - startTime) / DURATION, 1);
+
+    /* Cubic ease-in-out */
+    const t = raw < 0.5 ? 4 * raw * raw * raw : 1 - Math.pow(-2 * raw + 2, 3) / 2;
+
+    /* Interpolate position on arc */
+    const total  = arcPts.length - 1;
+    const fi     = t * total;
+    const i0     = Math.min(Math.floor(fi), total - 1);
+    const i1     = Math.min(i0 + 1, total);
+    const frac   = fi - i0;
+    const lat    = arcPts[i0][0] + frac * (arcPts[i1][0] - arcPts[i0][0]);
+    const lng    = arcPts[i0][1] + frac * (arcPts[i1][1] - arcPts[i0][1]);
+
+    vehicleMarker.setLatLng([lat, lng]);
+
+    /* Rotate the emoji span toward heading (not the Leaflet container) */
+    if (isPlane) {
+      const ahead = arcPts[Math.min(i0 + 3, total)];
+      const cur   = arcPts[i0];
+      /* atan2 for 2D lat/lng — approximate, good enough for display */
+      const angle = Math.atan2(ahead[1] - cur[1], ahead[0] - cur[0]) * 180 / Math.PI;
+      /* getElement() returns the Leaflet wrapper div; find our span inside it */
+      const wrapper = vehicleMarker.getElement();
+      if (wrapper) {
+        const span = wrapper.querySelector('.v-emoji');
+        if (span) span.style.transform = `rotate(${angle}deg)`;
+      }
+    }
+
+    if (raw < 1) {
+      animTimer = requestAnimationFrame(tick);
+    }
+  }
+
+  /* One rAF delay so Leaflet has time to insert the marker's DOM element */
+  requestAnimationFrame(() => requestAnimationFrame(tick));
+
+  map.flyTo([dest.lat, dest.lng], Math.min(map.getZoom() + 1, 5), { duration: 1.3 });
+}
+
+/* Add map markers */
+LOCATIONS.forEach(loc => {
+  const icon = loc.home ? homeIcon : placeIcon;
+  const m    = L.marker([loc.lat, loc.lng], { icon }).addTo(map);
+  const tip  = `<strong>${loc.name}</strong>${loc.desc ? `<br><span style="font-size:.74rem;font-weight:300;">${loc.desc}</span>` : ''}`;
+  m.bindTooltip(tip, { direction:'top', offset:[0,-8], opacity:.97 });
+  if (!loc.home) {
+    m.on('click', () => flyTo(loc));
+    m.on('add',   () => { const el = m.getElement(); if (el) el.style.cursor = 'pointer'; });
+  }
+});
+</script>
+
+
+          <footer class="home-footer">
+            <p>Last updated: <span id="date">…</span></p>
+          </footer>
+        </main>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="/assets/js/github_date.js"></script>
+
+  </body>
+</html>

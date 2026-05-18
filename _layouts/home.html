@@ -1,61 +1,74 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  {%- include head.html -%}
 
-  {{ content }}
+  <body class="home-page">
 
+    <div class="home-wrap">
+      <div class="home-layout">
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
+        <!-- ── Sidebar ──────────────────────────────── -->
+        <aside class="home-sidebar">
+          <div class="sidebar-inner">
 
+            <div class="sidebar-photo-wrap">
+              <img src="/assets/images/profile.png" alt="Noah Yi-Ting Hung" class="sidebar-photo"/>
+            </div>
 
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+            <h1 class="sidebar-name">Noah Yi-Ting <strong>Hung</strong></h1>
 
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
+            <p class="sidebar-role">PhD Candidate</p>
+            <p class="sidebar-affil">Machine Learning &amp; Data Science<br>Georgia State University</p>
+
+            <div class="sidebar-links">
+              <a href="mailto:yhung7@gsu.edu" title="Email"><i class="fa fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=uhPzWCEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/yitinghung/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <p class="sidebar-location"><i class="fas fa-location-dot"></i>&nbsp; Atlanta, GA</p>
+
+          </div>
+        </aside>
+
+        <!-- ── Content ──────────────────────────────── -->
+        <main class="home-content">
+
+          <!-- Dynamic header: title changes per page, nav shows other pages -->
+          <div class="content-header {% if page.layout == 'post-single' %}content-header-post{% endif %}">
+            <div>
+              <h2 class="page-title">{{ page.page_title | default: page.title }}</h2>
+              <div class="page-title-bar"></div>
+            </div>
+            <nav class="content-nav">
+              {% unless page.url == '/' %}
+              <a href="/" class="content-nav-link">Home</a>
+              {% endunless %}
+              {% unless page.url == '/publication' or page.url == '/publication/' %}
+              <a href="/publication" class="content-nav-link">Research</a>
+              {% endunless %}
+              {% unless page.url == '/post' or page.url == '/post/' %}
+              <a href="/post" class="content-nav-link">Posts</a>
+              {% endunless %}
+              {% unless page.url == '/gallery' or page.url == '/gallery/' %}
+              <a href="/gallery" class="content-nav-link">Gallery</a>
+              {% endunless %}
+            </nav>
+          </div>
+
+          {{ content }}
+
+          <footer class="home-footer">
+            <p>Last updated: <span id="date">…</span></p>
+          </footer>
+        </main>
+
       </div>
-    {%- endif %}
+    </div>
 
-  {%- endif -%}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="{{ '/assets/js/github_date.js' | relative_url }}"></script>
 
-</div>
+  </body>
+</html>
