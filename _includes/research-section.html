@@ -1,0 +1,185 @@
+{% assign research_items = site.data.research %}
+{% if include.featured_only %}
+  {% assign research_items = site.data.research | where: "featured", true | sort: "home_order" %}
+{% endif %}
+{% assign preprints = site.data.research | where: "section", "preprint" %}
+{% assign journals = site.data.research | where: "section", "journal" %}
+
+<section style="margin-bottom: 2.4rem;">
+  <div class="section-heading">{{ include.heading | default: "📄 Selected Research" }}</div>
+
+  <div class="pub-filters">
+    <span class="filter-label">Tags:</span>
+    <div class="filter-tags">
+      <button class="filter-btn fbt-llm" data-filter="llm">LLM</button>
+      <button class="filter-btn fbt-ml" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn fbt-stat" data-filter="stat">Statistics</button>
+      <button class="filter-btn fbt-rel" data-filter="rel">Reliability</button>
+    </div>
+  </div>
+
+  {% if include.featured_only %}
+  <ul class="pub-list" id="{{ include.list_id | default: 'pub-list' }}">
+    {% for item in research_items %}
+    <li class="pub-card" id="pub-{{ item.id }}" data-tags="{{ item.tags | join: ',' }}">
+      <div class="pub-card-body">
+        <p class="pub-title">{{ item.title }}</p>
+        <p class="pub-authors">{{ item.authors }}</p>
+        <div class="pub-meta-row" style="display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;">
+          <div class="pub-meta-line">
+            <span>{{ item.status }}</span><span class="pub-meta-sep">·</span><span>{{ item.venue_html | default: item.venue }}</span>
+          </div>
+          {% if item.tag_labels %}
+          <div class="pub-meta-line" style="display:flex;flex-wrap:wrap;gap:.35rem;justify-content:flex-start;align-items:flex-start;">
+            {% for tag in item.tag_labels %}
+            <span class="pub-tag tag-{{ tag.key }}">{{ tag.label }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="pub-actions">
+          <span class="pub-links">
+            {% for link in item.links %}
+            <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
+            {% endfor %}
+          </span>
+          <details class="pub-toggle">
+            <summary>BibTeX</summary>
+            <div class="pub-toggle-panel">
+              <pre class="pub-bibtex">{{ item.bibtex }}</pre>
+            </div>
+          </details>
+          <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
+        </div>
+        <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
+      </div>
+      <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <section style="margin-bottom: 2rem;">
+    <div class="section-heading">Pre-print</div>
+    <ul class="pub-list" id="{{ include.list_id | default: 'pub-list' }}-preprint">
+      {% for item in preprints %}
+      <li class="pub-card" id="pub-{{ item.id }}" data-tags="{{ item.tags | join: ',' }}">
+        <div class="pub-card-body">
+          <p class="pub-title">{{ item.title }}</p>
+          <p class="pub-authors">{{ item.authors }}</p>
+          <div class="pub-meta-row" style="display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;">
+            <div class="pub-meta-line">
+              <span>{{ item.status }}</span><span class="pub-meta-sep">·</span><span>{{ item.venue_html | default: item.venue }}</span>
+            </div>
+            {% if item.tag_labels %}
+            <div class="pub-meta-line" style="display:flex;flex-wrap:wrap;gap:.35rem;justify-content:flex-start;align-items:flex-start;">
+              {% for tag in item.tag_labels %}
+              <span class="pub-tag tag-{{ tag.key }}">{{ tag.label }}</span>{% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <div class="pub-actions">
+            <span class="pub-links">
+              {% for link in item.links %}
+              <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
+              {% endfor %}
+            </span>
+            <details class="pub-toggle">
+              <summary>BibTeX</summary>
+              <div class="pub-toggle-panel">
+                <pre class="pub-bibtex">{{ item.bibtex }}</pre>
+              </div>
+            </details>
+            <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
+          </div>
+          <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
+        </div>
+        <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-heading">Journal</div>
+    <ul class="pub-list" id="{{ include.list_id | default: 'pub-list' }}-journal">
+      {% for item in journals %}
+      <li class="pub-card" id="pub-{{ item.id }}" data-tags="{{ item.tags | join: ',' }}">
+        <div class="pub-card-body">
+          <p class="pub-title">{{ item.title }}</p>
+          <p class="pub-authors">{{ item.authors }}</p>
+          <div class="pub-meta-row" style="display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;">
+            <div class="pub-meta-line">
+              <span>{{ item.status }}</span><span class="pub-meta-sep">·</span><span>{{ item.venue_html | default: item.venue }}</span>
+            </div>
+            {% if item.tag_labels %}
+            <div class="pub-meta-line" style="display:flex;flex-wrap:wrap;gap:.35rem;justify-content:flex-start;align-items:flex-start;">
+              {% for tag in item.tag_labels %}
+              <span class="pub-tag tag-{{ tag.key }}">{{ tag.label }}</span>{% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <div class="pub-actions">
+            <span class="pub-links">
+              {% for link in item.links %}
+              <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
+              {% endfor %}
+            </span>
+            <details class="pub-toggle">
+              <summary>BibTeX</summary>
+              <div class="pub-toggle-panel">
+                <pre class="pub-bibtex">{{ item.bibtex }}</pre>
+              </div>
+            </details>
+            <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
+          </div>
+          <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
+        </div>
+        <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if include.featured_only and research_items.size == 0 %}
+  <p style="color:var(--faint);font-style:italic;font-size:.9rem;">No featured research yet.</p>
+  {% endif %}
+</section>
+
+<script>
+  function toggleAbstract(id) {
+    document.getElementById(id).classList.toggle('expanded');
+  }
+  (function () {
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = [...document.querySelectorAll('.pub-card')];
+    function applyFilter(tag) {
+      cards.forEach(c => {
+        const show = !tag || (c.dataset.tags || '').split(',').includes(tag);
+        if (show) {
+          if (c._hideTimer) { clearTimeout(c._hideTimer); c._hideTimer = null; }
+          c.style.display = '';
+          c.style.opacity = '0';
+          c.style.transform = 'translateY(8px)';
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            c.style.opacity = '';
+            c.style.transform = '';
+          }));
+        } else {
+          c.style.opacity = '0';
+          c.style.transform = 'translateY(-4px)';
+          c._hideTimer = setTimeout(() => {
+            c.style.display = 'none';
+            c.style.opacity = '';
+            c.style.transform = '';
+          }, 210);
+        }
+      });
+    }
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      const tag = btn.dataset.filter;
+      const isActive = btn.classList.contains('active');
+      btns.forEach(b => b.classList.remove('active'));
+      isActive ? applyFilter(null) : (btn.classList.add('active'), applyFilter(tag));
+    }));
+  })();
+</script>

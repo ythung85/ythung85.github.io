@@ -10,18 +10,18 @@ page_title: About
   <p>I am a PhD candidate in Machine Learning and Data Science at the Department of Mathematics and Statistics,
   <a href="https://gsu.edu" class="inst inst-gsu">
     <img class="inst-logo inst-logo-wide" src="/assets/images/logo/gsu.png" alt="GSU logo">Georgia State University</a>,
-  advised by Professor <a href="" class="advisor">Li-Hsiang Lin</a>. My research sits at the intersection of statistical modeling, machine learning, and uncertainty quantification —
+  advised by Professor <a href="https://sites.google.com/prod/view/li-hsianglin/main-page?authuser=0" class="advisor">Li-Hsiang Lin</a>. My research sits at the intersection of statistical modeling, machine learning, and uncertainty quantification —
   with particular focus on non-parametric methods, interpretable deep models, and portfolio optimization.</p>
 
   <p>I received my M.S. in Joint Statistics and Computer Science from
   <a href="https://purdue.edu" class="inst inst-purdue">
     <img class="inst-logo inst-logo-wide" src="/assets/images/logo/purdue.png" alt="Purdue University logo">Purdue University</a>,
-  working with Professor <a href="" class="advisor">Qi Guo</a> on computer vision.
+  working with Professor <a href="https://www.qiguo.org" class="advisor">Qi Guo</a> on computer vision.
   I completed my B.S. at
   <a href="https://ntu.edu.tw" class="inst inst-ntu">
     <img class="inst-logo" src="/assets/images/logo/ntu.png" alt="National Taiwan University logo">National Taiwan University</a>
   under <a href="" class="advisor">Ku-Wei Liao</a> on reliability engineering.
-  Before my PhD, I was a graduate research assistant under Professor <a href="" class="advisor">Henry Horng-Shing Lu</a>,
+  Before my PhD, I was a graduate research assistant under Professor <a href="https://misg.stat.nycu.edu.tw" class="advisor">Henry Horng-Shing Lu</a>,
   working on deep mixture density networks.</p>
 </section>
 
@@ -61,171 +61,7 @@ page_title: About
 
 
 <!-- ══ Selected Research ══════════════════════════════════════ -->
-<section style="margin-bottom: 2.4rem;">
-  <div class="section-heading">📄 Selected Research</div>
-
-  <div class="pub-filters">
-    <span class="filter-label">Tags:</span>
-    <div class="filter-tags">
-      <button class="filter-btn fbt-llm"  data-filter="llm">LLM</button>
-      <button class="filter-btn fbt-ml"   data-filter="ml">Machine Learning</button>
-      <button class="filter-btn fbt-stat" data-filter="stat">Statistics</button>
-      <button class="filter-btn fbt-rel"  data-filter="rel">Reliability</button>
-    </div>
-  </div>
-
-  <ul class="pub-list" id="pub-list">
-    <li class="pub-card" id="pub-aura" data-tags="llm,ml">
-      <div class="pub-card-body">
-        <p class="pub-title">AURA: Adaptive Uncertainty--aware Refinement for LLM-as-a-Judge Auditing.</p>
-        <p class="pub-authors">Zilong Zhang,<strong> Noah Yi-Ting Hung</strong>, Weiyi He, Lei Ding, Junxi Chang, Chi-Kuang Yeh.</p>
-        <div class="pub-meta-row">
-          <span>Preprint</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
-          <span class="pub-tag tag-llm">LLM Evaluation</span><span class="pub-tag tag-ml">Active Learning</span>
-        </div>
-        <div class="pub-actions">
-          <span class="pub-links">
-            <a href="#" aria-label="arXiv">📄</a>
-          </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">@misc{zhang2025aura,
-  title={AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing},
-  author={Zhang, Zilong and Hung, Noah Yi-Ting and He, Weiyi and Ding, Lei and Chang, Junxi and Yeh, Chi-Kuang},
-  year={2025},
-  note={arXiv preprint}
-}</pre>
-            </div>
-          </details>
-          <button class="pub-expand-btn" onclick="toggleAbstract('pub-aura')">Abstract <span class="expand-arrow">▶</span></button>
-        </div>
-        <div class="pub-abstract-wrap"><p class="pub-abstract">Large language models (LLMs) are increasingly used as judges for open-ended generation, as large-scale human evaluation is often expensive and difficult to scale, yet their preferences remain imperfect proxies for human judgment. Existing auditing pipelines often assume that a reliable subset of examples or clean supervision signals are available beforehand, for example from human annotation, heuristic filtering, or the outputs of strong judges. In LLM evaluation, this assumption is fragile: the initial split may inherit judge bias, while human verification is typically too scarce to define stable groups at scale. We propose AURA, an adaptive uncertainty--aware refinement framework for auditing pairwise LLM--as--a--judge decisions under selected human verification. AURA iteratively learns a human-consistency signal, propagates reliable evidence, and prioritizes uncertain comparisons for human review. The key idea is to treat trust in a judge as a latent quantity that is progressively refined as evidence accumulates. We provide a compact formulation, a stable refinement procedure, and a comprehensive evaluation on both synthetic and real pairwise LLM-answer data.</p></div>
-      </div>
-      <div class="pub-card-thumb"><img src="assets/images/AURA.png" alt="AURA"/></div>
-    </li>
-
-    <li class="pub-card" id="pub-pu" data-tags="llm,ml">
-      <div class="pub-card-body">
-        <p class="pub-title">Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning.</p>
-        <p class="pub-authors">Zilong Zhang<sup>*</sup>, <strong>Noah Yi-Ting Hung<sup>*</sup></strong>, Lei Ding, Chi-Kuang Yeh.</p>
-        <div class="pub-meta-row">
-          <span>Preprint</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
-          <span class="pub-tag tag-llm">LLM Evaluation</span><span class="pub-tag tag-stat">PU Learning</span>
-        </div>
-        <div class="pub-actions">
-          <span class="pub-links">
-            <a href="#" aria-label="arXiv">📄</a>
-          </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">@misc{zhang2025llm_pu,
-  title={Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning},
-  author={Zhang, Zilong and Hung, Noah Yi-Ting and Ding, Lei and Yeh, Chi-Kuang},
-  year={2025},
-  note={arXiv preprint}
-}</pre>
-            </div>
-          </details>
-          <button class="pub-expand-btn" onclick="toggleAbstract('pub-pu')">Abstract <span class="expand-arrow">▶</span></button>
-        </div>
-        <div class="pub-abstract-wrap"><p class="pub-abstract">Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM-as-a-Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive–unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human-verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human-consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM-as-a-judge pipelines.</p></div>
-      </div>
-      <div class="pub-card-thumb"><img src="assets/images/LLM_PU.png" alt="LLM PU"/></div>
-    </li>
-
-    <li class="pub-card" id="pub-sdami" data-tags="ml,stat">
-      <div class="pub-card-body">
-        <p class="pub-title">Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun</p>
-        <div class="pub-meta-row">
-          <span>Submitted</span><span class="pub-meta-sep">·</span><span>arXiv 2025</span><span class="pub-meta-sep"> | </span>
-          <span class="pub-tag tag-stat">Interpretable ML</span><span class="pub-tag tag-stat">Non-parametric</span><span class="pub-tag tag-ml">Deep Learning</span>
-        </div>
-        <div class="pub-actions">
-          <span class="pub-links">
-            <a href="https://arxiv.org/abs/2509.23068" target="_blank" aria-label="arXiv">📄</a>
-          </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">@misc{hung2025sdami,
-  title={Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability},
-  author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D.},
-  year={2025},
-  note={arXiv preprint}
-}</pre>
-            </div>
-          </details>
-          <button class="pub-expand-btn" onclick="toggleAbstract('pub-sdami')">Abstract <span class="expand-arrow">▶</span></button>
-        </div>
-        <div class="pub-abstract-wrap"><p class="pub-abstract">SDAMI combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional black-box models, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability while maintaining predictive power on small or moderate samples with high-dimensional features.</p></div>
-      </div>
-      <div class="pub-card-thumb"><img src="assets/images/SDAMI.png" alt="SDAMI"/></div>
-    </li>
-
-    <li class="pub-card" id="pub-dps" data-tags="stat">
-      <div class="pub-card-body">
-        <p class="pub-title">Deep P-Spline: Theory, Fast Tuning, and Application</p>
-        <p class="pub-authors"><strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun</p>
-        <div class="pub-meta-row">
-          <span>Accepted</span><span class="pub-meta-sep">·</span><span>JASA 2026</span><span class="pub-meta-sep"> | </span>
-          <span class="pub-tag tag-stat">Non-parametric</span><span class="pub-tag tag-award">🏆 JSM SPES Award</span>
-        </div>
-        <div class="pub-actions">
-          <span class="pub-links">
-            <a href="https://arxiv.org/abs/2501.01376" target="_blank" aria-label="arXiv">📄</a>
-          </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">@article{hung2026dps,
-  title={Deep P-Spline: Theory, Fast Tuning, and Application},
-  author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D.},
-  journal={Journal of the American Statistical Association},
-  year={2026}
-}</pre>
-            </div>
-          </details>
-          <button class="pub-expand-btn" onclick="toggleAbstract('pub-dps')">Abstract <span class="expand-arrow">▶</span></button>
-        </div>
-        <div class="pub-abstract-wrap"><p class="pub-abstract">We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.</p></div>
-      </div>
-      <div class="pub-card-thumb"><img src="assets/images/DPS.png" alt="Deep P-Spline"/></div>
-    </li>
-
-    <li class="pub-card" id="pub-smc" data-tags="stat,rel">
-      <div class="pub-card-body">
-        <p class="pub-title">Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States</p>
-        <p class="pub-authors">John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong></p>
-        <div class="pub-meta-row">
-          <span>Accepted</span><span class="pub-meta-sep">·</span><span>JSHM 2024</span><span class="pub-meta-sep"> | </span>
-          <span class="pub-tag tag-rel">Reliability</span><span class="pub-tag tag-stat">Stochastic Processes</span>
-        </div>
-        <div class="pub-actions">
-          <span class="pub-links">
-            <a href="https://journals.sagepub.com/doi/10.1177/14759217241277969" target="_blank" aria-label="paper">📄</a>
-          </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">@article{thedy2024smc,
-  title={Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States},
-  author={Thedy, John and Liao, Kuo-Wei and Hung, Noah Yi-Ting},
-  journal={Journal of Structural Health Monitoring},
-  year={2024}
-}</pre>
-            </div>
-          </details>
-          <button class="pub-expand-btn" onclick="toggleAbstract('pub-smc')">Abstract <span class="expand-arrow">▶</span></button>
-        </div>
-        <div class="pub-abstract-wrap"><p class="pub-abstract">Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.</p></div>
-      </div>
-      <div class="pub-card-thumb"><img src="assets/images/smc.png" alt="Semi-Markov"/></div>
-    </li>
-  </ul>
-</section>
+{% include research-section.html featured_only=true %}
 
 
 <!-- ══ Travel Globe ═══════════════════════════════════════════ -->
@@ -248,34 +84,6 @@ page_title: About
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
-  /* ── Publication filter ── */
-  function toggleAbstract(id) {
-    document.getElementById(id).classList.toggle('expanded');
-  }
-  (function () {
-    const btns  = document.querySelectorAll('.filter-btn');
-    const cards = [...document.querySelectorAll('#pub-list .pub-card')];
-    function applyFilter(tag) {
-      cards.forEach(c => {
-        const show = !tag || (c.dataset.tags || '').split(',').includes(tag);
-        if (show) {
-          if (c._hideTimer) { clearTimeout(c._hideTimer); c._hideTimer = null; }
-          c.style.display = '';
-          c.style.opacity = '0'; c.style.transform = 'translateY(8px)';
-          requestAnimationFrame(() => requestAnimationFrame(() => { c.style.opacity = ''; c.style.transform = ''; }));
-        } else {
-          c.style.opacity = '0'; c.style.transform = 'translateY(-4px)';
-          c._hideTimer = setTimeout(() => { c.style.display = 'none'; c.style.opacity = ''; c.style.transform = ''; }, 210);
-        }
-      });
-    }
-    btns.forEach(btn => btn.addEventListener('click', () => {
-      const tag = btn.dataset.filter, isActive = btn.classList.contains('active');
-      btns.forEach(b => b.classList.remove('active'));
-      isActive ? applyFilter(null) : (btn.classList.add('active'), applyFilter(tag));
-    }));
-  })();
-
   /* ── D3 Globe ── */
   (function () {
     const LOCS = [
@@ -451,7 +259,7 @@ page_title: About
     Promise.all([
       d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'),
       d3.json('https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@v5.1.2/geojson/ne_110m_admin_1_states_provinces_lines.geojson')
-        .catch(() => null)  /* graceful fail if CDN unreachable */
+        .catch(() => null)
     ]).then(([world, admin1]) => {
       landG.append('path')
         .datum(topojson.feature(world, world.objects.land))

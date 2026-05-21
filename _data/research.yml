@@ -1,0 +1,202 @@
+# Set featured: true to show this item on the home page.
+- id: aura
+  section: preprint
+  home_order: 2
+  featured: true
+  title: "AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing."
+  authors: "Zilong Zhang,<strong> Noah Yi-Ting Hung</strong>, Weiyi He, Lei Ding, Junxi Chang, Chi-Kuang Yeh."
+  status: "Submitted"
+  venue: "arXiv 2026"
+  tags:
+    - llm
+    - ml
+  tag_labels:
+    - key: llm
+      label: "LLM Evaluation"
+    - key: ml
+      label: "Active Learning"
+  links:
+    - href: "#"
+      label: "📄"
+      aria: "arXiv"
+  bibtex: |
+    @misc{zhang2025aura,
+      title={AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing},
+      author={Zhang, Zilong and Hung, Noah Yi-Ting and He, Weiyi and Ding, Lei and Chang, Junxi and Yeh, Chi-Kuang},
+      year={2025},
+      note={arXiv preprint}
+    }
+  abstract: |
+    Large language models (LLMs) are increasingly used as judges for open-ended generation, as large-scale human evaluation is often expensive and difficult to scale, yet their preferences remain imperfect proxies for human judgment. Existing auditing pipelines often assume that a reliable subset of examples or clean supervision signals are available beforehand, for example from human annotation, heuristic filtering, or the outputs of strong judges. In LLM evaluation, this assumption is fragile: the initial split may inherit judge bias, while human verification is typically too scarce to define stable groups at scale. We propose AURA, an adaptive uncertainty--aware refinement framework for auditing pairwise LLM--as--a--judge decisions under selected human verification. AURA iteratively learns a human-consistency signal, propagates reliable evidence, and prioritizes uncertain comparisons for human review. The key idea is to treat trust in a judge as a latent quantity that is progressively refined as evidence accumulates. We provide a compact formulation, a stable refinement procedure, and a comprehensive evaluation on both synthetic and real pairwise LLM-answer data.
+  image: "/assets/images/AURA.png"
+  image_alt: "AURA"
+
+- id: pu
+  section: preprint
+  home_order: 3
+  featured: true
+  title: "Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning."
+  authors: "Zilong Zhang<sup>*</sup>, <strong>Noah Yi-Ting Hung<sup>*</sup></strong>, Lei Ding, Chi-Kuang Yeh."
+  status: "Submitted"
+  venue: "arXiv 2026"
+  tags:
+    - llm
+    - ml
+  tag_labels:
+    - key: llm
+      label: "LLM Evaluation"
+    - key: stat
+      label: "PU Learning"
+  links:
+    - href: "#"
+      label: "📄"
+      aria: "arXiv"
+  bibtex: |
+    @misc{zhang2025llm_pu,
+      title={Quantifying and Auditing LLM Evaluation via Positive-Unlabeled Learning},
+      author={Zhang, Zilong and Hung, Noah Yi-Ting and Ding, Lei and Yeh, Chi-Kuang},
+      year={2025},
+      note={arXiv preprint}
+    }
+  abstract: |
+    Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM-as-a-Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive–unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human-verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human-consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM-as-a-judge pipelines.
+  image: "/assets/images/LLM_PU.png"
+  image_alt: "LLM PU"
+
+- id: sdami
+  section: preprint
+  home_order: 4
+  featured: true
+  title: "Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability"
+  authors: "<strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun"
+  status: "Submitted"
+  venue: "arXiv 2025"
+  tags:
+    - ml
+    - stat
+  tag_labels:
+    - key: stat
+      label: "Interpretable ML"
+    - key: stat
+      label: "Non-parametric"
+    - key: ml
+      label: "Deep Learning"
+  links:
+    - href: "https://arxiv.org/abs/2509.23068"
+      label: "📄"
+      aria: "arXiv"
+      target: "_blank"
+      rel: "noopener noreferrer"
+  bibtex: |
+    @article{hung2025sparse,
+      title={Sparse Deep Additive Model with Interactions: Enhancing Interpretability and Predictability},
+      author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D.},
+      journal={arXiv preprint arXiv:2509.23068},
+      year={2025}
+    }
+  abstract: |
+    SDAMI combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional black-box models, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability while maintaining predictive power on small or moderate samples with high-dimensional features.
+  image: "/assets/images/SDAMI.png"
+  image_alt: "SDAMI"
+
+- id: dps
+  section: journal
+  home_order: 1
+  featured: true
+  title: "Deep P-Spline: Theory, Fast Tuning, and Application"
+  authors: "<strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun"
+  status: "Accepted"
+  venue: "JASA 2026"
+  venue_html: "<em>Journal of the American Statistical Association</em> (JASA) 2026"
+  tags:
+    - stat
+  tag_labels:
+    - key: stat
+      label: "Non-parametric"
+    - key: award
+      label: "🏆 JSM SPES Award"
+  links:
+    - href: "https://www.tandfonline.com/doi/full/10.1080/01621459.2026.2671447"
+      label: "📄"
+      aria: "arXiv"
+      target: "_blank"
+      rel: "noopener noreferrer"
+  bibtex: |
+    @article{hung2026deep,
+      title={Deep p-spline: Theory, fast tuning, and application},
+      author={Hung, Noah Yi-Ting and Lin, Li-Hsiang and Calhoun, Vince D},
+      journal={Journal of the American Statistical Association},
+      number={just-accepted},
+      pages={1--28},
+      year={2026},
+      publisher={Taylor \& Francis}
+    }
+  abstract: |
+    We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.
+  image: "/assets/images/DPS.png"
+  image_alt: "Deep P-Spline"
+
+
+- id: sugar
+  section: journal
+  home_order: 999
+  featured: false
+  title: "Improving Sugarcane Extraneous Matter Prediction Using Transformed Near-Infrared Spectral Data and Functional Regression"
+  authors: "Stephania Imbachi Ordonez, <strong>Noah Yi-Ting Hung</strong>, Kevin McPeak, Gillian Eggleston, Li-Hsiang Lin"
+  status: "Accepted"
+  venue: "JABES 2026"
+  venue_html: "<em>Journal of Agricultural, Biological, and Environmental Statistics</em> (JABES) 2026"
+  tags:
+    - stat
+  tag_labels:
+    - key: stat
+      label: "Functional Analysis"
+  links:
+    - href: "."
+      label: "📄"
+      aria: "arXiv"
+      target: "_blank"
+      rel: "noopener noreferrer"
+  bibtex: |
+    @article{.
+    }
+  abstract: |
+    We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.
+  image: "/assets/images/sugar.jpg"
+  image_alt: "Sugarcane Prediction"
+
+
+- id: smc
+  section: journal
+  home_order: 5
+  featured: true
+  title: "Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States"
+  authors: "John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong>"
+  status: "Accepted"
+  venue: "JSHM 2024"
+  venue_html: "<em>Journal of Structural Health Monitoring</em> (JSHM) 2024"
+  tags:
+    - stat
+    - rel
+  tag_labels:
+    - key: rel
+      label: "Reliability"
+    - key: stat
+      label: "Stochastic Processes"
+  links:
+    - href: "https://journals.sagepub.com/doi/10.1177/14759217241277969"
+      label: "📄"
+      aria: "paper"
+      target: "_blank"
+      rel: "noopener noreferrer"
+  bibtex: |
+    @article{thedy2024smc,
+      title={Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States},
+      author={Thedy, John and Liao, Kuo-Wei and Hung, Noah Yi-Ting},
+      journal={Journal of Structural Health Monitoring},
+      year={2024}
+    }
+  abstract: |
+    Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.
+  image: "/assets/images/smc.png"
+  image_alt: "Semi-Markov"
