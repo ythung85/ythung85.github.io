@@ -48,7 +48,7 @@
     - key: stat
       label: "PU Learning"
   links:
-    - href: "#"
+    - href: "https://arxiv.org/abs/2606.19057"
       label: "📄"
       aria: "arXiv"
   bibtex: |
@@ -107,7 +107,6 @@
   authors: "<strong>Noah Yi-Ting Hung</strong>, Li-Hsiang Lin, Vince D. Calhoun"
   status: "Accepted"
   venue: "JASA 2026"
-  venue_html: "<em>Journal of the American Statistical Association</em> (JASA) 2026"
   tags:
     - stat
   tag_labels:
@@ -145,20 +144,25 @@
   authors: "Stephania Imbachi Ordonez, <strong>Noah Yi-Ting Hung</strong>, Kevin McPeak, Gillian Eggleston, Li-Hsiang Lin"
   status: "Accepted"
   venue: "JABES 2026"
-  venue_html: "<em>Journal of Agricultural, Biological, and Environmental Statistics</em> (JABES) 2026"
   tags:
     - stat
   tag_labels:
     - key: stat
       label: "Functional Analysis"
   links:
-    - href: "."
+    - href: "https://link.springer.com/article/10.1007/s13253-026-00744-7"
       label: "📄"
       aria: "arXiv"
       target: "_blank"
       rel: "noopener noreferrer"
   bibtex: |
-    @article{.
+    @article{ordonez2026improving,
+      title={Improving Sugarcane Extraneous Matter Prediction Using Transformed Near-Infrared Spectral Data and Functional Regression},
+      author={Ordo{\~n}ez, Stephania Imbachi and Hung, Yi-Ting N and McPeak, Kevin M and Eggleston, Gillian and Lin, Li-Hsiang},
+      journal={Journal of Agricultural, Biological and Environmental Statistics},
+      pages={1--17},
+      year={2026},
+      publisher={Springer}
     }
   abstract: |
     We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.
@@ -174,7 +178,6 @@
   authors: "John Thedy, Kuo-Wei Liao, <strong>Noah Yi-Ting Hung</strong>"
   status: "Accepted"
   venue: "JSHM 2024"
-  venue_html: "<em>Journal of Structural Health Monitoring</em> (JSHM) 2024"
   tags:
     - stat
     - rel
@@ -190,11 +193,15 @@
       target: "_blank"
       rel: "noopener noreferrer"
   bibtex: |
-    @article{thedy2024smc,
+    @article{thedy2025semi,
       title={Semi-Markov Process-Driven Maintenance Scheduling for Tainter Gate System Considering Multiple Limit States},
       author={Thedy, John and Liao, Kuo-Wei and Hung, Noah Yi-Ting},
       journal={Journal of Structural Health Monitoring},
-      year={2024}
+      volume={24},
+      number={4},
+      pages={2031--2051},
+      year={2025},
+      publisher={Sage Publications Sage UK: London, England}
     }
   abstract: |
     Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.
