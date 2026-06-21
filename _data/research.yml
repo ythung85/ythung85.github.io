@@ -30,6 +30,7 @@
     Large language models (LLMs) are increasingly used as judges for open-ended generation, as large-scale human evaluation is often expensive and difficult to scale, yet their preferences remain imperfect proxies for human judgment. Existing auditing pipelines often assume that a reliable subset of examples or clean supervision signals are available beforehand, for example from human annotation, heuristic filtering, or the outputs of strong judges. In LLM evaluation, this assumption is fragile: the initial split may inherit judge bias, while human verification is typically too scarce to define stable groups at scale. We propose AURA, an adaptive uncertainty--aware refinement framework for auditing pairwise LLM--as--a--judge decisions under selected human verification. AURA iteratively learns a human-consistency signal, propagates reliable evidence, and prioritizes uncertain comparisons for human review. The key idea is to treat trust in a judge as a latent quantity that is progressively refined as evidence accumulates. We provide a compact formulation, a stable refinement procedure, and a comprehensive evaluation on both synthetic and real pairwise LLM-answer data.
   image: "/assets/images/AURA.png"
   image_alt: "AURA"
+  badge: "arXiv'26"
 
 - id: pu
   section: preprint
@@ -62,6 +63,7 @@
     Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM-as-a-Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive–unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human-verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human-consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM-as-a-judge pipelines.
   image: "/assets/images/LLM_PU.png"
   image_alt: "LLM PU"
+  badge: "arXiv'26"
 
 - id: sdami
   section: preprint
@@ -98,6 +100,7 @@
     SDAMI combines sparsity-driven feature selection with deep subnetworks for flexible function approximation. Unlike conventional black-box models, SDAMI explicitly disentangles main effects and interaction effects to enhance interpretability while maintaining predictive power on small or moderate samples with high-dimensional features.
   image: "/assets/images/SDAMI.png"
   image_alt: "SDAMI"
+  badge: "arXiv'25"
 
 - id: dps
   section: journal
@@ -131,9 +134,21 @@
       publisher={Taylor \& Francis}
     }
   abstract: |
-    We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.
+    Deep neural networks (DNNs) have been widely applied to solve real-world regression problems. However, 
+    selecting optimal network structures remains a significant challenge. This study addresses this issue by 
+    linking neuron selection in DNNs to knot placement in basis expansion techniques. We introduce a difference 
+    penalty that automates knot selection, thereby simplifying the complexities of neuron selection. We name this 
+    method Deep P-Spline (DPS). This approach extends the class of models considered in conventional DNN modeling and 
+    forms the basis for a latent variable modeling framework using the Expectation-Conditional Maximization (ECM) algorithm 
+    for efficient network structure tuning with theoretical guarantees. From a nonparametric regression perspective, 
+    DPS is proven to overcome the curse of dimensionality, enabling the effective handling of datasets with a large 
+    number of input variables—a scenario where conventional nonparametric regression methods typically underperform. 
+    This capability motivates the application of the proposed methodology to computer experiments and image data analyses, 
+    where the associated regression problems involving numerous inputs are common. Numerical results validate the effectiveness 
+    of the model, underscoring its potential for advanced nonlinear regression tasks.
   image: "/assets/images/DPS.png"
   image_alt: "Deep P-Spline"
+  badge: "JASA'26"
 
 
 - id: sugar
@@ -168,6 +183,7 @@
     We introduce a difference penalty that automates knot selection and simplifies neuron selection in deep neural networks. DPS extends conventional DNN modeling and forms the basis for a latent variable framework using the ECM algorithm for efficient structure tuning with theoretical guarantees.
   image: "/assets/images/sugar.jpg"
   image_alt: "Sugarcane Prediction"
+  badge: "JABES'26"
 
 
 - id: smc
@@ -207,3 +223,4 @@
     Adopting the Semi-Markov Process, which accommodates non-exponential distributions of state durations, to formulate optimal maintenance strategies for Tainter gate systems noted for prolonged dormancy and significant operational uncertainties.
   image: "/assets/images/smc.png"
   image_alt: "Semi-Markov"
+  badge: "JSHM'24"

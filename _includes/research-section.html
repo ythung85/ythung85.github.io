@@ -26,9 +26,11 @@
         <p class="pub-title">{{ item.title }}</p>
         <p class="pub-authors">{{ item.authors }}</p>
         <div class="pub-meta-row" style="display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;">
+          <!--
           <div class="pub-meta-line">
             <span>{{ item.status }}</span><span class="pub-meta-sep">·</span><span>{{ item.venue_html | default: item.venue }}</span>
           </div>
+          -->
           {% if item.tag_labels %}
           <div class="pub-meta-line" style="display:flex;flex-wrap:wrap;gap:.35rem;justify-content:flex-start;align-items:flex-start;">
             {% for tag in item.tag_labels %}
@@ -42,17 +44,13 @@
             <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
             {% endfor %}
           </span>
-          <details class="pub-toggle">
-            <summary>BibTeX</summary>
-            <div class="pub-toggle-panel">
-              <pre class="pub-bibtex">{{ item.bibtex }}</pre>
-            </div>
-          </details>
+          <button class="pub-expand-btn" onclick="toggleBibtex('pub-{{ item.id }}')">BibTeX <span class="expand-arrow bibtex-expand-arrow">▶</span></button>
           <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
         </div>
+        <div class="pub-bibtex-wrap"><pre class="pub-bibtex">{{ item.bibtex }}</pre></div>
         <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
       </div>
-      <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+      <div class="pub-card-thumb">{% if item.badge %}<span class="pub-thumb-badge pub-thumb-badge-{{ item.badge_type | default: item.section | downcase }}">{{ item.badge }}</span>{% endif %}<img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
     </li>
     {% endfor %}
   </ul>
@@ -82,17 +80,13 @@
               <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
               {% endfor %}
             </span>
-            <details class="pub-toggle">
-              <summary>BibTeX</summary>
-              <div class="pub-toggle-panel">
-                <pre class="pub-bibtex">{{ item.bibtex }}</pre>
-              </div>
-            </details>
+            <button class="pub-expand-btn" onclick="toggleBibtex('pub-{{ item.id }}')">BibTeX <span class="expand-arrow bibtex-expand-arrow">▶</span></button>
             <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
           </div>
+          <div class="pub-bibtex-wrap"><pre class="pub-bibtex">{{ item.bibtex }}</pre></div>
           <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
         </div>
-        <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+        <div class="pub-card-thumb">{% if item.badge %}<span class="pub-thumb-badge pub-thumb-badge-{{ item.badge_type | default: item.section | downcase }}">{{ item.badge }}</span>{% endif %}<img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
       </li>
       {% endfor %}
     </ul>
@@ -123,17 +117,13 @@
               <a href="{{ link.href }}" {% if link.target %}target="{{ link.target }}"{% endif %}{% if link.rel %} rel="{{ link.rel }}"{% endif %} aria-label="{{ link.aria | default: link.label }}">{{ link.label }}</a>
               {% endfor %}
             </span>
-            <details class="pub-toggle">
-              <summary>BibTeX</summary>
-              <div class="pub-toggle-panel">
-                <pre class="pub-bibtex">{{ item.bibtex }}</pre>
-              </div>
-            </details>
+            <button class="pub-expand-btn" onclick="toggleBibtex('pub-{{ item.id }}')">BibTeX <span class="expand-arrow bibtex-expand-arrow">▶</span></button>
             <button class="pub-expand-btn" onclick="toggleAbstract('pub-{{ item.id }}')">Abstract <span class="expand-arrow">▶</span></button>
           </div>
+          <div class="pub-bibtex-wrap"><pre class="pub-bibtex">{{ item.bibtex }}</pre></div>
           <div class="pub-abstract-wrap"><p class="pub-abstract">{{ item.abstract }}</p></div>
         </div>
-        <div class="pub-card-thumb"><img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
+        <div class="pub-card-thumb">{% if item.badge %}<span class="pub-thumb-badge pub-thumb-badge-{{ item.badge_type | default: item.section | downcase }}">{{ item.badge }}</span>{% endif %}<img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}"/></div>
       </li>
       {% endfor %}
     </ul>
@@ -147,7 +137,16 @@
 
 <script>
   function toggleAbstract(id) {
-    document.getElementById(id).classList.toggle('expanded');
+    const card = document.getElementById(id);
+    const willExpand = !card.classList.contains('expanded');
+    card.classList.remove('bibtex-expanded');
+    card.classList.toggle('expanded', willExpand);
+  }
+  function toggleBibtex(id) {
+    const card = document.getElementById(id);
+    const willExpand = !card.classList.contains('bibtex-expanded');
+    card.classList.remove('expanded');
+    card.classList.toggle('bibtex-expanded', willExpand);
   }
   (function () {
     const btns = document.querySelectorAll('.filter-btn');
